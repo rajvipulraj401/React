@@ -1,5 +1,3 @@
-Certainly! I'll adjust the formatting to ensure it displays correctly on GitHub:
-
 # Notes on JavaScript Modules, React Components, and Variable Export/Import
 
 ## Importing and Exporting Modules
