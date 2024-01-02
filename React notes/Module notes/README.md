@@ -1,5 +1,11 @@
 # Notes on JavaScript Modules, React Components, and Variable Export/Import
 
+
+## The Main Idea Behind Modules
+
+- The main idea behind modules is to allow you to import and export different sections of code from different files into other files. This allows you to break up all your code into smaller files, making it easier to understand and reason with later on when you want to change it. Enhancing readability and ease of debugging when making changes later on. (debug).
+
+
 ## Importing and Exporting Modules
 
 - To use modules (import and export) in JavaScript, specify the `type` attribute in the HTML file `<script>` tag.
@@ -9,10 +15,6 @@
 ```
 
 - Defining `type="module"` defaults the file to use the "defer" attribute for loading.
-
-## The Main Idea Behind Modules
-
-- The main idea behind modules is to allow you to import and export different sections of code from different files into other files. This allows you to break up all your code into smaller files, making it easier to understand and reason with later on when you want to change it. Enhancing readability and ease of debugging when making changes later on. (debug).
 
 ### Types of Exports
 
@@ -35,11 +37,35 @@ export default class User {}
 export function printName(user) {}
 ```
 
-Note: Only one default export is allowed.
+**Export Section:**
+
+```javascript
+// Exporting the subtract function as the default export
+export default function subtract(x, y) {
+  return x - y;
+}
+/*
+Since export default is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. Additionally, you cannot use export default with var, let, or const 
+
+*/
+// Example of export default with a function
+export default function subtract(x, y) {
+  return x - y;
+}
+
+// Example of an attempt to use export default with an object (not allowed)
+// export default { subtract };
+```
+
+
+Note: Only one default export is allowed
+---
+
+
 
 ### Variable Export and Import
 
-- Exporting variables and functions:
+- #### Exporting variables and functions:
 
 ```javascript
 const a = 5;
@@ -52,7 +78,7 @@ function sum() {
 export { a, b, sum };
 ```
 
-- Importing variables:
+- ####  Importing variables:
 
 ```javascript
 import { a, b, sum } from "./app.js"; // Relative path because it is in the same folder
@@ -89,6 +115,57 @@ import u /* as UserAlias */ from "/user.js";
 const userWithDifferentName = new u("bob", 11);
 console.log(userWithDifferentName);
 ```
+
+
+### Importing all contents
+
+**Suppose you have a file and you wish to import all of its contents into the current file. This can be done with the import * as syntax. Here's an example where the contents of a file named math_functions.js are imported into a file in the same directory**
+
+
+```javascript
+
+
+// Importing all contents from math_functions.js into a module named myMathModule
+import * as myMathModule from "./math_functions.js";
+
+/* 
+The above import statement will create an object called myMathModule. This is just a variable name, you can name it anything. The object will contain all of the exports from math_functions.js in it, so you can access the functions like you would any other object property. Here's how you can use the add and subtract functions that were imported:*/
+
+
+// Using the imported functions from myMathModule
+myMathModule.add(2, 3);
+myMathModule.subtract(5, 3);
+
+// Importing all contents from string_functions.js into an object named stringFunctions
+import * as stringFunctions from "./string_functions.js";
+
+// Using the imported functions from stringFunctions
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+```
+
+---
+
+
+#### **Import Default Values:**
+
+**The syntax differs in one key place. The imported value, add, is not surrounded by curly braces ({}). add here is simply a variable name for whatever the default export of the math_functions.js file is. You can use any name here when importing a default.**
+
+**for example HERE WE are using sub instead of default name subtract**
+```javascript
+// Importing the default export from math_functions.js with the name 'add'
+import add from "./math_functions.js";
+
+// Using the imported default value 'add'
+add(2, 3);
+
+// Importing the default export from math_functions.js with a different name 'sub'
+import sub from "./math_functions.js";
+
+// Using the imported default value 'sub'
+sub(7, 4);
+```
+
 
 ### Importing Functions
 
