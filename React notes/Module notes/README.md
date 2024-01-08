@@ -54,10 +54,6 @@ Note: Since export default is used to declare a fallback value for a module or f
 ---
 
 
-Note: Only one default export is allowed
----
-
-
 
 ### Variable Export and Import
 
