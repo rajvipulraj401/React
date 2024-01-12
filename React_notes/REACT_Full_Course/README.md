@@ -93,9 +93,9 @@ npm run dev
 2) Class Components( not using anymore)
 
 
-https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/classVsFun.png
 
-
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/classVsFun.png)
 
 ## What is JSX?
 
