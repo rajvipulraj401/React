@@ -169,15 +169,14 @@ components
 
 ## 11. Class vs Function Components
 
-1) Functional components.
-2) Class Components( not using anymore)
-
 ### `Class Components`
 
 • Stateful: Can manage state.
 
 • Lifecycle: Access to lifecycle methods.
+
 • Verbose: More boilerplate code.
+
 • Not Preferred anymore.
 
 ### `Functional Components`
@@ -187,10 +186,11 @@ components
 • Can use Hooks for state and effects.
 
 • Simpler and more concise.
+
 • More Popular.
 
 
-## What is JSX?
+## What is `JSX`?
 
 1. Definition: JSX determines how the UI will
 look wherever the component is used.
@@ -259,7 +259,7 @@ export default KgButton;
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/export.png)
 
-`NOte - This concept covered in module notes.`
+### `NOte - This concept covered in module notes.`
 
 
 ## 14. Other Important Points
@@ -281,7 +281,7 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 
 
-Wherever you want to do calculation or want to use javascript codes you can inclose it inside {} .
+`Wherever you want to do calculation or want to use javascript codes you can inclose it inside {} .`
 
 exp
 
@@ -317,11 +317,13 @@ export default Hello;
 
 ## 16 Making  a Random component
 
+
+
+
+```jsx
+
 Random.jsx
 ------------------
-
-
-```javascript
 function Random(){
 
 let number = Math.random ()*100;
