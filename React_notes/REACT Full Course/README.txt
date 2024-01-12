@@ -4,12 +4,18 @@
 (write from that )
 
 
-Features-
+## Features-
 
-3) used to create single Page Appliction.
+1) It makes our website do very very fewer page reloads.
+
+2) Extreme use of reusable components so making a dynamic website is easy.
+
+3) Very efficient for the browser as the browser pe load nahi padega.
+
+4) used to create single Page Appliction.
 
 
-Dom 
+## Dom 
 
 Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND through HTML it creates a DOM  a tree like structure . so the tree of this element is called DOM .
 
