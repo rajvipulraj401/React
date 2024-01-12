@@ -65,8 +65,8 @@ React application is a `tree of component with App component as the root`  bring
 
 ## 9) Project Structure.
 
-https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/prjSt.png
 
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/prjSt.png)
 
 ## vite
 
@@ -153,8 +153,8 @@ export default KgButton;
 ## Different ways of exporting
 
 
-https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/export.png
-
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/export.png)
 
 `NOte - This concept covered in module notes.`
 
