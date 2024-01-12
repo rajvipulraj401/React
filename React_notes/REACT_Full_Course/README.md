@@ -1,43 +1,47 @@
 # React full course 
 
 
-## Features-
+# 1.What is React?
 
-1) It makes our website do very very fewer page reloads.
+1.JavaScript library to build Dynamic
+and interactive user interfaces
 
-2) Extreme use of reusable components so making a dynamic website is easy.
+2. Developed at Facebook in 2011.
 
-3) Very efficient for the browser as the browser pe load nahi padega.
+3. Currently most widely used JS
+library for front-end development.
 
-4) used to create single Page Appliction.
+4. Used to create single page
+application (page does not re-load).
 
-
-## Dom 
+## 2. Working of DOM
 
 Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND through HTML `it creates a DOM  a tree like structure `. so the tree of this element is called DOM .
 
 
-1) Browser takes HTML and create DOM .
+1. Browser takes HTML and create DOM.
 
-2) JS helps us modify DOM based on user actions or events.
+2. JS helps us modify DOM based on user actions or
+events.
 
-3) In big applications, Working with DOM becomes complicated.
-
-
-
-## WHAT was the Problems with JavaScript.
+3. In big applications, Working with DOM becomes
+complicated.
 
 
-1) React has a simple mental model.
+## 3.WHAT was the Problems with JavaScript.
+
+
+1) **React has a simple mental model.**
 
 2) JS is cumbersome .
 
-3) JS is error- prone.
+3) `JS is error- prone.`
 
-4) JS is Hard to maintain.
+4) **JS** is `Hard to maintain.`
 
- 
-## Working of React..
+
+
+## 4.Working of React..
 
 1) No need to worry about `querying`and `updating DOM `(declarative)
 
@@ -48,7 +52,9 @@ Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND
 4) It saves a lot of time cheezein aasan hai pahele se likhi huyi hai .
 
 
-## Difference between JS vs React.
+ 
+
+## 5.Difference between JS vs React.
 
 
 1) `JS is imperative` : You define steps to reach your desire state.
@@ -56,25 +62,85 @@ Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND
 2) `React is Declarative` : You define the targer UI State and  then reat figures out how to react that state.
 
 
+## **Features of React**-
 
-## Introduction to Components.
+1) It makes our website do very very fewer page reloads.
+
+2) Extreme use of reusable components so making a dynamic website is easy.
+
+3) Very efficient for the browser as the browser pe load nahi padega.
+
+4) used to create single Page Appliction.
+
+
+
+
+
+
+
+## 6. Introduction to Components.
 
 React application is a `tree of component with App component as the root`  bringing everything together.
 
 
 
+## 7, What is IDE
+
+1. IDE stands for `Integrated
+Development Environment.`
+
+2. Software suite that
+consolidates basic tools
+required for software
+development.
+
+3. Central hub for coding, finding
+problems, and testing.
+
+4. `Designed to improve
+developer efficiency.`
+
+## 7. Need of IDE
+
+1. Streamlines development.
+2. Increases productivity.
+3. Simplifies complex tasks.
+4. Offers a unified workspace.
+5. IDE Features
+	1. Code Autocomplete
+	2. Syntax Highlighting
+	3. Version Control
+	4. Error Checking
+
+# 8. Create a React App
+
+1. Official tool is CRA(Create React APP)
+
+2. Vite is a modern tool to create React Project.
+
+3. Vite produces Quick and Small bundle size.
+
+4. Vite: Use npm run dev to launch dev server.
+
+5. Use npm start for CRA.
+
+
 ## 9) Project Structure.
 
+1. node_modules/ has all the installed node packages
 
-![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/prjSt.png)
+2. public/ Directory: Contains static files that don't
+change.
 
-## vite
+3. src/ Directory: Main folder for the React code.
 
-npm creat vite@latest
-
-npm install
-
-npm run dev
+	a. components/: Reusable parts of the UI, 	likebuttonsor headers.
+	b. assets/: Images, fonts, and other static files.
+	c. styles/: CSS or stylesheets.
+4. package.json contains information about this project
+like name, version, dependencies on other react
+packages.
+5. vite.config.js contains vite config.
 
 
 ## Chapter 1 : Creating React Components (1:08:05)
@@ -82,26 +148,61 @@ npm run dev
 
 ## 10) File Extensions.
 
-.js -> This is javascript file extension .
-.jsx -> This stands for javaScript XML ,
- it combines javaScript with HTML-like tags 
-- Makes it easier to design UI components.
+**.JS**
+• Stands for JavaScript
 
-### TWO ways to define components.
+• Contains regular JavaScript code
+
+• Used for general logic and
+components
+
+**.JSX**
+
+• Stands for JavaScript XML
+
+• Combines JavaScript with HTML-like
+tags
+• Makes it easier to design UI
+components
+
+## 11. Class vs Function Components
 
 1) Functional components.
 2) Class Components( not using anymore)
 
+### `Class Components`
 
+• Stateful: Can manage state.
 
-![Alt Text](
-https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/classVsFun.png)
+• Lifecycle: Access to lifecycle methods.
+• Verbose: More boilerplate code.
+• Not Preferred anymore.
+
+### `Functional Components`
+
+• Initially stateless.
+
+• Can use Hooks for state and effects.
+
+• Simpler and more concise.
+• More Popular.
+
 
 ## What is JSX?
 
+1. Definition: JSX determines how the UI will
+look wherever the component is used.
 
-![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/jsx.png)
+2. Not HTML: Though it resembles HTML,
+you're actually writing JSX, which stands
+for JavaScript XML.
 
+3. Conversion: JSX gets converted to regular
+JavaScript.
+
+4. Babeljs.io/repl is a tool that allows you to
+see how JSX is transformed into
+JavaScript.
 
 We can use our component like normal html like
  for example 
@@ -118,7 +219,7 @@ so the above App component when exported can be used like normal html tag.
 `NOTE -We can use any component by importing and we can also export our component .`
 
 
-## Exporting Components
+## 13 .Exporting Components
 
 
 Example of exporting and importing a button from a different component( jsx file) inside other component (.jsx file).
@@ -161,8 +262,8 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 ## 14. Other Important Points
 
-1) Naming : Must be capitalized for writing component function ;
-lowercase for default HTML.
+1) Naming : `Must be capitalized` for writing component function ;
+`lowercase for default HTML`.
 
 2) HTML : unlike vanilla JS where you can't directly write HTML, in React, you can embed HTML-like syntax using JSX.
 
