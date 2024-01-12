@@ -131,9 +131,9 @@ developer efficiency.`
 2. public/ Directory: Contains static files that don't
 change.
 3. src/ Directory: Main folder for the React code.
-	a. components/: Reusable parts of the UI,likebuttonsor headers.
-	b. assets/: Images, fonts, and other static files.
-	c. styles/: CSS or stylesheets.
+	1. components/: Reusable parts of the UI,likebuttonsor headers.
+	2. assets/: Images, fonts, and other static files.
+	3. styles/: CSS or stylesheets.
 4. package.json contains information about this project
 like name, version, dependencies on other react
 packages.
