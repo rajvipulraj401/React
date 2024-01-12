@@ -40,14 +40,7 @@ export function printName(user) {}
 **Export Section:**
 
 ```javascript
-// Exporting the subtract function as the default export
-export default function subtract(x, y) {
-  return x - y;
-}
-/*
-Since export default is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. Additionally, you cannot use export default with var, let, or const 
 
-*/
 // Example of export default with a function
 export default function subtract(x, y) {
   return x - y;
@@ -56,9 +49,7 @@ export default function subtract(x, y) {
 // Example of an attempt to use export default with an object (not allowed)
 // export default { subtract };
 ```
-
-
-Note: Only one default export is allowed
+Note: Since export default is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. Additionally, you cannot use export default with var, let, or const 
 ---
 
 
