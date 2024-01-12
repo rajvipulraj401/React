@@ -128,10 +128,8 @@ developer efficiency.`
 ## 9) Project Structure.
 
 1. node_modules/ has all the installed node packages
-
 2. public/ Directory: Contains static files that don't
 change.
-
 3. src/ Directory: Main folder for the React code.
 	a. components/: Reusable parts of the UI,likebuttonsor headers.
 	b. assets/: Images, fonts, and other static files.
