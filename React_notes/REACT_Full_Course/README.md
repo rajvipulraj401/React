@@ -108,7 +108,7 @@ Attach pic
 
 AttacH  Pic
 
-![Alt Text](https://raw.githubusercontent.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/prjSt.png)
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/prjSt.png)
 
 
 
