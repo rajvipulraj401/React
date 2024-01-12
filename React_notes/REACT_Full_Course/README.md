@@ -1,7 +1,4 @@
-	# React full course 
-
-## History of React.
-(write from that )
+# React full course 
 
 
 ## Features-
@@ -17,7 +14,7 @@
 
 ## Dom 
 
-Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND through HTML it creates a DOM  a tree like structure . so the tree of this element is called DOM .
+Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND through HTML `it creates a DOM  a tree like structure `. so the tree of this element is called DOM .
 
 
 1) Browser takes HTML and create DOM .
@@ -28,14 +25,12 @@ Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND
 
 
 
-
-
 ## WHAT was the Problems with JavaScript.
 
 
 1) React has a simple mental model.
 
-2) JS is sumbersome .
+2) JS is cumbersome .
 
 3) JS is error- prone.
 
@@ -46,9 +41,9 @@ Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND
 
 1) No need to worry about `querying`and `updating DOM `(declarative)
 
-2) React creates a web page with small and reusable components.
+2) React creates a web page with `small and reusable components`.
 
-3) React will take care of creating and Updating DOM element .
+3) React will `take care of creating and Updating DOM element` .
 
 4) It saves a lot of time cheezein aasan hai pahele se likhi huyi hai .
 
@@ -56,37 +51,36 @@ Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND
 ## Difference between JS vs React.
 
 
-1) JS is imperative : You define steps to reach your desire state.
+1) `JS is imperative` : You define steps to reach your desire state.
 
-2) React is Declarative : You define the targer UI State and  then reat figures out how to react that state.
+2) `React is Declarative` : You define the targer UI State and  then reat figures out how to react that state.
 
 
 
 ## Introduction to Components.
 
-React application is a tree of component with App component as the root  bringing everything together.
+React application is a `tree of component with App component as the root`  bringing everything together.
 
 
 
-9) Project Structure.
+## 9) Project Structure.
 
-IMG
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/prjSt.png
 
-.
 
-vite
+## vite
 
 npm creat vite@latest
+
 npm install
+
 npm run dev
-
-
 
 
 ## Chapter 1 : Creating React Components (1:08:05)
 
 
-10) File Extensions.
+## 10) File Extensions.
 
 .js -> This is javascript file extension .
 .jsx -> This stands for javaScript XML ,
@@ -99,37 +93,37 @@ npm run dev
 2) Class Components( not using anymore)
 
 
-Attach pic
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/classVsFun.png
 
 
 
 ## What is JSX?
 
 
-AttacH  Pic
-
-![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/prjSt.png)
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/jsx.png)
 
 
+We can use our component like normal html like
+ for example 
 
-We can use our component like normal html like for example 
-
+```jsx
 function App(){
 }
 export default App;
 
 so the above App component when exported can be used like normal html tag. 
  <App/> in .jsx file.
+```
 
-
-We can use any component by importing and we can also export our component .
+`NOTE -We can use any component by importing and we can also export our component .`
 
 
 ## Exporting Components
 
 
-example of exporting and importing a button from a different component( jsx file) inside other component (.jsx file).
+Example of exporting and importing a button from a different component( jsx file) inside other component (.jsx file).
 
+```jsx
 App.jsx
 
 
@@ -145,24 +139,24 @@ This is the best React Course
 </div>
 }
 export default App;
+```
 
-
+```jsx
  KgButton.jsx 
 
 function KgButton(){
 return <button > Like this Video </button >
 }
 export default KgButton;
-
+```
 
 ## Different ways of exporting
 
 
-ATtach pic 
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/export.png
 
 
-
-NOte - This concept covered in module notes.
+`NOte - This concept covered in module notes.`
 
 
 ## 14. Other Important Points
@@ -188,6 +182,7 @@ Wherever you want to do calculation or want to use javascript codes you can incl
 
 exp
 
+```jsx
 function Hello(){
 let myName = "Vipul";
 let number = 456;
@@ -199,7 +194,7 @@ MessageNo: {number} I am your Friend { ()}
 </p>
 }
 export default Hello;
-
+```
 
 ## 16) Reusable Components
 
@@ -253,7 +248,8 @@ This is the best React course
 export default App;
 
 ```
-note - Always remember to open and close the componet tag ex
+### Note - Always remember to open and close the componet tag
+ ex
 
 `<Random></Random>
 or <Random/>`
