@@ -84,18 +84,18 @@ Create components and make data if you need it and link the data and change data
 
 ## How to think in React??
 
-Always think how the final version of your project will look like and then break that down into components (components are the part that is repeated inside the project many times so that we can reuse it again and again )
+Always `think how the final version of your project will look like and then break that down into components` (components are the part that is repeated inside the project many times so that we can reuse it again and again )
 
 ## When do we use React JS?
 
-Jab aapko ek thoda bade level par APP create karna ho, jismein khoob saari cheezein ho rahi hai and khoob saara reusable component structure hai.
+Jab aapko ek thoda `bada APP` create karna ho, jismein khoob saari cheezein ho rahi hai and `khoob saara reusable component structure hai`.
 
 ## How we work in React??
 
 We make components aur ye saare components go inside one parent component. Aur parent component ko body mein put kar diya jaata hai.
 
 ## Component - 
-Anything that is big and also any thing that is repeatable inside our App is a component or can be made a component. So, a component is a function that returns JSX.
+`Anything that is big and also any thing that is repeatable` inside our App is a component or can be made a component. So, a component is a function that returns JSX.
 
 ## JSX - 
 JSX is very similar to HTML with superpowers. Whatever code we write in HTML inside JSX it gets converted into javascript. (using React.createElement).
@@ -128,42 +128,48 @@ For example - A product component.
 
 And we attach it on the 7th line we can do that by
 
-<Products/>
+```jsx
+<Products/>```
 
 But first, we have to import it at the top and export product at last in product.jsx
 
-## Q) How do we change the reaction of data in a component?
+## How do we change the reaction of data in a component?
 
---> We have data in State so we only change the state and react will react whenever state changes, so when we change the state aur baaki jagah react khud change krega.
+--> We have data in State so `we only change the state and react will react whenever state changes`, so when we change the state aur baaki jagah react khud change krega.
 
-## Q) How do we send and receive data inside a component?
+##  How do we send and receive data inside a component?
 
 Example.
 
+```jsx
 <products naam ="value"/> 
-and accept this naam in the component function of that products component. and use that naam property anywhere in that component 
-note - in order to send an object put inside data={{age ;25, name :Vipul }}
+//and accept this naam in the component //function of that products component. and //use that naam property anywhere in that //component 
+//note - in order to send an object put inside {}
+data={{age ;25, name :Vipul }}
+```
 
-FIRST CURLY BRACKET IS FOR JSX.
+Note - FIRST CURLY BRACKET IS FOR JSX.
 
 Sol-n -> watch reactJs crash course around 1:15:00
 
-## Q) How do we create your data inside a component?
+##  How do we create our data inside a component?
 
 -> When we say we want to create our data inside a component we are basically saying how do we create state and we can create state anywhere in a component.
 
+```jsx
 ex - import React ,{useState } from 'react'
 
 function Products ({age, data}){
 const [a,b] = useState(false};
 return (
 )
-}
+ }
 export default Products
 
+```
 CONDITIONAL RENDERING - CONDITIONAL RENDERING OF class- (using the ternary operator is something happen we can change the class applied to that element.)
 
-## que) How do we change data inside a component??
+##  How do we change data inside a component??
 
 we do that through the updater function inside the component.
 
@@ -185,7 +191,7 @@ do this and do this it will go step by step like we do in JavaScript code.
 **Conclusion:**
 - Imperative is like saying how to get to the code, and declarative is like saying what we want.
 
-for example - CREATINg a sandwich - if we create the sandwich step by step ourselves it is called imperative code(i.e in JavaScript) 
+for example - CREATING a sandwich - if we create the sandwich step by step ourselves it is called imperative code(i.e in JavaScript) 
 
 for example - if we go to a shop and ask to shopkeeper I want this sandwich and along with this and then we get the sandwich This is called declarative approach ( i.e we do this in react )
 
@@ -225,20 +231,9 @@ Note - Any time you are dealing with state you cannot change it. so we need to m
   - Takes a function as an argument.
   - Should be called at the top of the function.
 
-The only thing you have to know about hooks in react that they need to be called at the top of  your function . We cannot put hooks conditionally . like if (true) run this hook this will not work and we will get an error."you cannot render hooks conditionlly you cannot put them inside if's , loops or even after return "
+`The only thing you have to know about hooks in react that they need to be called at the top of  your function . We cannot put hooks conditionally . like if (true) run this hook this will not work and we will get an error."you cannot render hooks conditionlly you cannot put them inside if's , loops or even after return "`
 
 
 
-
-## **React with Vite:**
-  1. Navigate to the folder where you want to install the React project using Vite.
-  2. Open VS Code in the folder.
-  3. Open the console and run:
-     ```
-     npm create vite@latest
-     npm i
-     npm run dev
-     ```
-   Now, you'll have local files and a local server.
 
 # conclusion - React ka naam react islea hai kyunki react reacts when we change state react changes at all places where state has been used and this is the main model of the Whole react. This is the way it works.

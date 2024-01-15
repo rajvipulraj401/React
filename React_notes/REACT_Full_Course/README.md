@@ -14,6 +14,47 @@ library for front-end development.
 4. Used to create single page
 application (page does not re-load).
 
+## How can you say React is a library, not a framework? What is the difference between a library and a framework?
+
+
+### React as a Library (Bricks Analogy):
+
+**Description:** React is like a toolbox with bricks when building a house.
+
+**Explanation:** In React, these "bricks" symbolize individual components. Developers create and define these components based on their application's needs.
+
+**Connection:** React components act as the building blocks (bricks) for constructing the user interface.
+
+### Freedom in Component Assembly:
+
+**Analogy:** Developers, like builders, have the freedom to creatively assemble these "bricks."
+
+**Explanation:** React doesn't enforce a predefined structure for the entire application. Developers can arrange and organize components based on their specific design requirements.
+
+**Inference:** React provides flexibility, emphasizing its role as a library that offers tools for building without dictating the entire architecture.
+
+### User-Defined Components:
+
+**Analogy:** The term "bricks" metaphorically represents user-defined components in React.
+
+**Explanation:** React components are not predefined; developers create them according to the application's requirements.
+
+**Inference:** Unlike some frameworks with predefined elements, React's focus is on user-defined components, reinforcing its nature as a library.
+
+### Metaphor Clarification:
+
+**Analogy Recap:** The term "bricks" is metaphorical, highlighting the building blocks (React components) that developers use to construct the application.
+
+**Explanation:** React components are not predetermined; developers design and define them, aligning with the metaphor of using bricks to build.
+
+### Flexibility vs. Structure:
+
+- **Flexibility with Library (React):** React's flexibility allows developers to use its tools creatively, akin to arranging bricks for unique designs.
+
+- **Structured Approach with Frameworks (Vue.js and Angular):** In contrast, Vue.js and Angular provide a more structured approach, acting like blueprints that guide the overall architecture, offering less freedom but a well-defined structure.
+
+The analogy emphasizes that React's role is more aligned with a library, providing user-defined components (bricks) for construction. The user's freedom in arranging these components reinforces React's nature as a library, where the developer has more discretion in the application's design.
+
 ## 2. Working of DOM
 
 Browser  when tries to load webpage and it takes all the files HTML,CSS , js AND through HTML `it creates a DOM  a tree like structure `. so the tree of this element is called DOM .
@@ -129,6 +170,10 @@ developer efficiency.`
 5. Use npm start for CRA.
 
 
+`npm create vite@latest
+npm  install on  that folder 
+npm run dev
+`
 ## 9) Project Structure.
 
 1. node_modules/ has all the installed node packages
@@ -182,6 +227,7 @@ components
 ### `Functional Components`
 
 • Initially stateless.
+(This means by default you cannot keep a value in this value , thesee function don't have any prooperty)
 
 • Can use Hooks for state and effects.
 
@@ -286,6 +332,8 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 exp
 
 ```jsx
+HELLO.jsx
+
 function Hello(){
 let myName = "Vipul";
 let number = 456;
@@ -293,7 +341,7 @@ let fullName =()=>{
 return "Vipul Raj";
 }
 return <p>
-MessageNo: {number} I am your Friend { ()}
+MessageNo: {number} I am your Friend { fullName()}
 </p>
 }
 export default Hello;
@@ -317,9 +365,6 @@ export default Hello;
 
 ## 16 Making  a Random component
 
-
-
-
 ```jsx
 
 Random.jsx
@@ -327,7 +372,7 @@ Random.jsx
 function Random(){
 
 let number = Math.random ()*100;
-return <h1 style ={{ "background-color":#776691}}>Random number is : {Math.round(number)}</h1>
+return <h1 style ={{ "background-color":"#776691"}}>Random number is : {Math.round(number)}</h1>
 }
 //Style element has to be included inside curly bracket as first curly is for jsx and second one is for css.
 export default Random ;
@@ -353,7 +398,7 @@ This is the best React course
 export default App;
 
 ```
-### Note - Always remember to open and close the componet tag
+### Note - Always remember to open and close the component tag
  ex
 
 `<Random></Random>

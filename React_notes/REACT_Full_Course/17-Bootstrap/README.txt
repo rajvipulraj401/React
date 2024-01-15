@@ -25,6 +25,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 Note - In order to use this  in React copy this at top at main.jsx
 
 
+now------
+
+
+1) in order to see how elements are in bootstrap go to bootstrap website and see the examples there
+
+2) in order to use those components just `go to docs there and copy the code of any desired element ` for exaple button 
+
+
 
 from 2:26 do from yourself -------------------*******
 
