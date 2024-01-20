@@ -33,7 +33,7 @@ now------
 2) in order to use those components just `go to docs there and copy the code of any desired element ` for exaple button 
 
  
-### Todo App basic project without using components
+## Todo App basic project without using components
 
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/17-Bootstrap/Todoapp1st.png)
@@ -105,6 +105,46 @@ export default App;
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/17-Bootstrap/Todoapp1st.png)
 
 
+
+
+
+`index.html`-----------------
+
+```html
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+```
+
+
+`main.jsx---------------`
+```jsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+```
+
+
 `App.jsx------------`
 ```jsx
 
@@ -130,23 +170,6 @@ function App() {
 
 export default App;
 
-
-```
-
-`main.jsx---------------`
-```jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-```
 
 
 `AppName.jsx`-----------
