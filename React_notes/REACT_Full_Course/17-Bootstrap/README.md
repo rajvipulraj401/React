@@ -199,7 +199,7 @@ export default AddTodo;
 ```
 
 
-`Todoitem1.jsx`
+`Todoitem1.jsx`-------------------------
 ```jsx
 
 function Todoitem1() {
@@ -223,11 +223,9 @@ function Todoitem1() {
 
 export default Todoitem1;
 
-
-
 ```
 
-`Todoitem2.jsx`
+`Todoitem2.jsx-----------------------`
 
 ```jsx
 
@@ -252,4 +250,4 @@ function Todoitem2() {
 
 export default Todoitem2;
 
-``
+```
