@@ -1,14 +1,14 @@
-function Todoitem1() {
+function TodoItem1() {
   let name = "Buy Milk";
   let date = "20/01/2024";
 
   return (
-    <div class="container text-center">
-      <div class="row 2">
-        <div class="col-6">{name}</div>
-        <div class="col-4">{date}</div>
-        <div class="col-2">
-          <button type="button" class="btn btn-danger">
+    <div className="container">
+      <div className="row kg-row">
+        <div className="col-6">{name}</div>
+        <div className="col-4">{date}</div>
+        <div className="col-2">
+          <button type="button" className="btn btn-danger  kg-button">
             Delete
           </button>
         </div>
@@ -17,4 +17,4 @@ function Todoitem1() {
   );
 }
 
-export default Todoitem1;
+export default TodoItem1;
