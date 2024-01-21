@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 .todo-container h1 {
   font-weight: 700;
@@ -24,15 +24,15 @@ input {
 }
 
 .kg-button {
-  /* width: 100%;
-   */
-  min-width: 100px;
+  width: 80px;
+
+  /* min-width: 100px; */
 }
-/* 
-.row {
-  padding: 10px 0;
-} */
 
 .kg-row {
   margin: 20px 0;
+}
+
+.kg-col {
+  width: auto;
 }
