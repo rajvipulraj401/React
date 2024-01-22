@@ -38,6 +38,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 ```
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/React_small_projects/2-Bharat-clock-version-1/Bharat-clock-version-1/
+bc.png)
+
 
 
 `App.jsx------------`
@@ -106,3 +110,5 @@ export default CurrentTime;
 
 
 ```
+
+
