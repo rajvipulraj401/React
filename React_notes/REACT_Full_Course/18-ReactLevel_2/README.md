@@ -2,14 +2,19 @@
 
 ## Fragments.
 
-1. What?
+### 1. What?
+
 Allows grouping of multiple elements without
 extra DOM nodes.
-2. Why?
+
+### 2. Why?
+
 • Return multiple elements without a wrapping
 parent.
 • Cleaner DOM and consistent styling.
-3. How? Two syntaxes:
+
+### 3. How? Two syntaxes:
+
 1. <React.Fragment>...</React.Fragment>
 2. Short: <>...</>
 
