@@ -37,3 +37,20 @@ NOTE2 - Key is saved in virtual Dom it will not be seen in browser inspect
 
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-React Level 2/mapKey.png)
+
+
+
+
+
+
+
+
+
+# Conditional Rendering
+
+
+How to identify the components ?
+
+First we have to identify that the individual components have some value in themselves or not .
+
+for example the Heading can be a component as it has a meaning in itself.
