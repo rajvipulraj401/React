@@ -36,7 +36,7 @@ NOTE2 - Key is saved in virtual Dom it will not be seen in browser inspect
 
 
 ![Alt Text](
-https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-React Level 2/mapKey.png)
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/mapKey.png)
 
 
 
