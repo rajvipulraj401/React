@@ -27,12 +27,16 @@ parent.
 
  **JSX Elements**: Transform array items into JSX.
 
- Inline Rendering: Directly inside JSX
+ **Inline Rendering**: Directly inside JSX
+
+```jsx
 {items.map(item => <li key={item.id}>{item.name}</li>)}
+```
+ **Key Prop**: Assign unique key for optimized re-renders.
 
- Key Prop: Assign unique key for optimized re-renders.
+```jsx
 <div key={item.id}>{item.name}</div>
-
+```
 
 
 **NOTE - Each child in a list should have unique key prop We have to add a key  as it helps react , React kahta hai ki jabhi bhi aap ek list ko render krte hai toh har item ke paas apna ek id hona chahiye kyunki React ka kaam hi yahi hai ki ye update ko save krta hai .Agr page me kuch change hua hai toh  bas utna hi page mujhe change krna pade poore page me change na karna pade  . SO it says that ki agar aap iske andar id de denge toh mujhe pata chal jayega jab iske andar changes honge , `Mujhe sirf iswale me  change krna hai, nahi toh agar saare item same honge toh ek bhi change hoga toh mujhe sabko change krna hoga so REACT USE KRNE KA WHOLE POINT KHARAB HOJAYEGA`**
