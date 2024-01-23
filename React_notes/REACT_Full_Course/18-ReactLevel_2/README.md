@@ -4,8 +4,8 @@
 
 ### 1. What?
 
-Allows grouping of multiple elements without
-extra DOM nodes.
+`Allows grouping of multiple elements without
+extra DOM nodes.(without extra div)`
 
 ### 2. Why?
 
@@ -20,13 +20,16 @@ parent.
 
 
 
-## Map method in React
+## `Map method in React______`
 
 
-1. Purpose: Render lists from array data.
-2. JSX Elements: Transform array items into JSX.
+1. **Purpose**: Render lists from array data.
+
+2. **JSX Elements**: Transform array items into JSX.
+
 3. Inline Rendering: Directly inside JSX
 {items.map(item => <li key={item.id}>{item.name}</li>)}
+
 4. Key Prop: Assign unique key for optimized re-renders.
 <div key={item.id}>{item.name}</div>
 
@@ -51,7 +54,7 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 
 
-# Conditional Rendering
+## `Conditional Rendering______`
 
 
 How to identify the components ?
