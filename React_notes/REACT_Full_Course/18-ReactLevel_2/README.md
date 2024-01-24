@@ -53,12 +53,29 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 
 
-
-
-
-
-
 ## `Conditional Rendering______`
+
+#### `When we do rendering based on certain condition it is called conditional Rendering`
+
+
+Conditional Rendering
+• Displaying content based on certain conditions.
+• Allows for dynamic user interfaces.
+Methods
+• If-else statements: Choose between two blocks
+of content.
+• Ternary operators: Quick way to choose
+between two options.
+• Logical operators: Useful for rendering content
+when a condition is true.
+Benefits
+• Enhances user experience.
+• Reduces unnecessary rendering.
+• Makes apps more interactive and responsive.
+
+
+
+
 
 
 How to identify the components ?
@@ -66,3 +83,4 @@ How to identify the components ?
 First we have to identify that the individual components have some value in themselves or not .
 
 for example the Heading can be a component as it has a meaning in itself.
+
