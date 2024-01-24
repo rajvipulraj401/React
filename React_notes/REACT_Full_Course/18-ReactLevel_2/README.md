@@ -61,9 +61,15 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 Conditional Rendering
 • Displaying content based on certain conditions.
 • Allows for dynamic user interfaces.
-Methods
+
+
+## Methods---
+
 • If-else statements: Choose between two blocks
 of content.
+
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional0.png)
 
 
 • `Ternary operators`: Quick way to choose
