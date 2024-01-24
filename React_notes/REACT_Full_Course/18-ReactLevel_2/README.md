@@ -1,6 +1,6 @@
   # React Level 2-
 
-## `Fragments______`
+# `Fragments______`
 
 ### 1. What?
 
@@ -20,7 +20,7 @@ parent.
 
 
 
-## `Map method in React______`
+# `Map method in React______`
 
 
  **Purpose**: Render lists from array data.
@@ -53,19 +53,17 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 
 
-## `Conditional Rendering______`
+# `Conditional Rendering______`
 
 #### `When we do rendering based on certain condition it is called conditional Rendering`
 
-
-Conditional Rendering
 • Displaying content based on certain conditions.
 • Allows for dynamic user interfaces.
 
 
 ## Methods---
 
-### If-else statements: Choose between two blocks of content.
+### 1- If-else statements: Choose between two blocks of content.
 
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional0.png)
