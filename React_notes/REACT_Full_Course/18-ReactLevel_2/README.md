@@ -64,11 +64,26 @@ Conditional Rendering
 Methods
 • If-else statements: Choose between two blocks
 of content.
-• Ternary operators: Quick way to choose
+
+
+• `Ternary operators`: Quick way to choose
 between two options.
-• Logical operators: Useful for rendering content
+
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional1.png)
+
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditiona2.png)
+
+• `Logical operators`: Useful for rendering content
 when a condition is true.
-Benefits
+
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditiona3.png)
+
+## `Benefits of Doing conditional rendering :---`
+
+
 • Enhances user experience.
 • Reduces unnecessary rendering.
 • Makes apps more interactive and responsive.
