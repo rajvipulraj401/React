@@ -63,7 +63,7 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 ## Methods---
 
-### 1- `If-else statements:` Choose between two blocks of content.
+### 1.`If-else statements:` Choose between two blocks of content.
 
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional0.png)
@@ -85,7 +85,7 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 ## `Benefits of Doing conditional rendering :---`
 
 
-• Enhances user experience.
+• Enhances **user experience**.
 
 • Reduces unnecessary rendering.
 
@@ -94,6 +94,34 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 
 
+# `Props______` 
+
+
+## Props in React
+
+• Short for properties
+
+• Mechanism for passing data.
+
+• Read-only by default
+
+## Usage
+
+• Pass data from parent to child component.
+
+• Makes components reusable.
+
+• Defined as attributes in JSX.
+
+## Key Points
+
+• Data flows one-way (downwards).
+
+• Props are immutable.
+
+• Used for communication between components.
+Examples
+<Header title="My App" />
 
 
 How to identify the components ?
