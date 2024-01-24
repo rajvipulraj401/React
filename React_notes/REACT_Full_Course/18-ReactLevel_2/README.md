@@ -89,7 +89,7 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 • Reduces unnecessary rendering.
 
-• Makes apps more interactive and responsive.
+• Makes apps **more interactive and responsive**.
 
 
 
@@ -113,15 +113,21 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 • Defined as attributes in JSX.
 
-## Key Points
+## `Key Points`
 
-• Data flows one-way (downwards).
+• Props is an object in javascript which catches all the arguments inside the props object•
 
-• Props are immutable.
+• Data flows `one-way` (downwards).
+
+• `Props are immutable.`
 
 • Used for communication between components.
 Examples
 <Header title="My App" />
+
+
+
+props are passed as a attribute
 
 
 How to identify the components ?
