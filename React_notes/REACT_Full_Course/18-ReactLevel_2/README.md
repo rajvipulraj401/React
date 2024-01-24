@@ -79,13 +79,13 @@ between two options.
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional1.png)
 
 ![Alt Text](
-https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditiona2.png)
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional2.png)
 
 • `Logical operators`: Useful for rendering content
 when a condition is true.
 
 ![Alt Text](
-https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditiona3.png)
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional3.png)
 
 ## `Benefits of Doing conditional rendering :---`
 
