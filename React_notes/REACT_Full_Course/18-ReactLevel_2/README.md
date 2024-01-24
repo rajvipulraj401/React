@@ -81,8 +81,7 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional2.png)
 
-### `Logical operators`: Useful for rendering content
-when a condition is true.
+### `Logical operators`: Useful for rendering content when a condition is true.
 
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional3.png)
