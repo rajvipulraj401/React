@@ -267,6 +267,12 @@ so the above App component when exported can be used like normal html tag.
 `NOTE -We can use any component by importing and we can also export our component .`
 
 
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/jsx1.png)
+
+
+
+
 ## 13 .Exporting Components
 
 

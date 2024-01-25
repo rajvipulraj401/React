@@ -113,6 +113,10 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 • Defined as attributes in JSX.
 
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/props1.png)
+
+
 ## `Key Points`
 
 • Props is an object in javascript which catches all the arguments inside the props object•
@@ -126,13 +130,151 @@ Examples
 <Header title="My App" />
 
 
+### `App.jsx---`
+```jsx
 
-props are passed as a attribute
+```
 
 
-How to identify the components ?
+### `App.jsx---`
+```jsx
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import FoodItems from "./components/FoodItems";
+import ErrorMessage from "./components/ErrorMessage";
 
-First we have to identify that the individual components have some value in themselves or not .
+function App() {
+  // let foodItems =[];
+  let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
 
-for example the Heading can be a component as it has a meaning in itself.
+  return (
+    <>
+      <h1>Healthy Food</h1>
+      <ErrorMessage items={foodItems}></ErrorMessage>
+      <FoodItems groccery={foodItems} />
+    </>
+  );
+}
+
+export default App;
+
+
+```
+
+
+### `ErrorMessage.jsx---`
+```jsx
+
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import FoodItems from "./components/FoodItems";
+import ErrorMessage from "./components/ErrorMessage";
+
+function App() {
+  // let foodItems =[];
+  let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
+  return (
+    <>
+      <h1>Healthy Food</h1>
+      <ErrorMessage items={foodItems}></ErrorMessage>
+      <FoodItems groccery={foodItems} />
+    </>
+  );
+}
+
+export default App;
+
+
+```
+
+
+### `FoodItems.jsx---`
+```jsx
+
+import Item from "./Item";
+// let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
+const FoodItems = ({ groccery }) => {
+  return (
+    <ul className="list-group">
+      {groccery.map((item) => (
+        <Item key={item} foods={item} />
+        // Passing the 'foods' prop to the 'Item' component.
+        // Note: 'foodItem' will be accessible within 'Item' component via the 'props' object.
+        // (props is just the name you can have any name)
+
+        // we have to wrte item inside curly bracketbecause it is jsx code
+        // else the browser will interpret it as text and not the variable.
+
+        // NOTE 2 - Ensure each component in the list has a unique "key" prop, required by React for efficient updates.
+      ))}
+    </ul>
+  );
+};
+
+export default FoodItems;
+
+// how we pass props
+
+/* 
+We pass as an attribute .
+examples - <Header title = "My App"/>*/
+
+
+```
+
+
+### `Item.jsx---`
+```jsx
+
+// THIS item.jsx will make a single list item
+
+// const Item = (props) => {
+//   // THIS IS THE props object
+//   return <li className="list-group-item">{props.foodItem}</li>;
+// };
+
+// we can also do via destructuring
+
+const Item = ({ foods }) => {
+  // THIS IS THE props object
+  return <li className="list-group-item">{foods}</li>;
+};
+
+export default Item;
+
+
+
+```
+
+
+### `main.jsx---`
+```jsx
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+```
+
+
+`props are passed as a attribute
+props are catched similarly like in normal jScript function -> arguments and destructuring.`
+
+
+
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/props2.png)
+
+
+
 
