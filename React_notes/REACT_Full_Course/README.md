@@ -1,6 +1,5 @@
 # React full course 
 
-
 # 1.What is React?
 
 1.JavaScript library to build Dynamic
