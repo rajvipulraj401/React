@@ -286,7 +286,8 @@ ex--
  	.cat_meow_j3xk{
 	        color : orange;
 	}
-
+/* JUST like above we just give normal className like meow but css module make this name
+ in a random code type name so that the name is localized*/
 ``` 
 2. Styles are scoped to individual components.
 
