@@ -277,4 +277,31 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 
 
+#  Css Modules ----
 
+1. `**Localized class names to avoid global conflicts.**`
+
+ex--
+	```CSS 
+ 	.cat_meow_j3xk{
+	        color : orange;
+	}
+
+``` 
+2. Styles are scoped to individual components.
+
+3. **Helps in creating component-specific styles**.
+
+4. Automatically generates unique class names.
+
+5. Promotes modular and maintainable CSS.
+
+6. Can use alongside global CSS when needed.
+
+--(jaha tumko global css use krna hai wo bhi kr sakte ho aur modular bhi aur yaha tak ki bootstrap wagairah bhi use kr sakte hai saath me)
+
+` NOTE -
+whenever we are applying a custom css . 
+we should use module css  in react application . 
+iska unique class name  hoga so isse name clash nahi hoga .
+`
