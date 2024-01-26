@@ -279,10 +279,10 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 #  Css Modules ----
 
-1. `**Localized class names to avoid global conflicts.**`
+1. `Localized class names to avoid global conflicts.`
 
 ex--
-	```CSS 
+```css
  	.cat_meow_j3xk{
 	        color : orange;
 	}
