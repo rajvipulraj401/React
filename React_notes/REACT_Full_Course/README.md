@@ -11,7 +11,7 @@ and interactive user interfaces
 library for front-end development.
 
 4. Used to create single page
-application (page does not re-load).
+application (page does not re-load) .
 
 ## How can you say React is a library, not a framework? What is the difference between a library and a framework?
 
@@ -28,7 +28,7 @@ application (page does not re-load).
 
 **Analogy:** Developers, like builders, have the freedom to creatively assemble these "bricks."
 
-**Explanation:** React doesn't enforce a predefined structure for the entire application. Developers can arrange and organize components based on their specific design requirements.
+**Explanation:**  React doesn't enforce a predefined structure for the entire application. Developers can arrange and organize components based on their specific design requirements.
 
 **Inference:** React provides flexibility, emphasizing its role as a library that offers tools for building without dictating the entire architecture.
 
