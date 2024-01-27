@@ -308,5 +308,45 @@ iska unique class name  hoga so isse name clash nahi hoga .
 
 
 
-`JO BHI CHIZ MULTIPLE MODULE ME DEFined  hai usko hum global css me chhor sakte hai baaki single file pe lagne wala css ko hum module.css file banakae daalenge`
+`JO BHI CHIZ MULTIPLE MODULE ME Defined  hai usko hum global css me chhor sakte hai baaki single file pe lagne wala css ko hum module.css file banakae daalenge`
 `
+
+
+# How TO USE module .css 
+
+
+In order to use it do the following steps .
+
+1.  Identify which styles are only applied to individual files then only create that style in module.css .
+
+2. copy the style defined in global css file and .
+
+3. Create another file in component folder with name of the specific file where the css is applied .
+
+for example . _ 
+ 	a ) if there is a file name with AppName.jsx and you have applied a style in that then .
+
+	b) Create a file called AppName.module.css for that file specified styles.
+	c) paste all the styles there in that file .
+	d) In order to use the style now go to the AppName.jsx file and then there .
+ PUT the reference of module.css which you created jsut now.
+
+	e) Also import the styles which you made in the AppName.jsx file at top .
+
+
+for example
+
+```jsx
+
+import styles from "./AppName.module.css";
+
+function AppName() {
+  return <h1 className={styles["appName_style"]}>Todo App</h1>;
+}
+export default AppName;
+
+// This is the way to export default ufunction in react .
+// Brother it is a function component so it is basically a function so you have to return it .
+
+
+```

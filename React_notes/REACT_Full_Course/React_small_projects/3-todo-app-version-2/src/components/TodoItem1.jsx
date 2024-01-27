@@ -2,6 +2,8 @@ function TodoItem1() {
   let name = "Buy Milk";
   let date = "20/01/2024";
 
+  // The thing is we are hardcoding the data.
+
   return (
     <div className="container">
       <div className="row kg-row">
