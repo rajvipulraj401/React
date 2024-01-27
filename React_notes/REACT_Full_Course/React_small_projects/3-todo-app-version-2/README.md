@@ -194,7 +194,7 @@ export default TodoItem;
 
 ```
 
-##  `
+  `
    **What error I had?**
 
    *Answer:* The error I faced was that I was not rendering with the `map` method correctly. Also, inside the `map` method, there were multiple lines,
