@@ -1,0 +1,38 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.todo-container h1 {
+  font-weight: 700;
+  margin: 10px;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+/* .todo-container {
+  padding: 10px 0;
+} */
+
+input {
+  width: 100%;
+}
+
+.items-container {
+  text-align: left;
+}
+
+.kg-button {
+  width: 80px;
+
+  /* min-width: 100px; */
+}
+
+.kg-row {
+  margin: 20px 0;
+}
+
+.kg-col {
+  width: auto;
+}

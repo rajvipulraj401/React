@@ -305,4 +305,8 @@ ex--
 whenever we are applying a custom css . 
 we should use module css  in react application . 
 iska unique class name  hoga so isse name clash nahi hoga .
+
+
+
+`JO BHI CHIZ MULTIPLE MODULE ME DEFined  hai usko hum global css me chhor sakte hai baaki single file pe lagne wala css ko hum module.css file banakae daalenge`
 `
