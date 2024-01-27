@@ -194,8 +194,7 @@ export default TodoItem;
 
 ```
 
-  `
-   **What error I had?**
+  `   **What error I had?** `
 
    *Answer:* The error I faced was that I was not rendering with the `map` method correctly. Also, inside the `map` method, there were multiple lines,
     so I needed to use the `return` keyword and also include parentheses and fragments because there needs to be a parent div. Otherwise, 
@@ -203,7 +202,6 @@ export default TodoItem;
 
    Lastly, when I was rendering with the `map` method, I should have used `**Chrome DevTools**` to inspect the rendered elements and also used `console.log` 
    to see which styles are being applied and which are not. It's important to carefully review how I'm rendering the elements and anticipate what will happen.
-`
 
 `App.css---------------`
 
