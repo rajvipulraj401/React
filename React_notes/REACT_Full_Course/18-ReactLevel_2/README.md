@@ -316,13 +316,12 @@ In order to use it do the following steps .
 3. Create another file in component folder with name of the specific file where the css is applied .
 
 for example . _ 
- 	a ) if there is a file name with AppName.jsx and you have applied a style in that then .
 
+ 	a ) if there is a file name with AppName.jsx and you have applied a style in that then .
 	b) Create a file called AppName.module.css for that file specified styles.
 	c) paste all the styles there in that file .
 	d) In order to use the style now go to the AppName.jsx file and then there .
- PUT the reference of module.css which you created jsut now.
-
+ 		PUT the reference of module.css which you created jsut now.
 	e) Also import the styles which you made in the AppName.jsx file at top .
 
 
@@ -337,7 +336,7 @@ function AppName() {
 }
 export default AppName;
 
-// This is the way to export default ufunction in react .
+// This is the way to export default function in react .
 // Brother it is a function component so it is basically a function so you have to return it .
 
 
