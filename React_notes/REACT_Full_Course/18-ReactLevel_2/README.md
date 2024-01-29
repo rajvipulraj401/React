@@ -74,6 +74,7 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional1.png)
 
+
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional2.png)
 
@@ -130,11 +131,6 @@ Examples
 <Header title="My App" />
 
 
-### `App.jsx---`
-```jsx
-
-```
-
 
 ### `App.jsx---`
 ```jsx
@@ -166,26 +162,22 @@ export default App;
 ### `ErrorMessage.jsx---`
 ```jsx
 
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import FoodItems from "./components/FoodItems";
-import ErrorMessage from "./components/ErrorMessage";
-
-function App() {
-  // let foodItems =[];
-  let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+const ErrorMessage = ({ items }) => {
+  //   let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
 
   return (
     <>
-      <h1>Healthy Food</h1>
-      <ErrorMessage items={foodItems}></ErrorMessage>
-      <FoodItems groccery={foodItems} />
+      {items.length === 0 && <h3>I am still hungry.</h3>}
+      {/* This is optional chaining  so the thing after and operator will run 
+      if before and operator statement is true else it willnot run*/}
     </>
-  );
-}
 
-export default App;
+    // we are adding fragments because we are writing jsx code inside it that's why .
+  );
+};
+
+export default ErrorMessage;
+
 
 
 ```
