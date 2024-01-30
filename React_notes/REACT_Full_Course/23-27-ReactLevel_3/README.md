@@ -40,6 +40,9 @@ function Container (props){
 
 ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23-27-ReactLevel_3/food.png)
 
+```{r, echo=FALSE}
+knitr::include_graphics("https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23-27-ReactLevel_3/food.png")
+
 
 
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23-27-ReactLevel_3/food.png
