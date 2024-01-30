@@ -21,7 +21,7 @@ function Container (props){
  	     Container component.</p>
 <Container>
 
-
+```
 
 1. children is a special prop for passing elements into components.
 

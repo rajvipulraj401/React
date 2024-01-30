@@ -3,10 +3,7 @@
 # 1.What is React?
 
 
-![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/food.png)
-
-
-1.JavaScript library to build Dynamic
+1. JavaScript library to build Dynamic
 and interactive user interfaces
 
 2. Developed at Facebook in 2011.
