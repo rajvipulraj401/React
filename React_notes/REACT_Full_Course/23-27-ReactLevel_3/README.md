@@ -1,6 +1,6 @@
  # React Level 3 -
 
-# `Passing **Children** ________`
+# `Passing **Children** to a Component________`
 
 ```jsx
 
