@@ -1,0 +1,22 @@
+.buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-content: flex-start; */
+  /* margin-left: 60px;
+    width: 74%;
+    height: 70%;
+    padding: 10px 0; */
+}
+.button {
+  height: 45px;
+  width: 45px;
+  margin: 3px;
+  /* border: 1px solid black;
+        border-radius: 5px;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem; */
+  /* margin: 2px 10px; */
+}
