@@ -270,10 +270,6 @@ so the above App component when exported can be used like normal html tag.
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/jsx1.png)
 
 
-```{r, echo=FALSE}
-knitr::include_graphics("https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/jsx1.png")
-
-
 
 
 ## 13 .Exporting Components
