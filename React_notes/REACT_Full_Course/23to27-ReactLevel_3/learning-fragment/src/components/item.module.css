@@ -9,4 +9,6 @@
 
 .button {
   float: right;
+  /* this will  algin every button to right of its parent  (the list item is parent here
+  so it is to its right)*/
 }

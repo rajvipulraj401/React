@@ -17,12 +17,12 @@ function App() {
         <FoodItems groccery={foodItems} />
       </Container>
 
-      <Container>
+      {/* <Container>
         <p>
           Baby ,Why don't you eat it regualrly and see your body grow boy .You
           can do it . Healthy Mind in a Healthy Body
         </p>
-      </Container>
+      </Container> */}
     </>
   );
 }

@@ -141,6 +141,11 @@ export default App;
 5. Avoid inline arrow functions in JSX for performance.
 
 
+
+` Note - whenever we write  any **`onClick`** method THE `event` also gets passed 
+
+
+
 # `Passing **Functions via Props** -----`
 
 
