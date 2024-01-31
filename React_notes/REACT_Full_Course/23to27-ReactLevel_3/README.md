@@ -124,9 +124,9 @@ export default App;
 
 
 
-# `Handling Events .-----`
+# `Handling Events .-----` 
 
-
+ ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/food.png)
 `CLICK A SCREEN SHOT FROM THE YOUTUBE AND ATTACH IT HERE `
 
 
@@ -138,13 +138,198 @@ export default App;
 
 4. Use onChange for controlled form inputs.
 
-5. Avoid inline arrow functions in JSX for performance.
+5. Avoid inline arrow functions in JSX for performance. 
+for example
+
+```jsx
+import styles from "./FoodInput.module.css";
+
+const handleOnChange = (event) => {
+  console.log(event.target.value);
+  /* When we go inside event object in console there is target object inside it and then 
+    inside that there is a value property   */
+};
+
+const FoodInput = () => {
+  return (
+    <input
+      type="text"
+      placeholder="Enter Food Item here"
+      className={styles.foodInput}
+      onChange={handleOnChange}
+    />
+  );
+};
+
+export default FoodInput;
+
+```
 
 
 
-` Note - whenever we write  any **`onClick`** method THE `event` also gets passed 
+` Note - whenever we write  any **`onClick`** method THE `event` also gets passed  so WHenever we call onClick or any type of method which handles behaviour  `so in this case what react does is it by default creates a object of that event`  in which it has detail of  what event has happened.we can give it any name (event , e or d anything)`
 
 
+
+```jsx
+
+Item.jsx -----------------(filename)
+
+
+import styles from "./Item.module.css";
+const Item = ({ foods }) => {
+  // THIS IS THE props object
+
+  // const handleBuyButtonClicked = (foods) => {
+  const handleBuyButtonClicked = (event) => {
+    console.log(event);
+    // this will directly work also
+    console.log(`${foods} being bought`);
+    // yaha jsx curly bracket nahi dena pada javascript code dene pe kyunki
+    // ye function neeche call hoga aur wo sara code already {} curly bracket
+    // ke andar hi hai
+  };
+  return (
+    // <li className={`${styles["kg-item"]} list-group-item`}>
+    <li className={`list-group-item`}>
+      <span className={styles["kg-span"]}>{foods}</span>
+      <button
+        className={`${styles.button} btn btn-info`}
+        // handing click event in react
+        // onClick={() => handleBuyButtonClicked(foods)}
+        /*we were making anonymous method so that it doesn't get 
+          get immediately called*/
+
+        onClick={(event) => handleBuyButtonClicked(event)}
+        // event object
+
+        // now passing function reference
+
+        // note - if we are inside jsx and we have to write javascript thenwe will use {} but if we are inside {} only then we won't use another
+        // bracket.
+      >
+        Buy
+      </button>
+    </li>
+  );
+};
+
+export default Item;
+
+
+```
+
+```css
+
+item.module.css-------------(filename)
+
+.kg-item {
+  background-color: khaki;
+}
+
+.kg-span {
+  font-weight: 500;
+  color: orangered;
+}
+
+.button {
+  float: right;
+  /* this will  algin every button to right of its parent  (the list item is parent here
+  so it is to its right)*/
+}
+
+
+```
+
+```jsx
+App.jsx------
+
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import FoodItems from "./components/FoodItems";
+import ErrorMessage from "./components/ErrorMessage";
+import Container from "./components/container";
+import FoodInput from "./components/FoodInput";
+
+function App() {
+  // let foodItems =[];
+  let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
+  return (
+    <>
+      <Container asdf="asdfff">
+        <h1 className="food-heading">Healthy Food</h1>
+        <FoodInput />
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItems groccery={foodItems} />
+      </Container>
+
+      {/* <Container>
+        <p>
+          Baby ,Why don't you eat it regualrly and see your body grow boy .You
+          can do it . Healthy Mind in a Healthy Body
+        </p>
+      </Container> */}
+    </>
+  );
+}
+
+export default App;
+
+
+```
+
+```jsx
+
+
+FoodInput.jsx------------
+
+
+
+import styles from "./FoodInput.module.css";
+
+const handleOnChange = (event) => {
+  console.log(event.target.value);
+  /* When we go inside event object in console there is target object inside it and then 
+    inside that there is a value property   */
+};
+
+const FoodInput = () => {
+  return (
+    <input
+      type="text"
+      placeholder="Enter Food Item here"
+      className={styles.foodInput}
+      onChange={handleOnChange}
+    />
+  );
+};
+
+export default FoodInput;
+
+
+```
+
+```css
+
+FoodInput.module.css-------------------
+
+.foodInput {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+
+```
+
+
+## syntheticBaseEvent - 
+
+`This is not normal base event . It is special react event .`synthetic Event` what it does is  it is different for different different devices (phone , laptop , computer)`
+
+  
 
 # `Passing **Functions via Props** -----`
 

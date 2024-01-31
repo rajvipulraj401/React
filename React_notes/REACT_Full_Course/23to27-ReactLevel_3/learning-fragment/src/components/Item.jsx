@@ -3,9 +3,13 @@ const Item = ({ foods }) => {
   // THIS IS THE props object
 
   // const handleBuyButtonClicked = (foods) => {
-  const handleBuyButtonClicked = () => {
+  const handleBuyButtonClicked = (event) => {
+    console.log(event);
     // this will directly work also
     console.log(`${foods} being bought`);
+    // yaha jsx curly bracket nahi dena pada javascript code dene pe kyunki
+    // ye function neeche call hoga aur wo sara code already {} curly bracket
+    // ke andar hi hai
   };
   return (
     // <li className={`${styles["kg-item"]} list-group-item`}>
@@ -18,7 +22,8 @@ const Item = ({ foods }) => {
         /*we were making anonymous method so that it doesn't get 
           get immediately called*/
 
-        onClick={handleBuyButtonClicked}
+        onClick={(event) => handleBuyButtonClicked(event)}
+        // event object
 
         // now passing function reference
 
