@@ -2,6 +2,10 @@
 
 # `Passing **Children** to a Component________`
 
+
+### Suppose we want to use pop up (container) something which doesn't care what text or data is inside it . we just need to have basic layout for that . so for this we will use passing children to a  component. (and we will pass all the text or tag inside that it for example see below)👇🏼👇🏼
+
+
 ```jsx
 
 function Container (props){
@@ -40,6 +44,77 @@ function Container (props){
 
 ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/food.png)
 
+
+
+ `container.jsx----------`
+```jsx
+
+
+import styles from "./Container.module.css";
+
+// const Container = (props) => {
+const Container = ({ children, asdf }) => {
+  //   return <div className={styles.container}>{props.children}</div>;
+  return <div className={styles.container}>{children}</div>;
+};
+
+export default Container;
+
+```
+
+`conatiner.module.css---`
+
+```css
+
+.container {
+  border: 1px solid black;
+  margin: 15px;
+  width: 50%;
+  min-width: 300px;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+}
+
+
+```
+`App.jsx-------------`
+
+```jsx
+
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import FoodItems from "./components/FoodItems";
+import ErrorMessage from "./components/ErrorMessage";
+import Container from "./components/container";
+
+function App() {
+  // let foodItems =[];
+  let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
+  return (
+    <>
+      <Container asdf="asdfff">
+        <h1 className="food-heading">Healthy Food</h1>
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItems groccery={foodItems} />
+      </Container>
+
+      <Container>
+        <p>
+          Baby ,Why don't you eat it regualrly and see your body grow boy .You
+          can do it . Healthy Mind in a Healthy Body
+        </p>
+      </Container>
+    </>
+  );
+}
+
+export default App;
+
+
+```
 
 ##  `Note---`
 
