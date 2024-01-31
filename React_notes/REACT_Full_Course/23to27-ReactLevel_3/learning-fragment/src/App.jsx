@@ -9,22 +9,23 @@ import FoodInput from "./components/FoodInput";
 function App() {
   // let foodItems =[];
   let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+  let textToShow = "Food Item Entered by user";
+
+  const handleOnChange = (event) => {
+    console.log(event.target.value);
+    /* When we go inside event object in console there is target object inside it and then 
+      inside that there is a value property   */
+    textToShow = event.target.value;
+  };
 
   return (
     <>
-      <Container asdf="asdfff">
+      <Container>
         <h1 className="food-heading">Healthy Food</h1>
-        <FoodInput />
+        <FoodInput handleOnChange={handleOnChange} />
         <ErrorMessage items={foodItems}></ErrorMessage>
         <FoodItems groccery={foodItems} />
       </Container>
-
-      {/* <Container>
-        <p>
-          Baby ,Why don't you eat it regualrly and see your body grow boy .You
-          can do it . Healthy Mind in a Healthy Body
-        </p>
-      </Container> */}
     </>
   );
 }

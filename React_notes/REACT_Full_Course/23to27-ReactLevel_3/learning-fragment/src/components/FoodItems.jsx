@@ -5,7 +5,11 @@ const FoodItems = ({ groccery }) => {
   return (
     <ul className="list-group">
       {groccery.map((item) => (
-        <Item key={item} foods={item} />
+        <Item
+          key={item}
+          foods={item}
+          handleBuyButton={() => console.log(`${item} bought`)}
+        />
         // Passing the 'foods' prop to the 'Item' component.
         // Note: 'foodItem' will be accessible within 'Item' component via the 'props' object.
         // (props is just the name you can have any name)

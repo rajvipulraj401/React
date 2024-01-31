@@ -1,4 +1,4 @@
- #--------------- React Level 3 ----------------
+ # --------------- React Level 3 ----------------
 
 # `Passing **Children** to a Component by using child props________`
 
@@ -328,6 +328,8 @@ export default FoodInput;
 # `Passing **Functions** via Props** -----`
 
 
+ ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/props.png)
+
 1. Pass dynamic behaviour between components.
 
 2. Enables upward communication from child to parent.
@@ -336,20 +338,234 @@ export default FoodInput;
 
 4. Parent defines a function, child invokes it.
 
-5. Enhances component interactivity.
+5. `Enhances component interactivity.`
 
 6. Example:
 <Button onClick={handleClick} />
 
 
-NOTE -------------------KHUD KA NOTES LIKHO AISE SAMGH ME NAHI AAYEGA..........???????????????🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣
+
+`items.jsx----`
+```jsx
+
+import styles from "./Item.module.css";
+const Item = ({ foods, handleBuyButton }) => {
+  // THIS IS THE props object
+
+  // const handleBuyButtonClicked = (foods) => {
+  const handleBuyButtonClicked = (event) => {
+    console.log(event);
+    // this will directly work also
+    console.log(`${foods} being bought`);
+    // yaha jsx curly bracket nahi dena pada javascript code dene pe kyunki
+    // ye function neeche call hoga aur wo sara code already {} curly bracket
+    // ke andar hi hai
+  };
+  return (
+    // <li className={`${styles["kg-item"]} list-group-item`}>
+    <li className={`list-group-item`}>
+      <span className={styles["kg-span"]}>{foods}</span>
+      <button
+        className={`${styles.button} btn btn-info`}
+        // handing click event in react
+        // onClick={() => handleBuyButtonClicked(foods)}
+        /*we were making anonymous method so that it doesn't get 
+          get immediately called*/
+
+        onClick={handleBuyButton}
+        // event object
+
+        // now passing function reference
+
+        // note - if we are inside jsx and we have to write javascript thenwe will use {} but if we are inside {} only then we won't use another
+        // bracket.
+      >
+        Buy
+      </button>
+    </li>
+  );
+};
+
+export default Item;
+
+
+```
+
+
+`FoodItems.jsx---`
+
+```jsx
+
+import Item from "./Item";
+// let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
+const FoodItems = ({ groccery }) => {
+  return (
+    <ul className="list-group">
+      {groccery.map((item) => (
+        <Item
+          key={item}
+          foods={item}
+          handleBuyButton={() => console.log(`${item} bought`)}
+        />
+        // Passing the 'foods' prop to the 'Item' component.
+        // Note: 'foodItem' will be accessible within 'Item' component via the 'props' object.
+        // (props is just the name you can have any name)
+
+        // we have to wrte item inside curly bracketbecause it is jsx code
+        // else the browser will interpret it as text and not the variable.
+
+        // NOTE 2 - Ensure each component in the list has a unique "key" prop, required by React for efficient updates.
+      ))}
+    </ul>
+  );
+};
+
+export default FoodItems;
+
+// how we pass props
+
+/* 
+We pass as an attribute .
+examples - <Header title = "My App"/>*/
+
+
+```
+
+
+`FoodInput.jsx--------`
+
+```jsx
+
+import styles from "./FoodInput.module.css";
+
+const FoodInput = ({ handleOnChange }) => {
+  return (
+    <input
+      type="text"
+      placeholder="Enter Food Item here"
+      className={styles.foodInput}
+      onChange={handleOnChange}
+    />
+  );
+};
+
+export default FoodInput;
+
+```
+
+```jsx
+
+
+```
+
+`App.jsx---------`
+
+```jsx
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import FoodItems from "./components/FoodItems";
+import ErrorMessage from "./components/ErrorMessage";
+import Container from "./components/container";
+import FoodInput from "./components/FoodInput";
+
+function App() {
+  // let foodItems =[];
+  let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+  let textToShow = "Food Item Entered by user";
+
+  const handleOnChange = (event) => {
+    console.log(event.target.value);
+    /* When we go inside event object in console there is target object inside it and then 
+      inside that there is a value property   */
+    textToShow = event.target.value;
+  };
+
+  return (
+    <>
+      <Container>
+        <h1 className="food-heading">Healthy Food</h1>
+        <FoodInput handleOnChange={handleOnChange} />
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItems groccery={foodItems} />
+      </Container>
+    </>
+  );
+}
+
+export default App;
+```
+
+
+```jsx
+
+
+```
+
+
+What we actually want is `we want to write all the logics in parent and in small components we just want to show ui`  ,so what we want is that our parent component which is bringing the data that should only know where to add data where to change data.how to add data how to delete data (so parent will pass behaviour along with props) and the small components duties will be to show the things correctly and add the behaviour and call the behaviour at right time.
+
+
+ and this goes to multiple level for example
+
+
+A -> B -> C-> (the behaviour which one parent is passing to other that parent also don't know about the behaviour it is getting data from its parent and that is getting from its own parent. so this way it can go on to multiple level .
+
+
+
+## What is the problem we got here??? and what will solve it .
+
+Answer - we change the value but this doesn't paint .  
+`So we have to know that this app component is function and each time it is reloaded textToShow value is assigned eventhough we are changing textToShow value internally but it is still not reflecting as props are immutable in order to change it you have to use state (do state management). AS we cannot change props variable. because our component is stateless.
+
+```jsx
+
+function App() {
+  // let foodItems =[];
+  let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+  let textToShow = "Food Item Entered by user";
+
+  const handleOnChange = (event) => {
+    console.log(event.target.value);
+    /* When we go inside event object in console there is target object inside it and then 
+      inside that there is a value property   */
+    textToShow = event.target.value;
+  };
+
+  return (
+    <>
+      <Container>
+        <h1 className="food-heading">Healthy Food</h1>
+        <FoodInput handleOnChange={handleOnChange} />
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItems groccery={foodItems} />
+      </Container>
+    </>
+  );
+}
+
+
+```
+
+ so , In order to use it we have to use state 
 
 
 
 
 
 
-# `Managing **State**-------------`
+
+
+
+
+
+
+
+
+
+
+# **`Managing  State`**-------------
 
 
 

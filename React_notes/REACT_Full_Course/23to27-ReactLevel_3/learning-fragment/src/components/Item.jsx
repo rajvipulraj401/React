@@ -1,5 +1,5 @@
 import styles from "./Item.module.css";
-const Item = ({ foods }) => {
+const Item = ({ foods, handleBuyButton }) => {
   // THIS IS THE props object
 
   // const handleBuyButtonClicked = (foods) => {
@@ -22,7 +22,7 @@ const Item = ({ foods }) => {
         /*we were making anonymous method so that it doesn't get 
           get immediately called*/
 
-        onClick={(event) => handleBuyButtonClicked(event)}
+        onClick={handleBuyButton}
         // event object
 
         // now passing function reference
