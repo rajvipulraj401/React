@@ -1,4 +1,4 @@
- # React Level 3 -
+ #--------------- React Level 3 ----------------
 
 # `Passing **Children** to a Component by using child props________`
 
@@ -124,10 +124,9 @@ export default App;
 
 
 
-# `Handling Events .-----` 
+# `-------- Handling Events ------` 
 
- ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/food.png)
-`CLICK A SCREEN SHOT FROM THE YOUTUBE AND ATTACH IT HERE `
+ ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/Handling.png)
 
 
 1. React events use camelCase, e.g., onClick.
@@ -139,7 +138,7 @@ export default App;
 4. Use onChange for controlled form inputs.
 
 5. Avoid inline arrow functions in JSX for performance. 
-for example
+for example 👇🏼👇🏼👇🏼
 
 ```jsx
 import styles from "./FoodInput.module.css";
@@ -167,15 +166,13 @@ export default FoodInput;
 
 
 
-` Note - whenever we write  any **`onClick`** method THE `event` also gets passed  so WHenever we call onClick or any type of method which handles behaviour  `so in this case what react does is it by default creates a object of that event`  in which it has detail of  what event has happened.we can give it any name (event , e or d anything)`
+` Note - whenever we write  any **`onClick`** method THE `event` also gets passed  so WHenever we call onClick or any type of method which handles behaviour  `so in this case what react does is that  it by default creates a object of that event`  in which it has detail of  what event has happened.we can give it any name (event , e or d anything)`
 
 
+
+`Item.jsx -----------------(filename)`
 
 ```jsx
-
-Item.jsx -----------------(filename)
-
-
 import styles from "./Item.module.css";
 const Item = ({ foods }) => {
   // THIS IS THE props object
@@ -219,9 +216,9 @@ export default Item;
 
 ```
 
+`item.module.css-------------`
 ```css
 
-item.module.css-------------(filename)
 
 .kg-item {
   background-color: khaki;
@@ -280,12 +277,10 @@ export default App;
 
 ```
 
+`FoodInput.jsx------------`
+
+
 ```jsx
-
-
-FoodInput.jsx------------
-
-
 
 import styles from "./FoodInput.module.css";
 
@@ -310,10 +305,9 @@ export default FoodInput;
 
 
 ```
+`FoodInput.module.css-------------------`
 
 ```css
-
-FoodInput.module.css-------------------
 
 .foodInput {
   width: 100%;
@@ -325,13 +319,13 @@ FoodInput.module.css-------------------
 ```
 
 
-## syntheticBaseEvent - 
+## synthetic Base Event - 
 
 `This is not normal base event . It is special react event .`synthetic Event` what it does is  it is different for different different devices (phone , laptop , computer)`
 
   
 
-# `Passing **Functions via Props** -----`
+# `Passing **Functions** via Props** -----`
 
 
 1. Pass dynamic behaviour between components.
