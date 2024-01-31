@@ -1,6 +1,6 @@
  # React Level 3 -
 
-# `Passing **Children** to a Component________`
+# `Passing **Children** to a Component by using child props________`
 
 
 ### Suppose we want to use pop up (container) something which doesn't care what text or data is inside it . we just need to have basic layout for that . so for this we will use passing children to a  component. (and we will pass all the text or tag inside that it for example see below)👇🏼👇🏼
@@ -118,11 +118,7 @@ export default App;
 
 ##  `Note---`
 
-### By use of child props we can send any components inside it  as children and then render it accordingly.
-
-
-
-NOTE -------------------KHUD KA NOTES LIKHO AISE SAMGH ME NAHI AAYEGA..........???????????????🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣
+### By use of child props we can send any components inside it  as children and whoever will take it as children props can use it by using `props.children or directly by destructuring it` and then render it accordingly.
 
 
 
@@ -160,6 +156,10 @@ NOTE -------------------KHUD KA NOTES LIKHO AISE SAMGH ME NAHI AAYEGA..........?
 
 6. Example:
 <Button onClick={handleClick} />
+
+
+NOTE -------------------KHUD KA NOTES LIKHO AISE SAMGH ME NAHI AAYEGA..........???????????????🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣
+
 
 
 
