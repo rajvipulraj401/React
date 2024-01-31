@@ -1,55 +1,41 @@
- # --------------- React Level 3 ----------------
+# --------------- React Level 3 ----------------
 
-# `Passing **Children** to a Component by using child props________`
+# 23 `Passing **Children** to a Component by using child props________`
 
-
-### Suppose we want to use pop up (container) something which doesn't care what text or data is inside it . we just need to have basic layout for that . so for this we will use passing children to a  component. (and we will pass all the text or tag inside that it for example see below)👇🏼👇🏼
-
+### Suppose we want to use pop up (container) something which doesn't care what text or data is inside it . we just need to have basic layout for that . so for this we will use passing children to a component. (and we will pass all the text or tag inside that it for example see below)👇🏼👇🏼
 
 ```jsx
-
-function Container (props){
-   return (
-       <div className = "container-style">
-	{props.children}
-        </div>
-     );
+function Container(props) {
+  return <div className="container-style">{props.children}</div>;
 }
-
 ```
 
 ```jsx
 <Container>
 	<h1> Welcome to My App </h1>
-	<p>This content is passed as children to the 
+	<p>This content is passed as children to the
  	     Container component.</p>
 <Container>
 
 ```
 
-1. children is a special prop for passing elements into components.
+1. `children is a special prop for passing elements into components.``
 
 2. Used for flexible and reusable component designs.
 
-3. Common in layout or container components.
+3. Common in layout or **container components.**
 
-4. Accessed with props.children.
+4. Accessed with props.children. we can even destructure the props object and use it.
 
 5. Can be any content: strings, numbers, JSX, or components.
 
 6. Enhances component composability and reusability.
 
-
-
-
 ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/food.png)
 
+`container.jsx----------`
 
-
- `container.jsx----------`
 ```jsx
-
-
 import styles from "./Container.module.css";
 
 // const Container = (props) => {
@@ -59,13 +45,11 @@ const Container = ({ children, asdf }) => {
 };
 
 export default Container;
-
 ```
 
 `conatiner.module.css---`
 
 ```css
-
 .container {
   border: 1px solid black;
   margin: 15px;
@@ -75,13 +59,11 @@ export default Container;
   padding: 15px;
   text-align: center;
 }
-
-
 ```
+
 `App.jsx-------------`
 
 ```jsx
-
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -112,33 +94,26 @@ function App() {
 }
 
 export default App;
-
-
 ```
 
-##  `Note---`
+## `Note---`
 
-### By use of child props we can send any components inside it  as children and whoever will take it as children props can use it by using `props.children or directly by destructuring it` and then render it accordingly.
+### By use of child props we can send any components inside it as children and whoever will take it as children props can use it by using `props.children or directly by destructuring it` and then render it accordingly.
 
+# 24 `-------- Handling Events ------`
 
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/Handling.png)
 
+1. React events use **camelCase, e.g., onClick.**
 
-
-# `-------- Handling Events ------` 
-
- ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/Handling.png)
-
-
-1. React events use camelCase, e.g., onClick.
-
-2. Uses synthetic events, not direct browser events.
+2. Uses `synthetic events,`` not direct browser events.
 
 3. Event handlers can be functions or arrow functions.
 
 4. Use onChange for controlled form inputs.
 
-5. Avoid inline arrow functions in JSX for performance. 
-for example 👇🏼👇🏼👇🏼
+5. `Avoid inline arrow functions in JSX for performance.``
+   for example 👇🏼👇🏼👇🏼
 
 ```jsx
 import styles from "./FoodInput.module.css";
@@ -161,14 +136,9 @@ const FoodInput = () => {
 };
 
 export default FoodInput;
-
 ```
 
-
-
-` Note - whenever we write  any **`onClick`** method THE `event` also gets passed  so WHenever we call onClick or any type of method which handles behaviour  `so in this case what react does is that  it by default creates a object of that event`  in which it has detail of  what event has happened.we can give it any name (event , e or d anything)`
-
-
+` Note - whenever we write  any **`onClick`** method THE `event`also gets passed  so WHenever we call onClick or any type of method which handles behaviour `so in this case what react does is that it by default creates a object of that event`  in which it has detail of  what event has happened.we can give it any name (event , e or d anything)`
 
 `Item.jsx -----------------(filename)`
 
@@ -212,14 +182,11 @@ const Item = ({ foods }) => {
 };
 
 export default Item;
-
-
 ```
 
 `item.module.css-------------`
+
 ```css
-
-
 .kg-item {
   background-color: khaki;
 }
@@ -234,8 +201,6 @@ export default Item;
   /* this will  algin every button to right of its parent  (the list item is parent here
   so it is to its right)*/
 }
-
-
 ```
 
 ```jsx
@@ -279,9 +244,7 @@ export default App;
 
 `FoodInput.jsx------------`
 
-
 ```jsx
-
 import styles from "./FoodInput.module.css";
 
 const handleOnChange = (event) => {
@@ -302,52 +265,42 @@ const FoodInput = () => {
 };
 
 export default FoodInput;
-
-
 ```
+
 `FoodInput.module.css-------------------`
 
 ```css
-
 .foodInput {
   width: 100%;
   padding: 5px;
   margin: 10px 0px;
 }
-
-
 ```
 
-
-## synthetic Base Event - 
+## synthetic Base Event -
 
 `This is not normal base event . It is special react event .`synthetic Event` what it does is  it is different for different different devices (phone , laptop , computer)`
 
-  
+# 25 `Passing Functions via Props -----`
 
-# `Passing **Functions** via Props** -----`
-
-
- ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/props.png)
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/props.png)
 
 1. Pass dynamic behaviour between components.
 
-2. Enables upward communication from child to parent.
+2. `Enables upward communication from child to parent.`
 
 3. Commonly used for event handling.
 
-4. Parent defines a function, child invokes it.
+4. **Parent defines a function, child invokes it.**
 
 5. `Enhances component interactivity.`
 
 6. Example:
-<Button onClick={handleClick} />
-
-
+   <Button onClick={handleClick} />
 
 `items.jsx----`
-```jsx
 
+```jsx
 import styles from "./Item.module.css";
 const Item = ({ foods, handleBuyButton }) => {
   // THIS IS THE props object
@@ -387,15 +340,11 @@ const Item = ({ foods, handleBuyButton }) => {
 };
 
 export default Item;
-
-
 ```
-
 
 `FoodItems.jsx---`
 
 ```jsx
-
 import Item from "./Item";
 // let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
 
@@ -428,15 +377,11 @@ export default FoodItems;
 /* 
 We pass as an attribute .
 examples - <Header title = "My App"/>*/
-
-
 ```
-
 
 `FoodInput.jsx--------`
 
 ```jsx
-
 import styles from "./FoodInput.module.css";
 
 const FoodInput = ({ handleOnChange }) => {
@@ -451,11 +396,9 @@ const FoodInput = ({ handleOnChange }) => {
 };
 
 export default FoodInput;
-
 ```
 
 ```jsx
-
 
 ```
 
@@ -497,30 +440,22 @@ function App() {
 export default App;
 ```
 
-
 ```jsx
-
 
 ```
 
+What we actually want is `we want to write all the logics in parent and in small components we just want to show ui` ,so what we want is that our parent component which is bringing the data that should only know where to add data where to change data.how to add data how to delete data (so parent will pass behaviour along with props) and the small components duties will be to show the things correctly and add the behaviour and call the behaviour at right time.
 
-What we actually want is `we want to write all the logics in parent and in small components we just want to show ui`  ,so what we want is that our parent component which is bringing the data that should only know where to add data where to change data.how to add data how to delete data (so parent will pass behaviour along with props) and the small components duties will be to show the things correctly and add the behaviour and call the behaviour at right time.
-
-
- and this goes to multiple level for example
-
+and this goes to multiple level for example
 
 A -> B -> C-> (the behaviour which one parent is passing to other that parent also don't know about the behaviour it is getting data from its parent and that is getting from its own parent. so this way it can go on to multiple level .
-
-
 
 ## What is the problem we got here??? and what will solve it .
 
 Answer - we change the value but this doesn't paint .  
-`So we have to know that this app component is function and each time it is reloaded textToShow value is assigned eventhough we are changing textToShow value internally but it is still not reflecting as props are immutable in order to change it you have to use state (do state management). AS we cannot change props variable. because our component is stateless.
+`So we have to know that this app component is function and each time it is reloaded textToShow value is assigned eventhough we are changing textToShow value internally but it is still not reflecting as props are immutable in order to change it you have to use state (do state management). AS we cannot change props variable. because our component is stateless. SO WE HAVE TO add state`
 
 ```jsx
-
 function App() {
   // let foodItems =[];
   let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
@@ -544,30 +479,11 @@ function App() {
     </>
   );
 }
-
-
 ```
 
- so , In order to use it we have to use state 
+so , In order to use it we have to use state
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# **`Managing  State`**-------------
-
-
+# 26 **`Managing  State`**-------------
 
 1. State represents `data that changes over time.`
 
@@ -584,28 +500,11 @@ function App() {
 7. Parent components can pass state down to children via props.
 
 8. Lifting state up: share state between components by moving it to their
-closest common ancestor.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   closest common ancestor.
 
 # `State vs Props -------`
 
-
-
-## State: 
+## State:
 
 • Local and mutable data within a component.
 
@@ -616,7 +515,6 @@ closest common ancestor.
 • Causes re-render when updated.
 
 • Managed using useState in functional components.
-
 
 ## Props:
 
