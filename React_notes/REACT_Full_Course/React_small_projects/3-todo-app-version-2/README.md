@@ -196,7 +196,7 @@ export default TodoItem;
 
   `   **What error I had?** `
 
-   *Answer:* The error I faced was that I was not rendering with the `map` method correctly. Also, inside the `map` method, there were multiple lines,
+   *Answer:* The error I faced was that I was not rendering with the `map` method incorrectly. Also, inside the `map` method, there were multiple lines,
     so I needed to use the `return` keyword and also include parentheses and fragments because there needs to be a parent div. Otherwise, 
     we cannot return so many divs from a function (whether it's inside a `map` method or elsewhere).
 
