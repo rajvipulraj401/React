@@ -526,28 +526,153 @@ so , In order to use it we have to use state
 ### Conclusion:
 Understanding the need for state management in React is crucial for building dynamic and interactive applications. In situations where data needs to change over time and reflect those changes in the UI, state management provides the mechanism to achieve this. In your case, incorporating state management using `useState` hook will allow you to update `textToShow` dynamically and reflect those changes in the UI.
 
+
+Now what we want.
+
+## we want two things :-
+
+`1) we want  that our app Component can save the value of textToShow and
+
+2) we want between re-renders the value of textToShow doesnot reset whatever value we set at last it keeps like that . `
+
 # 26 **`Managing  State`**-------------
+
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/state.png)
+
+
+
+
 
 1. State represents `data that changes over time.`
 
 2. State is local and private to the component.
+(state is associated with a particular component)
 
 3. **State changes cause the component to re-render.**
+  -> cause state change means that you changed a value and you have created your ui on the basis of that value or you have passed it to a child component. `IN both case it executes our function again and  it doesnot do assignment of that value again we will get our value back whatever changed has happened at last time .`
+
+`Understanding State Changes and Component Re-renders
+
+State changes trigger component re-renders: Whenever a component's state changes in React, it initiates a process known as re-rendering. This means that React automatically updates the user interface to reflect the latest state values.
+
+Function re-execution during re-renders: During a re-render, React re-runs the entire component function, including any logic or JSX rendering defined within it. This ensures that the UI always reflects the most up-to-date state values.
+
+Automatic state value updates: React handles state updates internally, ensuring that the most recent state values are readily available within the component function during re-renders. There's no need for manual reassignment of state values; React takes care of it behind the scenes.
+
+By understanding how state changes trigger component re-renders, developers can create dynamic and responsive user interfaces with React effortlessly.`
 
 4. For functional components, use the useState hook.
+ 
+NOTE -`Hooks are special type of component that has been created by react we can also create our own hook .` .
 
 5. React Functions that start with word use are called hooks
 
-6. `Hooks should only be used inside components`
+6. `Hooks should only be used inside components not on normal codes like any javascript functions`
 
 7. Parent components can pass state down to children via props.
 
 8. Lifting state up: share state between components by moving it to their
    closest common ancestor.
 
-```jsx
+
+
+## useState hook -------
+
+-> **Whenever we use useState hook it always returns an array which have two elements inside it.**
+
+ -> 1st element -- `current value of our state`
+ -> 2nd element -- ` A method through which we can change or edit our current value  `
+
+example 
+
+```jsx 
+
+import {useState} from "react";
+
+let textStateArr = useState();
+let textStateVal = textStateArr[0]; //This gives current val
+let setTextState = textStateArr[1]; // This gives a method through which we can change that value .
 
 ```
+So , what we can do is if we want to use any value as the current value we can set it as . this and also pass the initial value in useState hook see below 👇🏼👇🏼
+  
+```jsx
+
+import {useState} from "react";
+
+let textStateArr = useState("Food Item Entered by user");
+let textToShow = textStateArr[0]; //This gives current val
+let setTextState = textStateArr[1]; // This gives a method through which we can change that value 
+
+
+// in order to change it 
+
+const handleOnChange = (event )=>{
+	console.log(event.target.value);
+	//textToShow = event.target.value;
+	setTextState(event.target.value);
+};
+
+
+```
+
+`So what we are saying above is that Declare my state whose initial value is "Food Item Entered by user".`
+
+`In order to change it what we are doing instead of setting textToShow value to event.target.value we pass it to setTextState method in order to set it using useState hook`
+
+
+
+
+Certainly! Here's a refined version of your notes without removing any content:
+
+---
+
+## useState Hook
+
+- **Return Values**: The `useState` hook always returns an array with two elements.
+  - The first element represents the current value of the state.
+  - The second element is a function that allows us to change or update the current value of the state.
+
+Example:
+```jsx 
+import { useState } from "react";
+
+let textStateArr = useState();
+let textStateVal = textStateArr[0]; // This provides the current value
+let setTextState = textStateArr[1]; // This provides a method to update the value
+```
+
+- **Array Destructuring**: To enhance readability, we can use array destructuring to directly assign the elements of the array returned by `useState` to variables.
+  
+Example:
+```jsx 
+import { useState } from "react";
+
+const [textToShow, setTextState] = useState("Food Item Entered by user");
+```
+
+- **Initial State Value**: We can pass an initial value to `useState` as an argument. This initial value is used during the first render, and subsequent renders use the current state value.
+
+Example:
+```jsx 
+import { useState } from "react";
+
+const [textToShow, setTextState] = useState("Food Item Entered by user");
+```
+
+- **Updating State**: To update the state value, we use the updater function provided by `useState`. This function accepts a new value as its argument and triggers a re-render to reflect the updated state in the UI.
+
+Example:
+```jsx 
+const handleOnChange = (event) => {
+  setTextState(event.target.value); // Update state value
+};
+```
+
+By following these conventions, we can effectively manage state within functional components using the `useState` hook, enabling dynamic updates to the UI based on changes in state.
+
+---
+
 
 # `State vs Props -------`
 
