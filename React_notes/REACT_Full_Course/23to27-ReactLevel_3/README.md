@@ -531,15 +531,11 @@ Now what we want.
 
 ## we want two things :-
 
-`1) we want  that our app Component can save the value of textToShow and
+1) we want  that our app Component can save the value of textToShow and
 
-2) we want between re-renders the value of textToShow doesnot reset whatever value we set at last it keeps like that . `
+2) we want between re-renders the value of textToShow doesnot reset whatever value we set at last it keeps like that . 
 
 # 26 **`Managing  State`**-------------
-
-![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/state.png)
-
-
 
 
 
@@ -622,8 +618,11 @@ const handleOnChange = (event )=>{
 
 
 
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/23to27-ReactLevel_3/state.png)
 
-Certainly! Here's a refined version of your notes without removing any content:
+
+
+
 
 ---
 
