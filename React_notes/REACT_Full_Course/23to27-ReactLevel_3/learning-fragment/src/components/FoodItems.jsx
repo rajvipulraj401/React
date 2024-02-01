@@ -1,23 +1,29 @@
+import { useState } from "react";
 import Item from "./Item";
 // let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
 
 const FoodItems = ({ groccery }) => {
+  let [activeItems, setActiveItems] = useState([]);
+
+  let onBuyButton = (item, event) => {
+    let newItems = [...activeItems, item];
+    // jo button item wala click hua usko active items me daal do
+    setActiveItems(newItems);
+  };
+
   return (
     <ul className="list-group">
       {groccery.map((item) => (
         <Item
           key={item}
           foods={item}
-          handleBuyButton={() => console.log(`${item} bought`)}
+          bought={activeItems.includes(item)}
+          // handleBuyButton={(clicke) => onBuyButton(item, clicke)}
+          handleBuyButton={(clicke) => {
+            console.log(clicke);
+            onBuyButton(item, clicke);
+          }}
         />
-        // Passing the 'foods' prop to the 'Item' component.
-        // Note: 'foodItem' will be accessible within 'Item' component via the 'props' object.
-        // (props is just the name you can have any name)
-
-        // we have to wrte item inside curly bracketbecause it is jsx code
-        // else the browser will interpret it as text and not the variable.
-
-        // NOTE 2 - Ensure each component in the list has a unique "key" prop, required by React for efficient updates.
       ))}
     </ul>
   );

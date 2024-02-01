@@ -570,7 +570,8 @@ NOTE -`Hooks are special type of component that has been created by react we can
 8. Lifting state up: share state between components by moving it to their
    closest common ancestor.
 
-
+we have to keep the state at that point where all other component doesn't need to re - render so in turn it will give less load to browser(less work for browser). and also above the components which are going to use that state. 
+As props can only be send from parents to child .Hence pulling the state up.
 
 ## useState hook -------
 
@@ -599,7 +600,7 @@ import {useState} from "react";
 let textStateArr = useState("Food Item Entered by user");
 let textToShow = textStateArr[0]; //This gives current val
 let setTextState = textStateArr[1]; // This gives a method through which we can change that value 
-
+console.log(`Current value of textState:${textToShow}`);
 
 // in order to change it 
 
@@ -669,6 +670,166 @@ const handleOnChange = (event) => {
 ```
 
 By following these conventions, we can effectively manage state within functional components using the `useState` hook, enabling dynamic updates to the UI based on changes in state.
+
+
+
+`App.jsx------------`
+
+
+```jsx
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import FoodItems from "./components/FoodItems";
+import ErrorMessage from "./components/ErrorMessage";
+import Container from "./components/container";
+import FoodInput from "./components/FoodInput";
+
+function App() {
+  // let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
+  let [foodItems, setFoodItems] = useState([
+    /*"salad",
+    "Green Vegetable",
+    "Roti",*/
+  ]);
+
+  // let textToShow = "Food Item Entered by user";
+
+  const onKeyDown = (event) => {
+    if (event.key === "Enter") {
+      let newFoodItem = event.target.value;
+      event.target.value = "";
+      // This will clean the input value of the input text which i have written in the input field.
+
+      let newItems = [...foodItems, newFoodItem];
+      setFoodItems(newItems);
+      console.log("Food value entered is " + newFoodItem);
+    }
+    /* When we go inside event object in console there is target object inside it and then 
+      inside that there is a value property   */
+    // console.log(event.target.value);
+    // textToShow = event.target.value;
+  };
+
+  return (
+    <>
+      <Container>
+        <h1 className="food-heading">Healthy Food</h1>
+        <FoodInput handleKeyDown={onKeyDown} />
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItems groccery={foodItems} />
+      </Container>
+    </>
+  );
+}
+
+export default App;
+
+
+```
+
+
+`FoodItems.jsx----------------`
+
+```jsx
+import { useState } from "react";
+import Item from "./Item";
+// let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
+const FoodItems = ({ groccery }) => {
+  let [activeItems, setActiveItems] = useState([]);
+
+  let onBuyButton = (item, event) => {
+    let newItems = [...activeItems, item];
+    // jo button item wala click hua usko active items me daal do
+    setActiveItems(newItems);
+  };
+
+  return (
+    <ul className="list-group">
+      {groccery.map((item) => (
+        <Item
+          key={item}
+          foods={item}
+          bought={activeItems.includes(item)}
+          // handleBuyButton={(clicke) => onBuyButton(item, clicke)}
+          handleBuyButton={(clicke) => {
+            console.log(clicke);
+            onBuyButton(item, clicke);
+          }}
+        />
+      ))}
+    </ul>
+  );
+};
+
+export default FoodItems;
+
+// how we pass props
+
+/* 
+We pass as an attribute .
+examples - <Header title = "My App"/>*/
+
+
+```
+
+`Item.jsx--------`
+```jsx
+import styles from "./Item.module.css";
+const Item = ({ foods, bought, handleBuyButton }) => {
+
+  return (
+    // <li className={`${styles["kg-item"]} list-group-item`}>
+    <li className={`list-group-item ${bought && "active"}`}>
+      <span className={styles["kg-span"]}>{foods}</span>
+      <button
+        className={`${styles.button} btn btn-info`}
+        // handing click event in react
+        // onClick={() => handleBuyButtonClicked(foods)}
+        /*we were making anonymous method so that it doesn't get 
+          get immediately called*/
+
+        onClick={handleBuyButton}
+        // event object
+
+        // now passing function reference
+
+        // note - if we are inside jsx and we have to write javascript thenwe will use {} but if we are inside {} only then we won't use another
+        // bracket.
+      >
+        Buy
+      </button>
+    </li>
+  );
+};
+
+export default Item;
+
+
+```
+
+`FoodInput.jsx---`
+```jsx
+
+import styles from "./FoodInput.module.css";
+
+const FoodInput = ({ handleKeyDown }) => {
+  return (
+    <input
+      type="text"
+      placeholder="Enter Food Item here"
+      className={styles.foodInput}
+      // onChange={handleOnChange}
+      onKeyDown={handleKeyDown}
+    />
+  );
+};
+
+export default FoodInput;
+
+```
 
 ---
 
