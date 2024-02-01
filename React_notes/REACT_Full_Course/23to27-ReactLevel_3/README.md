@@ -551,15 +551,15 @@ Now what we want.
 3. **State changes cause the component to re-render.**
   -> cause state change means that you changed a value and you have created your ui on the basis of that value or you have passed it to a child component. `IN both case it executes our function again and  it doesnot do assignment of that value again we will get our value back whatever changed has happened at last time .`
 
-`Understanding State Changes and Component Re-renders
+## `Understanding State Changes and Component Re-renders`
 
-State changes trigger component re-renders: Whenever a component's state changes in React, it initiates a process known as re-rendering. This means that React automatically updates the user interface to reflect the latest state values.
+**State changes trigger component re-renders:** `Whenever a component's state changes in React, it initiates a process known as re-rendering. This means that React automatically updates the user interface to reflect the latest state values.`
 
-Function re-execution during re-renders: During a re-render, React re-runs the entire component function, including any logic or JSX rendering defined within it. This ensures that the UI always reflects the most up-to-date state values.
+**Function re-execution during re-renders:** During a re-render, React re-runs the entire component function, including any logic or JSX rendering defined within it. This ensures that the UI always reflects the most up-to-date state values.
 
-Automatic state value updates: React handles state updates internally, ensuring that the most recent state values are readily available within the component function during re-renders. There's no need for manual reassignment of state values; React takes care of it behind the scenes.
+**Automatic state value updates:** React handles state updates internally, ensuring that the most recent state values are readily available within the component function during re-renders. There's no need for manual reassignment of state values; React takes care of it behind the scenes.
 
-By understanding how state changes trigger component re-renders, developers can create dynamic and responsive user interfaces with React effortlessly.`
+By understanding how state changes trigger component re-renders, developers can create dynamic and responsive user interfaces with React effortlessly.
 
 4. For functional components, use the useState hook.
  
