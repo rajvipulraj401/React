@@ -398,10 +398,6 @@ const FoodInput = ({ handleOnChange }) => {
 export default FoodInput;
 ```
 
-```jsx
-
-```
-
 `App.jsx---------`
 
 ```jsx
@@ -448,7 +444,40 @@ What we actually want is `we want to write all the logics in parent and in small
 
 and this goes to multiple level for example
 
-A -> B -> C-> (the behaviour which one parent is passing to other that parent also don't know about the behaviour it is getting data from its parent and that is getting from its own parent. so this way it can go on to multiple level .
+A -> B -> C-> The behaviour which one parent is passing to other that parent also don't know about the behaviour it is getting data from its parent and that is getting from its own parent. so this way it can go on to multiple level .
+
+
+## **`Principle of Logic Centralization and Component Decoupling in React`**
+
+**Objective:**
+- Centralize all logic within parent components, while child components focus solely on UI presentation.
+- Parent components manage data operations such as addition, modification, and deletion, passing down behavior along with props to child components.
+
+**Parent Component Responsibilities:**
+- Handles all logic related to data manipulation and behavior definition.
+- Determines where to add, modify, or delete data within the application.
+- Passes down behavior along with props to child components, enabling them to execute specific actions.
+
+**Child Component Responsibilities:**
+- Primarily focuses on rendering UI elements in a visually appealing manner.
+- Receives behavior from parent components as props and executes them at appropriate times.
+- Does not concern itself with the origin or nature of the behavior it executes.
+
+**Key Points:**
+1. **Centralized Logic:** All application logic resides within parent components, promoting a clear separation of concerns and simplifying maintenance.
+2. **Data Management:** Parents manage data operations and define behavior, delegating specific actions to child components through props.
+3. **Component Decoupling:** Child components are decoupled from the intricacies of data manipulation, ensuring flexibility and reusability.
+4. **Nested Hierarchies:** This principle extends seamlessly across nested component hierarchies, enabling behavior delegation across multiple levels of parent-child relationships.
+
+**Illustrative Example:**
+- A parent component (A) manages data and behavior, passing down relevant behavior to its child component (B).
+- Component B, in turn, delegates behavior to its own child component (C), continuing the cascade of behavior delegation.
+- Each component along the hierarchy focuses on its specific responsibilities, contributing to the overall modularity and maintainability of the application.
+
+**Conclusion:**
+Embracing this principle facilitates the development of scalable and maintainable React applications, fostering a clean separation of concerns and promoting code reusability across various components and levels of the component hierarchy.
+
+--------------------------------------------------------------
 
 ## What is the problem we got here??? and what will solve it .
 
@@ -483,6 +512,20 @@ function App() {
 
 so , In order to use it we have to use state
 
+
+### Problem:
+- The issue here is that even though `textToShow` variable is being updated internally within the `handleOnChange` function, these updates are not reflected in the UI.
+- This happens because the `App` component is a function component, and each time it's re-rendered, `textToShow` is reinitialized with the initial value "Food Item Entered by user".
+
+### Solution:
+- The solution to this problem is to use state management.
+- Since props are immutable in React, and reinitializing variables within a function component does not cause re-renders or reflect UI changes, we need to utilize state to manage dynamic data that can change over time.
+- By using state, we ensure that changes to the data trigger re-renders, updating the UI accordingly.
+- In React, we can implement state management using hooks like `useState`.
+  
+### Conclusion:
+Understanding the need for state management in React is crucial for building dynamic and interactive applications. In situations where data needs to change over time and reflect those changes in the UI, state management provides the mechanism to achieve this. In your case, incorporating state management using `useState` hook will allow you to update `textToShow` dynamically and reflect those changes in the UI.
+
 # 26 **`Managing  State`**-------------
 
 1. State represents `data that changes over time.`
@@ -501,6 +544,10 @@ so , In order to use it we have to use state
 
 8. Lifting state up: share state between components by moving it to their
    closest common ancestor.
+
+```jsx
+
+```
 
 # `State vs Props -------`
 
