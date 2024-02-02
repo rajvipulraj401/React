@@ -811,6 +811,7 @@ export default Item;
 ```
 
 `FoodInput.jsx---`
+
 ```jsx
 
 import styles from "./FoodInput.module.css";
@@ -849,6 +850,7 @@ export default FoodInput;
 • Managed using useState in functional components.
 
 ## Props:
+
 
 • Passed into a component from its parent.
 
