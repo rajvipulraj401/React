@@ -2,7 +2,6 @@
 
 # 1.What is React?
 
-
 1. JavaScript library to build Dynamic
 and interactive user interfaces
 
@@ -80,8 +79,6 @@ complicated.
 
 4) **JS** is `Hard to maintain.`
 
-
-
 ## 4.Working of React..
 
 1) No need to worry about `querying`and `updating DOM `(declarative)
@@ -103,7 +100,7 @@ complicated.
 2) `React is Declarative` : You define the targer UI State and  then reat figures out how to react that state.
 
 
-## **Features of React**-
+##  **Features of React**-
 
 1) It makes our website do very very fewer page reloads.
 
