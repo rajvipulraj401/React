@@ -22,7 +22,9 @@
 - c)   For Buttons -
  
 	 a) we want that the buttons that we click gets display on the screen.
-   b) we want C button to empty the display .
+
+   	 b) we want C button to empty the display .
+
 	 c) we want = button to evaluate all the inputs .
 
 a)  we need to find a way to know which button was  clicked AND `after that we will use conditional rendering and use the functionality of the buttons as well as display them when clicked`
