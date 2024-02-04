@@ -241,24 +241,22 @@ a) So we need to find a way to know which button was  clicked AND `after that we
 
  
 
-`Here's a summary of how the second way works:`
-
-In the ButtonsContainer component:
-
-Define an array called buttonNames containing the names of all the buttons.
-Use the map function to iterate over each button name.
-For each button name, render a <button> element.
-Attach an onClick event handler to each button. When clicked, it calls the onButtonClick function with the corresponding buttonName as an argument.
-In the parent component (App):
-
-Pass the onButtonClick function as a prop to the ButtonsContainer.
-When a button is clicked in the ButtonsContainer, it triggers the onButtonClick function with the clicked button's name.
-In the App component, the onButtonClick function handles the logic based on the button name passed to it.
-For example, if the button clicked was "C", it clears the display (SetCalVal("")), if it was "=", it evaluates the expression (eval(calVal)), and so on.
-This approach allows the child component (ButtonsContainer) to communicate with the parent component (App) by passing data (the button name) through a function callback (onButtonClick).
+###  `Here's a summary of how the second way works:`
 
 
+**In the ButtonsContainer component:**
+- Define an array called `buttonNames` containing the names of all the buttons.
+- Use the `map` function to iterate over each button name.
+- For each button name, render a `<button>` element.
+- Attach an `onClick` event handler to each button. When clicked, it calls the `onButtonClick` function with the corresponding `buttonName` as an argument.
 
+**In the parent component (App):**
+- Pass the `onButtonClick` function as a prop to the `ButtonsContainer`.
+- When a button is clicked in the `ButtonsContainer`, it triggers the `onButtonClick` function with the clicked button's name.
+- In the `App` component, the `onButtonClick` function handles the logic based on the button name passed to it.
+- For example, if the button clicked was "C", it clears the display (`SetCalVal("")`), if it was "=", it evaluates the expression (`eval(calVal)`), and so on.
+- This approach allows the child component (`ButtonsContainer`) to communicate with the parent component (`App`) by passing data (the button name) through a function callback (`onButtonClick`).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 b&c) In order to do calculation in javascript we use `**eval method**`
 
