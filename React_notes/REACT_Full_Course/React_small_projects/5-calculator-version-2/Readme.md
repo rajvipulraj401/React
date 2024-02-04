@@ -1,5 +1,4 @@
   # Calculator project version 2
- 
 
 ##  Key Points:
 
@@ -10,36 +9,23 @@
 2. **Finding Which Button Was Clicked:**
     - Implement conditional rendering based on the clicked button.
     - Two methods proposed:
-        a) Logging the event object to identify the clicked button.
-	  # Calculator project version 2
- 
-
-##  Key Points:
-
-1. **Adding Behaviors in ButtonsContainer:**
-    - Utilize state in the parent component (App) to display button clicks in the Display component.
-    - State cannot be kept within ButtonsContainer due to the need to send state updates to Display, which are sibling components in the App container.
-   
-2. **Finding Which Button Was Clicked:**
-    - Implement conditional rendering based on the clicked button.
-    - Two methods proposed:
-        a) Logging the event object to identify the clicked button.
+    -  a) Logging the event object to identify the clicked button.
 ```jsx
 	const onButtonClick = (event) => console.log(event);
 ```
 
-        b) Passing the buttonText as a parameter to the onClick handler.
-	-> In this the child will have to make sure that the method inside parent gets buttonText on the button click
+    -    b) Passing the buttonText as a parameter to the onClick handler.
+	 In this the child will have to make sure that the method inside parent gets buttonText on the button click
 
 
 
- For Buttons -
+- c)   For Buttons -
  
-	a) we want that the buttons that we click gets display on the screen.
-	b) we want C button to empty the display .
-	c)we want = button to evaluate all the inputs .
+	 a) we want that the buttons that we click gets display on the screen.
+   b) we want C button to empty the display .
+	 c) we want = button to evaluate all the inputs .
 
-a) So we need to find a way to know which button was  clicked AND `after that we will use conditional rendering and use the functionality of the buttons as well as display them when clicked`
+a)  we need to find a way to know which button was  clicked AND `after that we will use conditional rendering and use the functionality of the buttons as well as display them when clicked`
 
 
 3. **Adding Behavior from Child:**
