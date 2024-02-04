@@ -52,10 +52,10 @@ In the App component, the onButtonClick function handles the logic based on the 
 For example, if the button clicked was "C", it clears the display (SetCalVal("")), if it was "=", it evaluates the expression (eval(calVal)), and so on.
 This approach allows the child component (ButtonsContainer) to communicate with the parent component (App) by passing data (the button name) through a function callback (onButtonClick).
 
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
-b&c) In order to do calculation in javascript we use `**eval method**`
+- b&c) In order to do calculation in javascript we use `**eval method**`
 
 **inside eval method we can pass a string  and it will calculate its value**
 
