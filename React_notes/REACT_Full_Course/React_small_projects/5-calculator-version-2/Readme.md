@@ -13,14 +13,12 @@
 ```jsx
 	const onButtonClick = (event) => console.log(event);
 ```
-
-    -    b) Passing the buttonText as a parameter to the onClick handler.
+ -    b) Passing the buttonText as a parameter to the onClick handler.
 
 	 In this the child will have to make sure that the method inside parent gets buttonText on 		the button click
 
 
-
-     -   c)   For Buttons -
+ -   c)   For Buttons -
  
 	 a) we want that the buttons that we click gets display on the screen.
 
