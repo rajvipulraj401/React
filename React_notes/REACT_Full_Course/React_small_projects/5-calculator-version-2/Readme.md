@@ -36,7 +36,7 @@ a)  we need to find a way to know which button was  clicked AND `after that we w
  
 
 ### `Here's a summary of how the second way works:`
-Sure, here are the highlighted points:
+
 
 **In the ButtonsContainer component:**
 - Define an array called `buttonNames` containing the names of all the buttons.
@@ -55,9 +55,11 @@ Sure, here are the highlighted points:
 
 - b&c) In order to do calculation in javascript we use `**eval method**`
 
-**inside eval method we can pass a string  and it will calculate its value**
+	**inside eval method we can pass a string  and it will calculate its value**
 
-` const result = eval(calVal);`
+```jsx
+ const result = eval(calVal);
+```
 
 `App.jsx----------------------------------`
 ```jsx
