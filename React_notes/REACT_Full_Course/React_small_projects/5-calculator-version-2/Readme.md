@@ -36,7 +36,7 @@ a)  we need to find a way to know which button was  clicked AND `after that we w
 
  
 
-`Here's a summary of how the second way works:`
+### `Here's a summary of how the second way works:`
 
 In the ButtonsContainer component:
 
