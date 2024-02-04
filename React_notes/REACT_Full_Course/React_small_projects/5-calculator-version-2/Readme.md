@@ -24,9 +24,8 @@
     - Implement conditional rendering based on the clicked button.
     - Two methods proposed:
         a) Logging the event object to identify the clicked button.
-
 ```jsx
-const onButtonClick = (event) => console.log(event);`
+	const onButtonClick = (event) => console.log(event);
 ```
 
         b) Passing the buttonText as a parameter to the onClick handler.
