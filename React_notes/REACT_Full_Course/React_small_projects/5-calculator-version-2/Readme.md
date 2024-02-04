@@ -1,14 +1,25 @@
   # Calculator project version 2
+ 
+
+##  Key Points:
+
+1. **Adding Behaviors in ButtonsContainer:**
+    - Utilize state in the parent component (App) to display button clicks in the Display component.
+    - State cannot be kept within ButtonsContainer due to the need to send state updates to Display, which are sibling components in the App container.
+   
+2. **Finding Which Button Was Clicked:**
+    - Implement conditional rendering based on the clicked button.
+    - Two methods proposed:
+        a) Logging the event object to identify the clicked button.
+	```jsx
+const onButtonClick = (event) => console.log(event);
+```
+        b) Passing the buttonText as a parameter to the onClick handler.
+	-> In this the child will have to make sure that the method inside parent gets buttonText on the button click
 
 
-1) Adding Behaviours in ButtonsContainer 
 
-1.1) ) As we want to show buttons click in the display component so we will have to use state in App component.
-
-2) If we want to keep state inside ButtonContainer then the state will not work as we have to send the state inside display also as buttons container and display are siblings in app container so we cannot make state in ButtonsContainer so we will have to keep the state in parent container HERe APP.jsx
-
-
--> For Buttons -
+ For Buttons -
  
 	a) we want that the buttons that we click gets display on the screen.
 	b) we want C button to empty the display .
@@ -17,16 +28,11 @@
 a) So we need to find a way to know which button was  clicked AND `after that we will use conditional rendering and use the functionality of the buttons as well as display them when clicked`
 
 
-/* We need to pass a method to display and buttonsContainer component */
+3. **Adding Behavior from Child:**
+    - ButtonsContainer communicates with App by passing button names through a function callback.
+    - App handles logic based on the button name received from ButtonsContainer.
 
-  //  1st way to find which button was clicked.
-  // const onButtonClick = (event) => console.log(event);
-
-  // 2nd way to find which button was clicked.(by changing its signature not we donot need event
-  //  we need buttonText now the child will have to make sure that the method inside parent gets buttonText on the button click )
  
-
-3) we want to add beaviour from child---
 
 `Here's a summary of how the second way works:`
 
@@ -47,7 +53,7 @@ This approach allows the child component (ButtonsContainer) to communicate with 
 
 
 
-b and c) In order to do calculation in javascript we use `**eval method**`
+b&c) In order to do calculation in javascript we use `**eval method**`
 
 **inside eval method we can pass a string  and it will calculate its value**
 
@@ -139,17 +145,12 @@ const ButtonsContainer = ({ onButtonClick }) => {
           className={styles.button}
           onClick={() => onButtonClick(buttonName)}
           // so now instead of passing onButtonClick as a reference to parent component we will now
-          // call onButtonClick and whenever the button will be click  and AS WE know the button name here cause when we were setting up each button  using map method and we were getting each buttonName so
-          // wohi naam toh aa rha tha we can no send this {buttonName} as a parameter in onButtonClick method so that whenever
-          // we click on the button and it goes to parent component as the event gets Triggered
+          // call onButtonClick and whenever the button will be click  and AS WE know the button name here cause 
+          // when we were setting up each button  using map method and we were getting each buttonName so
+          // wohi naam toh aa rha tha we can no send this {buttonName} as a parameter in onButtonClick method so that 
+          // whenever we click on the button and it goes to parent component as the event gets Triggered
         >
-          {/* What is the difference between normal function reference and Making a new method and passing its reference  ?
-          
-
-          Answer - We are actually not passing onButtonClick 
-
-          when we pass normal reference we just say that this is the reference of the function and please call yourself
-          */}
+     
           {buttonName}
         </button>
       ))}
