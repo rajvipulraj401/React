@@ -1,7 +1,7 @@
   # Calculator project version 2
+ 
 
-
-## Key Points:
+##  Key Points:
 
 1. **Adding Behaviors in ButtonsContainer:**
     - Utilize state in the parent component (App) to display button clicks in the Display component.
