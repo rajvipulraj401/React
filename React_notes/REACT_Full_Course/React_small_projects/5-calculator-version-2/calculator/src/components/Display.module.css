@@ -1,0 +1,9 @@
+.display {
+  /* border: 1px solid black; */
+  margin: 10px;
+  width: 172px;
+  font-size: 25px;
+  /* align-self: flex-start; */
+  /* margin-left: 25px; */
+  /* border-radius: 5px; */
+}

@@ -1,0 +1,9 @@
+.calculator {
+  border: 1px solid rgba(0, 0, 0, 0.575);
+  border-radius: 10px;
+  /* height: 600px; */
+  max-width: 200px;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
