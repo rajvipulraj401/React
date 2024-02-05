@@ -10,10 +10,15 @@
    `import {IconName} from "react-icons/fc";`
 
    // Also, you can directly copy the icon from the react-icons website and use it as a component:
+
    // e.g., <BiMessageAdd/>
+
    // Remember to import it:
+
    // import {BiMessageAdd} from "react-icons/bi";
+
    // Then, you can use it in your code.
+
    //ex `import {BiMessageAdd} from "react-icons/bi";`
 
 **The bi at last means all the icons starting with the name Bi**
