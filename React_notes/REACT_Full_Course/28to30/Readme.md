@@ -107,11 +107,11 @@ so,
 
 • React is a tool; Angular and Vue.js are toolsets.
 
-`Example - Understand that a library is like a hammer which is only for one specific purpose. For instance, React is a library that is only used for making UI.
+`Example - Understand that a library is like a hammer which is only for one specific purpose. For instance, React is a library that is only used for making UI.`
 
-In contrast, a framework is like a toolset which offers a complete package. It includes various tools such as a hammer, screw, screwdriver, etc. So basically, it is complete.
+`In contrast, a framework is like a toolset which offers a complete package. It includes various tools such as a hammer, screw, screwdriver, etc. So basically, it is complete.`
 
-Example frameworks include Vue and Angular.`
+**Example frameworks include Vue and Angular.**
 
 ### React's Specialty:
 
