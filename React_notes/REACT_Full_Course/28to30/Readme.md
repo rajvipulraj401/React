@@ -66,7 +66,7 @@ so,
 
 • `React Dom converts the React component tree into actual browser DOM means in Html`
 
-**Root Element**
+## **Root Element**
 
 • The root div acts as a container for the React app
 
@@ -74,7 +74,7 @@ so,
 
 • The component tree is rendered inside this root element
 
-**Strict Mode Component**
+## **Strict Mode Component**
 
 • It's a special component in React
 
@@ -82,20 +82,22 @@ so,
 
 • Its purpose is to spot potential issues in your React app
 
-**Platform Independence**
+## **Platform Independence**
 
 • React's design allows it to be platform-agnostic
 
 • While react-dom helps build web UIs using React, ReactNative can be used to craft mobile app UIs
 
-**React Vs Angular Vs Vue**
+## **React Vs Angular Vs Vue**
 
-React, Angular, and Vue:
+### React, Angular, and Vue:
+
 • React is a library, while Angular and Vue.js are frameworks.
 
 • React focuses on UI; Angular and Vue.js offer comprehensive tools for full app development.
 
-Library vs. Framework:
+### Library vs. Framework:
+
 • A library offers specific functionality.
 
 • A framework provides a set of tools and guidelines.
@@ -108,17 +110,20 @@ In contrast, a framework is like a toolset which offers a complete package. It i
 
 Example frameworks include Vue and Angular.
 
-React's Specialty:
+### React's Specialty:
+
 • React's main role is crafting dynamic, interactive UIs.
 
 • It doesn't handle routing, HTTP calls, state management, and more.
 
-React's Flexibility:
+### React's Flexibility:
+
 • React doesn't dictate tool choices for other app aspects.
 
 • Developers pick what fits their project best.
 
-About Angular and Vue.js:
+### About Angular and Vue.js:
+
 • Angular, developed by Google, provides a robust framework with a steep learning curve.
 
 • Vue.js is known for its simplicity and ease of integration, making it beginner-friendly.
