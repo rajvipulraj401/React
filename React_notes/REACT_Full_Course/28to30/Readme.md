@@ -34,19 +34,22 @@
 
 # 30 **How React Works**
 
-Root Component:
+## Root Component:
+
 • The App is the main or root component of a React application.
 
 • It's the starting point of your React component tree.
 
-Virtual DOM:
+## Virtual DOM:
+
 • React creates an in-memory structure called the virtual DOM.
 
 • Different from the actual browser DOM.
 
 • It's a lightweight representation where each node stands for a component and its attributes.
 
-Reconciliation Process:
+## Reconciliation Process:
+
 • When component data changes, React updates the virtual DOM's state to mirror these changes.
 
 • React then compares the current and previous versions of the virtual DOM.
@@ -104,11 +107,11 @@ so,
 
 • React is a tool; Angular and Vue.js are toolsets.
 
-Example - Understand that a library is like a hammer which is only for one specific purpose. For instance, React is a library that is only used for making UI.
+`Example - Understand that a library is like a hammer which is only for one specific purpose. For instance, React is a library that is only used for making UI.
 
 In contrast, a framework is like a toolset which offers a complete package. It includes various tools such as a hammer, screw, screwdriver, etc. So basically, it is complete.
 
-Example frameworks include Vue and Angular.
+Example frameworks include Vue and Angular.`
 
 ### React's Specialty:
 
