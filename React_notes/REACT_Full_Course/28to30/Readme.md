@@ -36,17 +36,23 @@
 
 Root Component:
 • The App is the main or root component of a React application.
+
 • It's the starting point of your React component tree.
 
 Virtual DOM:
 • React creates an in-memory structure called the virtual DOM.
+
 • Different from the actual browser DOM.
+
 • It's a lightweight representation where each node stands for a component and its attributes.
 
 Reconciliation Process:
 • When component data changes, React updates the virtual DOM's state to mirror these changes.
+
 • React then compares the current and previous versions of the virtual DOM.
+
 • It identifies the specific nodes that need updating. (means specific HTML nodes which have been changed and it will identify them and only change them )
+
 • Only these nodes are updated in the real browser DOM, making it efficient.
 
 so,
@@ -54,36 +60,46 @@ so,
 
 # 30 **React and ReactDOM (virtual DOM)**
 
-• The actual updating of the browser's DOM isn't done by React itself.
-• It's handled by a companion library called react-dom.
+• The actual updating of the browser's DOM isn't done by React itself
+
+• It's handled by a companion library called react-dom
+
 • `React Dom converts the React component tree into actual browser DOM means in Html`
 
 **Root Element**
 
-• The root div acts as a container for the React app.
-• The script tag is where the React app starts executing.
-• The component tree is rendered inside this root element.
+• The root div acts as a container for the React app
+
+• The script tag is where the React app starts executing
+
+• The component tree is rendered inside this root element
 
 **Strict Mode Component**
 
-• It's a special component in React.
-• Doesn't have a visual representation.
-• Its purpose is to spot potential issues in your React app.
+• It's a special component in React
+
+• Doesn't have a visual representation
+
+• Its purpose is to spot potential issues in your React app
 
 **Platform Independence**
 
-• React's design allows it to be platform-agnostic.
-• While react-dom helps build web UIs using React, ReactNative can be used to craft mobile app UIs.
+• React's design allows it to be platform-agnostic
+
+• While react-dom helps build web UIs using React, ReactNative can be used to craft mobile app UIs
 
 **React Vs Angular Vs Vue**
 
 React, Angular, and Vue:
 • React is a library, while Angular and Vue.js are frameworks.
+
 • React focuses on UI; Angular and Vue.js offer comprehensive tools for full app development.
 
 Library vs. Framework:
 • A library offers specific functionality.
+
 • A framework provides a set of tools and guidelines.
+
 • React is a tool; Angular and Vue.js are toolsets.
 
 Example - Understand that a library is like a hammer which is only for one specific purpose. For instance, React is a library that is only used for making UI.
@@ -94,14 +110,17 @@ Example frameworks include Vue and Angular.
 
 React's Specialty:
 • React's main role is crafting dynamic, interactive UIs.
+
 • It doesn't handle routing, HTTP calls, state management, and more.
 
 React's Flexibility:
 • React doesn't dictate tool choices for other app aspects.
+
 • Developers pick what fits their project best.
 
 About Angular and Vue.js:
 • Angular, developed by Google, provides a robust framework with a steep learning curve.
+
 • Vue.js is known for its simplicity and ease of integration, making it beginner-friendly.
 
 **Note**
