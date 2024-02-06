@@ -7,6 +7,7 @@
    `npm install react-icons –save`
 
 3. Use icon:
+
    `import {IconName} from "react-icons/fc";`
 
    // Also, you can directly copy the icon from the react-icons website and use it as a component:
