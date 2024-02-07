@@ -4,6 +4,7 @@ import AddTodo from "./components/AddTodo";
 // import TodoItem2 from "./components/Todoitem2";
 import TodoItem from "./components/TodoItem";
 import "./App.css";
+import { useState } from "react";
 
 const data = [
   {
@@ -16,14 +17,24 @@ const data = [
   },
 ];
 function App() {
+  // const [todoItem , setTodoItem]= useState();
+
+  const handleAddButton = (todoName, todoDate) => {
+    // console.log(todoName, todoDate);
+  };
+
   return (
     // Yaha se sara file ko alag krte hai component wise krke .
     <center>
       <AppName />
 
       <div className="items-container">
-        <AddTodo />
-        <TodoItem entry={data}></TodoItem>
+        <AddTodo onAddButtonClick={handleAddButton} />
+        <TodoItem
+          entry={data}
+          todoName={todoName}
+          todoDate={todoDate}
+        ></TodoItem>
         {/* instead of making duplicate components send props to one component
         to get things done at one place  */}
         {/* <TodoItem1 />
