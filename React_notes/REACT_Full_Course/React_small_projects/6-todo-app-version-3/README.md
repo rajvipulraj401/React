@@ -1,228 +1,151 @@
-# Todo-App version 2 (using props and module.css)
+# Todo App version 3
+
+## Adding New Todo Item Functionality
+
+### Requirement:
+- Allow users to add a new todo item by entering its name and selecting a due date.
+- Upon pressing the "Add" button, a new row should be added with the entered name and due date.
+- After adding, clear the input fields.
+
+#### Implementation Steps:
+
+1. **State Management**:
+   - Initialized state variables `todoName` and `dueDate` using `useState` hook to manage user input.
+   - Used state to capture and update the real-time values of todo name and due date.
+   - Ensured the input fields are bound to the state variables using the `value` attribute.
+   - **Event Target Usage**: Utilized `event.target.value` in `handleNameChange` and `handleDateChange` event handlers to capture changes in input fields.
+
+   ```jsx
+   const [todoName, setTodoName] = useState("");
+   const [dueDate, setdueDate] = useState("");
+   ```
+
+   ```jsx
+   const handleNameChange = (ev) => {
+     setTodoName(ev.target.value);
+   };
+
+   const handleDateChange = (ev) => {
+     setdueDate(ev.target.value);
+   };
+   ```
+
+2. **Handling User Input**:
+   - Implemented event handlers (`handleNameChange` and `handleDateChange`) to capture changes in input fields.
+   - Updated state variables (`todoName` and `dueDate`) with the entered values using setter functions.
+   - **Value Attribute Usage**: Set the `value` attribute of input fields to the current value of `todoName` and `dueDate` to reflect real-time changes and maintain input field state.
+   - Utilized the `onChange` event to detect changes in the input fields.
+
+   ```jsx
+   <input
+     type="text"
+     placeholder="Enter Todo Here "
+     value={todoName}
+     onChange={handleNameChange}
+   />
+   ```
+2.	Value Attribute Usage:
+•	The value attribute ensures that input fields display the current user input.
+•	Setting value to todoName and dueDate keeps input fields synchronized with user input.
+•	Enhances user experience by providing clear feedback on entered values.
+NOTE: Using value inside input tags ensures fields always display the latest user input.
+If we didn't set the `value` attribute and relied solely on `useState`:
+- Input fields wouldn't reflect user input in real-time.
+- User-entered values wouldn't display, causing confusion.
+- It would lead to a less intuitive and responsive user interface.
+   ```jsx
+   <input type="date" value={dueDate} onChange={handleDateChange} />
+   ```
+
+3. **Adding New Item**:
+   - Implemented a function (`handleAddButtonClicked`) to handle adding a new todo item.
+   - Invoked the `onNewItem` function with `todoName` and `dueDate` as arguments upon clicking the "Add" button.
+   - Cleared the input fields after adding the new todo item by resetting the state variables to empty strings.
+
+   ```jsx
+   const handleAddButtonClicked = () => {
+     onNewItem(todoName, dueDate);
+     setdueDate("");
+     setTodoName("");
+   };
+   ```
+
+   ```jsx
+   <button
+     type="button"
+     className="btn btn-success  kg-button"
+     onClick={handleAddButtonClicked}
+   >
+     Add
+   </button>
+   ```
+
+#### Additional Notes:
+- Used meaningful method names (`handleNameChange`, `handleDateChange`, `handleAddButtonClicked`) to indicate their purpose and functionality.
+- Ensured proper binding of event handlers to input fields to capture user interactions effectively.
+- Maintained immutability of state by updating state variables using setter functions rather than modifying them directly.
+- Utilized conditional rendering to display the "Enjoy Your Day" message when there are no todo items present.
+
+## Deleting Todo Items
+
+### Requirement:
+- Allow users to delete todo items by clicking a "Delete" button associated with each item.
+
+#### Implementation Steps:
+
+1. **Handling Deletion**:
+   - Implemented a function (`handleDeleteItem`) in the parent component (`App.jsx`) to handle deletion of todo items.
+   - Passed the `handleDeleteItem` function as a prop to the `TodoItems` component.
+   - Utilized the `filter` method to remove the selected todo item from the `todoItems` array.
+   - Updated the state with the new filtered array, effectively removing the selected todo item from the list.
+   - **Immutable State Usage**: `Maintained immutability of state by not directly modifying the current value of `todoItems`.`
+( we will not change the current value of state (we should treat it as immutable `Good Practise`)
+   - Sent the `onDeleteClick` function as a prop to the `TodoItems` component to handle deletion of individual todo items.
+
+   ```jsx
+   const handleDeleteItem = (todoItemName) => {
+     const newTodoItems = todoItems.filter(
+       (item) => item.name !== todoItemName
+     );
+     setTodoItems(newTodoItems);
+   };
+   ```
+
+   ```jsx
+   <TodoItems
+     todoItems={todoItems}
+     onDeleteClick={handleDeleteItem}
+   ></TodoItems>
+   ```
 
 
+## Displaying "Enjoy Your Day" Message (when no item)
 
-![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/17-Bootstrap/Todoapp1st.png)
+### Requirement:
+- When there are no todo items, display a message "Enjoy Your Day".
 
-`index.html`-----------------
+### Implementation Steps:
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
-```
+1. **Conditional Rendering**:
+   - Created a separate component (`WelcomeMessage`) to display the message.
+   - Utilized conditional rendering to display the `WelcomeMessage` component when the `todoItems` array is empty.
+   - Displayed the message "Enjoy Your Day" when there are no todo items to show.
 
-`main.jsx---------------`
-
-```jsx
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-```
-
-`App.jsx------------`
-
-```jsx
-import AppName from "./components/AppName";
-import AddTodo from "./components/AddTodo";
-// import TodoItem1 from "./components/Todoitem1";
-// import TodoItem2 from "./components/Todoitem2";
-import TodoItem from "./components/TodoItem";
-import "./App.css";
-
-const data = [
-  {
-    name: "Buy Milk",
-    duedate: "20/01/2024",
-  },
-  {
-    name: "Go to College",
-    duedate: "20/01/2024",
-  },
-];
-function App() {
-  return (
-    // Yaha se sara file ko alag krte hai component wise krke .
-    <center>
-      <AppName />
-
-      <div className="items-container">
-        <AddTodo />
-        <TodoItem entry={data}></TodoItem>
-        {/* instead of making duplicate components send props to one component
-        to get things done at one place  */}
-        {/* <TodoItem1 />
-        <TodoItem2></TodoItem2> */}
-      </div>
-    </center>
-  );
-  // center tag makes thing in center NOT GOOD practise as it isnot in html5.
-}
-
-export default App;
-```
-
-`AppName.jsx`-----------
-
-```jsx
-import styles from "./AppName.module.css";
-
-function AppName() {
-  return <h1 className={styles["appName_style"]}>Todo App</h1>;
-}
-export default AppName;
-
-// This is the way to export default ufunction in react .
-// Brother it is a function component so it is basically a function so you have to return it .
-
-```
-
-`AppName.module.css`--------------
-
-```css
-.appName_style {
-  font-weight: 700;
-  margin: 10px;
-  font-size: 45px;
-  margin-bottom: 20px;
-}
-
-
-```
-
-`AddTodo.jsx`--------
-
-```jsx
-import styles from "./AddTodo.module.css";
-
-function AddTodo() {
-  return (
-    <div className="container">
-      <div className="row kg-row">
-        <div className="col-6">
-          <input type="text" placeholder="Enter Todo Here " />
-          {/* className={styles["appName_style"] */}
-          {/* Bhool gye input tag is self closing tag aur jo input me show
-                  karana hai wo placeholder me daalnea padta hai*/}
-
-          {/* NOTE - jsx me comment bhi curly bracket ke andar aata hai  */}
-        </div>
-        <div className="col-4">
-          <input type="date" />
-        </div>
-        <div className="col-2 kg-col">
-          <button type="button" className="btn btn-success  kg-button">
-            Add
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default AddTodo;
-
-```
-`AddTodo.module.css..--------`
-
-```css
-input {
-  width: 100%;
-}
-
-/* THERE is no need to give class name in
- addtodo.module.css because this is a tag not a class that's why  */
-
-
-```
-
-`Todoitem.jsx`-------------------------
+### Additional Notes:
+- Ensured proper use of conditional rendering to display components based on specific conditions.
+- Maintained consistency in component structure and naming conventions for clarity and readability.
 
 ```jsx
-import "../App.css";
-// in order to go one level back
-
-function TodoItem({ entry }) {
-  // The thing is we are hardcoding the data.
-
-  //   NOTES - now we got the entry props which we passed from the App.js
-  // so we destructure the props object which we passed now we have the array and inside that the elements
-  // in the object  it now we have an array and using the map method we will iterate and get each index and display it however we want.
-
-  return (
-    <div className="container">
-      {/* <div className="row kg-row"> */}
-      {entry.map((curr) => {
-        return (
-          <>
-            <div className="row kg-row">
-              <div className="col-6">{curr.name}</div>
-              <div className="col-4">{curr.duedate}</div>
-              <div className="col-2 kg-col">
-                <button type="button" className="btn btn-danger  kg-button">
-                  Delete
-                </button>
-              </div>
-            </div>
-          </>
-   
-        );
-      })}
-    </div>
-  );
-}
-
-export default TodoItem;
-
-
+{todoItems.length === 0 &&<WelcomeMessage ><//WelcomeMessage>}
 ```
 
-  `   **What error I had?** `
-
-   *Answer:* The error I faced was that I was not rendering with the `map` method incorrectly. Also, inside the `map` method, there were multiple lines,
-    so I needed to use the `return` keyword and also include parentheses and fragments because there needs to be a parent div. Otherwise, 
-    we cannot return so many divs from a function (whether it's inside a `map` method or elsewhere).
-
-   Lastly, when I was rendering with the `map` method, I should have used `**Chrome DevTools**` to inspect the rendered elements and also used `console.log` 
-   to see which styles are being applied and which are not. It's important to carefully review how I'm rendering the elements and anticipate what will happen.
-
-`App.css---------------`
-
-```css
-
-.items-container {
-  text-align: left;
-}
-
-.kg-button {
-  width: 80px;
-
-  /* min-width: 100px; */
-}
-
-.kg-row {
-  margin: 20px 0;
-}
-
-.kg-col {
-  width: auto;
-}
-
-```
+## `EXTRA  --Notes:`
+- Ensured proper reference and execution of event handler functions to maintain functionality and context.
+- Avoided directly mutating state to adhere to best practices of immutability.
+- WHEN writing name of method write handle then the suitable name for method ex
+handleOnClick
+-`onChange` handler:
+- Detects changes in input fields.
+- Triggers a function when user input changes.
+- Allows real-time response to user input.
+- we have to add another method (anonymous method) and inside it we can pass the reference of the parent method when using onClick or any other event changer function as it passes the event as parameter by default case .
