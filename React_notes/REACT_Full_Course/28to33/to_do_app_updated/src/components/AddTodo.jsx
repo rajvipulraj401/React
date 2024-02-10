@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./AddTodo.module.css";
-
+import { BiMessageAdd } from "react-icons/bi";
 /* Now i want to send the date and name back to the app component so how to do 
 that */
 
@@ -51,7 +51,7 @@ function AddTodo({ onNewItem }) {
             /* we have to make anonymous function in onclick because by default it passes the event object but 
             we want to pass  different things that's why */
           >
-            Add
+            <BiMessageAdd />
           </button>
         </div>
       </div>
