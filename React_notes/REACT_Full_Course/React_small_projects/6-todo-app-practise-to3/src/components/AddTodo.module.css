@@ -1,0 +1,6 @@
+input {
+  width: 100%;
+}
+
+/* THERE is no need to give class name in
+ addtodo.module.css because this is a tag not a class that's why  */

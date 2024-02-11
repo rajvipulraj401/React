@@ -21,13 +21,23 @@ function App() {
   const [todoItems, setTodoItems] = useState(initialTodoItems);
 
   const handleNewItem = (itemName, itemDueDate) => {
-    console.log(`New Item Added : ${itemName} Date:${itemDueDate}`);
-    const newTodoItems = [
-      ...todoItems,
+    // console.log(`New Item Added : ${itemName} Date:${itemDueDate}`);
+    // const newTodoItems = [
+    //   ...todoItems,
+    //   { name: itemName, dueDate: itemDueDate },
+    // ];
+    // setTodoItems(newTodoItems);
+
+    setTodoItems((currValue) => [
+      ...currValue,
       { name: itemName, dueDate: itemDueDate },
-    ];
-    setTodoItems(newTodoItems);
+    ]);
+
+    //  If we want to set new value based on old value then instead
+    // of using spread use a method inside setter function of use state
   };
+
+  // React runs in async way .
 
   const handleDeleteItem = (todoItemName, todoDate) => {
     const newTodoItems = todoItems.filter((item) => item.name !== todoItemName);
