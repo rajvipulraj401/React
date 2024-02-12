@@ -16,7 +16,7 @@ application (page does not re-load) .
 ## How can you say React is a library, not a framework? What is the difference between a library and a framework?
 
 
-### React as a Library (Bricks Analogy):
+##  React as a Library (Bricks Analogy):
 
 **Description:** React is like a toolbox with bricks when building a house.
 
