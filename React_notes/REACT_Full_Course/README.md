@@ -5,7 +5,7 @@
 1. JavaScript library to build Dynamic
 and interactive user interfaces
 
-2. Developed at Facebook in 2011. and released in 2013 to public
+2. Developed at Facebook in 2011. and released in 2013 to public .
 
 3. Currently most widely used JS
 library for front-end development.
