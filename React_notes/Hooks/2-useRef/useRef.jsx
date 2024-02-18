@@ -1,12 +1,12 @@
 #  useRef from web dev simplified ----
 
 
-  What you want to do if you want to show how many times a component renders on the screen ?
+### What you want to do if you want to show how many times a component renders on the screen ?
 
 solution - The solution is to use something called ref's .  A ref is very similar to state and in that it persists between renders of  your component but the important thing to know about 
   <u><b> Ref vs State  </b> </u> is that .
 
-`State cause your component to reupdate but ref doesn't .`
+`State cause your component to reupdate but ref` doesn't .
 
 
  so For example if we do this
