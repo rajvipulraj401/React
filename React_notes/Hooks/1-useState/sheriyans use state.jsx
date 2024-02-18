@@ -1,5 +1,31 @@
 # ****_useState Hook_**
 
+gotcha 
+1) You can only use hooks in functional components , You cannot use in class components.
+
+2) Every time your funtion runs your hooks must execute in exact same order .
+  so you cannot call it conditionally or put it inside functions , loops .
+They must be at the top levels .
+
+This will not work .
+
+```jsx
+
+function App(){
+if (true){
+     useState()
+}
+useState()
+useState()
+useState()
+
+```
+### The above code would fail to compile 
+
+- we would get error "useState" is called conditionally . React Hooks must be called in the exact same order in every component render  react-hooks/rules-of-hooks
+
+
+
 ## What is a State?
 
 A state is data that React manages. Whenever this data changes, React updates the page accordingly. React doesn't change it automatically when you click the button , In order to change anything in the page you have to update the data .
@@ -37,6 +63,74 @@ function App() {
 }
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Other code Example (wrong one )
+
+```jsx
+
+import React ,{useState }from 'react';
+
+function App() {
+const [count ,setCount] =useState(4)
+
+function decrementCount() {
+setCount (count-1)
+}
+return(
+<>
+   <button onClick = {decrementCount}>-</button>
+<span>{count}</span>
+<button> + </button>
+</>
+  )
+}
+	export default App;
+```
+
+## NOW SOMETHING IMPORTANT TO KNOW is the above is actually incorrect way to  update a value based on the previous value.
+
+
+```jsx
+  
+function decremenCount(){
+setCount(count-1)
+{/*suppose here count value is 4 so we are doing in both cases 4-1 =3 so both will return same value  They are just overriding each other . */}
+setCount(count -1)
+}
+
+
+
+```
+
+#### `This above code will not work it will not work it will not subtract -2 it will only subtract -1` 
+
+**`Reason**  :--- Our count value is just the value of count when we render our function so here we are doing ,suppose here count value is 4 so we are doing in both cases 4-1 =3 so both will return same value  They are just overriding each other . 
+
+ ### But when  we pass another anonymous function 
+
+```jsx
+function decremenCoun(){
+setCount(prevCount => prevCount -1)
+setCount(prevCount => prevCount -1)
+}
+
+```
+  ### Here on Above what happens is that our previous value is passed into it so we get last value of count each time Therefore we are doing -2 on the above code .
+
+
+```jsx
+
+function incrementCount () {
+
+setCount (prevCount => prevCount -1 )
+}
+
+```
+
+2) So, Anytime you need to modify the state you need to send previous state value to create the new value , You need to make sure to use function version of setting your state just like if you were setting the state of inside of a class component.
+
+
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -44,10 +138,10 @@ function App() {
 
 Sometimes we need the old value when using `setVal`. If we need the old value, we use the functional way, and if we do not need the old value, we can use the spread operator.
 
-Inside `setVal`:
+Inside the setVal method:
 
 1. We can directly give a new value for our state.
-2. Or we can pass any function (inside the setter function) when we want to use the previous value.
+2. Alternatively, we can pass a function inside the setter function  when we want to utilize the previous value.
 
 Example:
 
@@ -67,13 +161,74 @@ function App() {
 
 export default App;
 
-export default App;
 
 ```
 
-`HERE onClick has an anonymous function and it will run that function only when it gets clicked` .In order to use updater onClick pass it inside an anonymous function 
+In the above example, the onClick event handler utilizes an anonymous function to ensure that the function is executed only when the button is clicked.  .In order to use updater function pass it in the button inside  onClick attribute passed inside an anonymous function .
 
 
+
+
+## Important Considerations ----
+
+
+When using a functional component with useState(initialValue), the initial value is called every time the component function runs. This can lead to performance issues (slowing of our app), especially with complex initial values such as computations involving Fibonacci sequences.
+
+To mitigate this performance impact, useState offers two ways to pass in the initial state:
+
+
+
+1. **Passing the value directly:**
+   ```jsx
+   const [count, setCount] = useState(4);
+   ```
+   In this approach, the initial value is called every time the component function runs,  so for complex value like for calculating fibonnaci or something and if that would keep happening over and over again that would really slow down the performance of our application.
+
+2. **Passing a function:**
+   ```jsx
+   const [count, setCount] = useState(() => 4);
+   ```
+   By passing a function, it runs only once when the component initially renders. This can improve performance for components with complex initial state values.
+
+### Example:
+
+```jsx
+const [count, setCount] = useState(() => {
+  console.log('Initial value setup');
+  return 4;
+});
+
+// Alternatively, using a separate function reference:
+function countInitial() {
+  console.log('Initial value setup');
+  return 4;
+}
+
+const [count, setCount] = useState(() => countInitial());
+```
+
+In the second approach, by passing a function reference, the function is executed only once during the initial render, improving performance for complex initial state setups.
+
+
+ ###  Additional Note
+
+
+So ,above we see  that countInitial function runs everytime our component renders. 
+
+
+<u>So, if we use a function and then call countInitial inside it, the countInitial function will only run once during the first render.</u>
+
+
+```jsx
+
+funciton countInitial () {
+   console.log("run function ")
+   return 4
+}
+
+const [count , setCount] = useState (()=>countInitial())
+
+```
 
 ------------------------------------------------------------------------------------------------------------------------------------
 # _Advanced Usage of useState_-----------------------------------------
@@ -384,3 +539,246 @@ export default App;
 
 
 ```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	## Creating Something with useState----------------
+
+
+### `App.jsx-------------------`
+
+```jsx
+import { useState } from "react";
+import "./App.css";
+import Card from "./components/Card";
+import SomeThing from "./components/SomeThing";
+
+function App() {
+  // const [val, setVal] = useState({ name: "lucky", isBanned: false });
+  // const [val, setVal] = useState({ name: "lucky", age: 23 });
+
+  // const [val, setVal] = useState([1, 2, 3, 4, 5, 6]);
+  // const [val, setVal] = useState([
+  //   { name: "lucky", age: 23 },
+  //   { name: "Shivam", age: 34 },
+  //   { name: "golu", age: 25 },
+  // ]);
+
+  return (
+    <div>
+      {/* <h1>Name : {val.name}</h1>
+      <h2>Banned : {val.isBanned.toString()}</h2>
+      <button
+        onClick={() => setVal({ ...val, isBanned: !val.isBanned })}
+        className={`px-3 py-1 ${
+          val.isBanned ? "bg-blue-600" : "bg-red-700"
+        } text-white text-md rounded-full`}
+      >
+        Change Button
+      </button> */}
+
+      {/* <h1>Name : {val.name}</h1>
+      <h2>Age : {val.age}</h2>
+      <h3>Role : {val.gender}</h3>
+
+      <button
+        className="px-3 py-1 mt-3 bg-red-500 text-md rounded-full"
+        onClick={() => setVal({ ...val, gender: "Male" })}
+      >
+        Click
+      </button> */}
+      {/* 
+      {val.map((item, index) => (
+        <>
+          <h1 key={index}>Name : {item.name}</h1>
+          <p>Age : {item.age}</p>
+        </>
+      ))} */}
+
+      {/* <button
+        onClick={() =>
+          setVal(() =>
+            val.map((item, index) =>
+              item.name === "Shivam" ? { name: "Shivam", age: 55 } : item
+            )
+          )
+        }
+        // onClick={() => setVal([...val, 10])}
+        // onClick={() =>
+        //   setVal(() => val.filter((item, index) => item % 2 !== 0))
+        // }
+        // onClick={() => setVal(() => val.filter((item, index) => index != 2))}
+        // onClick={() =>
+        //   setVal(() => {
+        //     return val.filter((item, index) => index != val.length - 1);
+        //   })
+        // }
+        className="px-3 py-1 text-md bg-blue-500 rounded-full text-white"
+      >
+        Change
+      </button> */}
+
+      {/* <Card /> */}
+      <SomeThing />
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+
+### `card.jsx----------------`
+
+
+```jsx
+
+
+import React, { useState } from "react";
+
+const Card = () => {
+  const [data, setData] = useState(false);
+
+  return (
+    <div>
+      <h2>{data.toString()}</h2>
+
+      {/* print bahar jaao if val is false and print mat jao iv val is true */}
+
+      <p>{data === false ? "BAHAR JAO" : "MAT JAO"}</p>
+
+      <button
+        // onClick={() => setData(!data)}
+        onClick={() => setData(() => !data)}
+        className="px-3 py-1 bg-sky-500 text-md rounded-full"
+      >
+        Change Data
+      </button>
+    </div>
+  );
+};
+
+export default Card;
+
+```
+
+### `SomeThing.jsx---------------------------------`
+
+
+
+```jsx
+
+
+import React, { useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
+
+const SomeThing = () => {
+  const [val, setVal] = useState(false);
+
+  return (
+    <div className="w-full h-screen bg-zinc-300 flex justify-center items-center">
+      <div className="w-60 relative h-32 flex bg-zinc-500 rounded-md overflow-hidden">
+        <img
+          className={`w-full h-full ${
+            val === false ? "-translate-x-[0%]" : "-translate-x-[100%]"
+          } transition-transform ease-out duration-300 object-cover shrink-0`}
+          src="https://images.unsplash.com/photo-1682685797743-3a7b6b8d8149?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="card"
+        />
+        <img
+          className={`w-full h-full transition-transform ease-out duration-300 ${
+            val === false ? "-translate-x-[0%]" : "-translate-x-[100%]"
+          } object-cover shrink-0`}
+          src="https://images.unsplash.com/photo-1702234867439-bec43ed4e369?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="card"
+        />
+        <span
+          onClick={() => setVal(() => !val)}
+          className="w-10 h-10 bg-[#dadada8b] flex items-center justify-center rounded-full absolute bottom-[0%] left-1/2 -translate-x-[50%] -translate-y-[50%]"
+        >
+          <FaArrowRight size={"1em"} />
+        </span>
+      </div>
+    </div>
+  );
+};
+
+export default SomeThing;
+
+```
+
+
+
+
+## Note ----
+
+
+1- If you want add styling to icons from react-icon library what you can do it that you can put it inside span tag and give classes to span and then give styling .
+
+2- Boolean cannot be printed as a string .
+
+### The below code is not right way .
+
+```jsx
+<button onClick = {() =>setVal(!val)} >
+```
+### _This code is the correct way to do it_
+
+```jsx
+<button onClick = {() =>setVal(()=>!val)} >
+```
+
+
+###  3) Using Small Brackets with Arrow Functions in JSX
+
+When working with JSX and arrow functions, especially when mapping over arrays or handling complex JSX expressions, using small brackets (parentheses) to enclose the arrow function's body is a good practice. This approach allows you to break the JSX expression into multiple lines for improved readability and maintainability. While omitting the small brackets may work in simple cases, it can lead to syntax errors or confusion, especially in more complex scenarios.
+
+### Example:
+
+```jsx
+import React from 'react';
+
+export function App(props) {
+  const data = ["harsh", "harsh2", "vipul"];
+  
+  return (
+    <div className='App'>
+      {data.map((elem, index) => (
+        <div key={index}>
+          {elem}
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+In the above example, small brackets are used to enclose the arrow function's body when mapping over the `data` array. This ensures that the JSX expression inside the arrow function is properly formatted across multiple lines, enhancing code readability.
+
+### Alternative Syntax:
+
+While using small brackets is the recommended approach, omitting them may still work in simpler cases. However, it's advisable to adopt the consistent use of small brackets for arrow functions in JSX to maintain code consistency and readability, especially in larger projects or when working collaboratively with other developers.
+
+### Alternative Syntax Example:
+
+```jsx
+import React from 'react';
+
+export function App(props) {
+  const data = ["harsh", "harsh2", "vipul"];
+  
+  return (
+    <div className='App'>
+      {data.map((elem, index) =>
+        <div key={index}>
+          {elem}
+        </div>
+      )}
+    </div>
+  );
+}
+```
+
+In this alternative syntax, small brackets are omitted from the arrow function. While this syntax may still work in simpler cases, using small brackets consistently across your codebase is recommended for improved code readability and maintainability.
+
