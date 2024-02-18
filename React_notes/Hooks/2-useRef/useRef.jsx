@@ -143,8 +143,7 @@ return (
 # useRef (from hitesh video)
 
 
-
- ## History ;-----
+## History :-----
 
 
 There are so many elements on the webpage and we use to take reference of that particular element and store it using `document.getElmentById or class or using querySelector` .
