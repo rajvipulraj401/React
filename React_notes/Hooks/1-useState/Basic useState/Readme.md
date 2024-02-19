@@ -35,11 +35,17 @@ For example, if a button is initially red and you want to change it to blue, you
 ### State Example:
 
 ```jsx
+
+import React, { useState } from 'react';
+function App() {
+
 // Initializing score state with value 0
 const [score, setScore] = useState(0);
 
 // Updating the score
 setScore(score + 10);
+
+}
 ```
 
 In this example, the `score` is stored in a state. When the score changes, React automatically updates any part of the page that depends on the score.
@@ -88,7 +94,9 @@ return(
 	export default App;
 ```
 
-## NOW SOMETHING IMPORTANT TO KNOW is the above is actually incorrect way to  update a value based on the previous value.
+## NOW SOMETHING IMPORTANT TO KNOW 
+
+The above example is actually incorrect way to  update a value based on the previous value.
 
 
 ```jsx
@@ -103,7 +111,7 @@ setCount(count -1)
 
 ```
 
-#### `This above code will not work it will not work it will not subtract -2 it will only subtract -1` 
+ `The above code will not work ,it will not subtract -2 it will only subtract -1` 
 
 **`Reason**  :--- Our count value is just the value of count when we render our function so here we are doing ,suppose here count value is 4 so we are doing in both cases 4-1 =3 so both will return same value  They are just overriding each other . 
 
@@ -116,7 +124,7 @@ setCount(prevCount => prevCount -1)
 }
 
 ```
-  ### Here on Above what happens is that our previous value is passed into it so we get last value of count each time Therefore we are doing -2 on the above code .
+  ### Here on Above what happens is that our previous value (latest value of count) is passed into it .Therefore we are doing -2 on the above code .
 
 
 ```jsx

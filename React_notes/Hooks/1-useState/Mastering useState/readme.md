@@ -1,9 +1,9 @@
 
-# Mastering useState ----
+#  ____ _Mastering useState_ ____
 
-# **Mastering useState() part 1**
+## Mastering useState() part 1
 
-### In order to change color ---
+### In order to change color (Obj value change) ---
 
 To change the color of a button when clicked, we need to dynamically pass the classNames in JSX using curly braces `{}`. This allows us to write JavaScript code inside the classNames in backticks and apply conditional styling based on state values.
 
@@ -32,7 +32,7 @@ function App() {
 export default App;
 ```
 
-# **Mastering useState() part 2**
+## **Mastering useState() part 2**
 
 ### How to add another property in the old object using useState?
 
@@ -59,11 +59,12 @@ export default App;
 ```
 ### We see the result `gender property is not being added in the object and why is that ???
 
-**Reason:** `useState` does not update the state immediately. It updates the state asynchronously behind the scenes, so we cannot immediately check for the updated value.
 
-### `Even if we put async function we will still not get the property in the object. (updation has been done but we are not seeing it immediately `
+**Reason:** `useState` does not update the state immediately. <u>It updates the state asynchronously behind the scenes, so we cannot immediately check for the updated value.</u>
 
-### **Note:** The setter function updates the state asynchronously, so we cannot check the updated value immediately in the next line of code. To check for updates, we use `useEffect`.
+#### `Even if we put async function we will still not get the property in the object. (updation has been done but we are not seeing it immediately `
+
+##### **Note:** The setter function updates the state asynchronously, so we cannot check the updated value immediately in the next line of code. To check for updates, we use `useEffect`.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # `useState Arrays []----------`
@@ -224,8 +225,7 @@ export default App;
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-	## Creating Something with useState----------------
+## Creating Something with useState----------------
 
 
 ### `App.jsx-------------------`

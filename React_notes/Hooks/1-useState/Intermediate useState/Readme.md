@@ -1,4 +1,4 @@
-		# _Intermediate useState_
+# _Intermediate useState_
 
 Sometimes we need the old value when using `setVal`. If we need the old value, we use the functional way, and if we do not need the old value, we can use the spread operator.
 

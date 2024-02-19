@@ -1,4 +1,4 @@
-# _Advanced Usage of useState_-----------------------------------------
+# ---- _Advanced Usage of useState_----------
 
 In React, the `useState` hook is commonly used for managing component state. While its basic usage involves simple data types like strings or numbers, `useState` can also handle more complex data structures like objects and arrays. However, when dealing with objects or arrays, which are of reference type, special considerations need to be taken into account.
 
@@ -31,12 +31,11 @@ function App() {
 
 export default App;
 ```
-
-	### setVal is our setter function it each time needs a  new value isse pichli value se koi matlab nahi hota hai .
+#### setVal is our setter function it each time needs a  new value isse pichli value se koi matlab nahi hota hai .
 
 In this example, `...val` creates a shallow copy of the `val` object. By then updating the `isBanned` property to its opposite value (`!val.isBanned`) within the new object passed to `setVal`, we ensure that the original `val` object remains unchanged.
 
-### Importance of Immutability
+## Importance of Immutability
 
 React relies on detecting changes in state references to determine when to re-render components. By following the immutability principle and creating new object or array references when updating state variables, React can accurately detect state changes and trigger component re-renders as needed.
 
@@ -51,7 +50,7 @@ When updating state variables that contain objects or arrays, it's crucial to cr
 
 React determines whether to re-render components by comparing the references of old and new state variables. If the references are different, React knows that a state update has occurred and re-renders the component.
 
-However, React doesn't compare the internal values of objects or arrays; it only compares their references. If you mutate the existing object or array directly without creating a new reference, React won't detect the change in state, leading to inconsistencies in UI rendering.
+<u>However, React doesn't compare the internal values of objects or arrays; it only compares their references. If you mutate the existing object or array directly without creating a new reference, React won't detect the change in state, leading to inconsistencies in UI rendering.</u>
 
 ### Using the Spread Operator
 
@@ -65,7 +64,7 @@ setVal({ ...val, isBanned: true });
 
 In this example, `...val` creates a new object reference with all the properties of the existing `val` object. By specifying the updated `isBanned` property within the new object, you ensure that React detects the state change and updates the UI accordingly.
 
-**Note:** Additionally, when dealing with primitive values, React doesn't directly update the existing variable. Instead, it creates a new variable in memory, assigns the new value to it, and then points to the new variable. This means that the old variable `count` is not updated; instead, a new variable is created, and the new value (in this case, `1`) is assigned to it. 
+**Note:** Additionally, `when dealing with primitive values, React doesn't directly update the existing variable. Instead, it creates a new variable in memory, assigns the new value to it, and then points to the new variable`. This means that the old variable `count` is not updated; instead, a new variable is created, and the new value (in this case, `1`) is assigned to it. 
 
 For example, when updating a state variable `count` of type `number`:
 
