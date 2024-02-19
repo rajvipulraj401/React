@@ -341,3 +341,78 @@ export default AppName;
 
 
 ```
+
+
+
+---
+
+# Using Module.css in React
+
+Yes, both ways of using the module.css in React are correct. Let's break down each approach:
+
+1. Using bracket notation:
+```jsx
+import styles from "./AppName.module.css";
+
+function AppName() {
+  return <h1 className={styles["appName_style"]}>Todo App</h1>;
+}
+export default AppName;
+```
+In this approach, `styles` is imported from the `AppName.module.css` file. The `styles` object contains all the CSS classes defined in the module, and each class name is a property of this object. By using bracket notation (`styles["appName_style"]`), you can access the class name defined in the module and apply it to the `h1` element.
+
+2. Using curly brackets:
+```jsx
+import styles from "./AppName.module.css";
+
+function AppName() {
+  return <h1 className={styles.appName}>Todo App</h1>;
+}
+export default AppName;
+```
+In this approach, `styles` is again imported from the `AppName.module.css` file. Here, the class name is accessed using dot notation (`styles.appName_style`). This approach is more concise and readable, especially when the class name doesn't contain special characters or spaces.
+
+Both approaches are correct and achieve the same result. You can choose whichever one you prefer based on your personal preference or coding style guidelines.
+
+---
+
+# When to Use square Bracket Notation in CSS Modules
+
+In CSS modules, curly braces are used when the class names contain special characters or spaces. This is because class names with special characters or spaces would not be accessible using dot notation. Here are some instances where curly bracket notation is required:
+
+1. **Special Characters in Class Names**: If the class name defined in the CSS module contains special characters such as hyphens, underscores, or spaces, you must use bracket notation to access it. For example:
+   ```jsx
+   import styles from "./AppName.module.css";
+
+   function AppName() {
+     return <h1 className={styles["app-name"]}>Todo App</h1>;
+   }
+   export default AppName;
+   ```
+
+2. **Dynamic Class Names**: When you need to dynamically generate class names based on variables or props, you must use bracket notation. For example:
+   ```jsx
+   import styles from "./AppName.module.css";
+
+   function AppName({ isImportant }) {
+     const className = isImportant ? styles["important"] : styles["normal"];
+     return <h1 className={className}>Todo App</h1>;
+   }
+   export default AppName;
+   ```
+
+3. **Reserved JavaScript Keywords**: If the class name coincides with a reserved JavaScript keyword, bracket notation should be used to avoid conflicts. For instance:
+   ```jsx
+   import styles from "./AppName.module.css";
+
+   function AppName() {
+     return <h1 className={styles["class-name"]}>Todo App</h1>;
+   }
+   export default AppName;
+   ```
+
+In these cases, using bracket notation ensures that you can access the CSS class correctly and apply it to your React components without encountering any errors.
+
+--- 
+
+
