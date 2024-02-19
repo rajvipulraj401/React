@@ -298,6 +298,86 @@ export default FoodInput;
 6. Example:
    <Button onClick={handleClick} />
 
+
+
+`App.jsx---------`
+
+```jsx
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import FoodItems from "./components/FoodItems";
+import ErrorMessage from "./components/ErrorMessage";
+import Container from "./components/container";
+import FoodInput from "./components/FoodInput";
+
+function App() {
+  // let foodItems =[];
+  let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+  let textToShow = "Food Item Entered by user";
+
+  const handleOnChange = (event) => {
+    console.log(event.target.value);
+    /* When we go inside event object in console there is target object inside it and then 
+      inside that there is a value property   */
+    textToShow = event.target.value;
+  };
+
+  return (
+    <>
+      <Container>
+        <h1 className="food-heading">Healthy Food</h1>
+        <FoodInput handleOnChange={handleOnChange} />
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItems groccery={foodItems} />
+      </Container>
+    </>
+  );
+}
+
+export default App;
+```
+
+
+`FoodItems.jsx---`
+
+```jsx
+import Item from "./Item";
+// let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+
+const FoodItems = ({ groccery }) => {
+  return (
+    <ul className="list-group">
+      {groccery.map((item) => (
+        <Item
+          key={item}
+          foods={item}
+          handleBuyButton={() => console.log(`${item} bought`)}
+        />
+        // Passing the 'foods' prop to the 'Item' component.
+        // Note: 'foodItem' will be accessible within 'Item' component via the 'props' object.
+        // (props is just the name you can have any name)
+
+        // we have to wrte item inside curly bracketbecause it is jsx code
+        // else the browser will interpret it as text and not the variable.
+
+        // NOTE 2 - Ensure each component in the list has a unique "key" prop, required by React for efficient updates.
+      ))}
+    </ul>
+  );
+};
+
+export default FoodItems;
+
+// how we pass props
+
+/* 
+We pass as an attribute .
+examples - <Header title = "My App"/>*/
+```
+
+
+
 `items.jsx----`
 
 ```jsx
@@ -342,43 +422,6 @@ const Item = ({ foods, handleBuyButton }) => {
 export default Item;
 ```
 
-`FoodItems.jsx---`
-
-```jsx
-import Item from "./Item";
-// let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
-
-const FoodItems = ({ groccery }) => {
-  return (
-    <ul className="list-group">
-      {groccery.map((item) => (
-        <Item
-          key={item}
-          foods={item}
-          handleBuyButton={() => console.log(`${item} bought`)}
-        />
-        // Passing the 'foods' prop to the 'Item' component.
-        // Note: 'foodItem' will be accessible within 'Item' component via the 'props' object.
-        // (props is just the name you can have any name)
-
-        // we have to wrte item inside curly bracketbecause it is jsx code
-        // else the browser will interpret it as text and not the variable.
-
-        // NOTE 2 - Ensure each component in the list has a unique "key" prop, required by React for efficient updates.
-      ))}
-    </ul>
-  );
-};
-
-export default FoodItems;
-
-// how we pass props
-
-/* 
-We pass as an attribute .
-examples - <Header title = "My App"/>*/
-```
-
 `FoodInput.jsx--------`
 
 ```jsx
@@ -396,44 +439,6 @@ const FoodInput = ({ handleOnChange }) => {
 };
 
 export default FoodInput;
-```
-
-`App.jsx---------`
-
-```jsx
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import FoodItems from "./components/FoodItems";
-import ErrorMessage from "./components/ErrorMessage";
-import Container from "./components/container";
-import FoodInput from "./components/FoodInput";
-
-function App() {
-  // let foodItems =[];
-  let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
-  let textToShow = "Food Item Entered by user";
-
-  const handleOnChange = (event) => {
-    console.log(event.target.value);
-    /* When we go inside event object in console there is target object inside it and then 
-      inside that there is a value property   */
-    textToShow = event.target.value;
-  };
-
-  return (
-    <>
-      <Container>
-        <h1 className="food-heading">Healthy Food</h1>
-        <FoodInput handleOnChange={handleOnChange} />
-        <ErrorMessage items={foodItems}></ErrorMessage>
-        <FoodItems groccery={foodItems} />
-      </Container>
-    </>
-  );
-}
-
-export default App;
 ```
 
 ```jsx
