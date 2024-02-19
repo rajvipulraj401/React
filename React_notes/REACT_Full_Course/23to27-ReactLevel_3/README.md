@@ -560,7 +560,6 @@ Now what we want.
 
 **Automatic state value updates:** React handles state updates internally, ensuring that the most recent state values are readily available within the component function during re-renders. There's no need for manual reassignment of state values; React takes care of it behind the scenes.
 
-By understanding how state changes trigger component re-renders, developers can create dynamic and responsive user interfaces with React effortlessly.
 
 4. For functional components, use the useState hook.
  
