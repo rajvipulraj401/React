@@ -355,11 +355,10 @@ Yes, both ways of using the module.css in React are correct. Let's break down ea
 import styles from "./AppName.module.css";
 
 function AppName() {
-  return <h1 className={styles["appName_style"]}>Todo App</h1>;
+  return <h1 className={styles["appNamestyle"]}>Todo App</h1>;
 }
 export default AppName;
 ```
-In this approach, `styles` is imported from the `AppName.module.css` file. The `styles` object contains all the CSS classes defined in the module, and each class name is a property of this object. By using bracket notation (`styles["appName_style"]`), you can access the class name defined in the module and apply it to the `h1` element.
 
 2. Using curly brackets:
 ```jsx
