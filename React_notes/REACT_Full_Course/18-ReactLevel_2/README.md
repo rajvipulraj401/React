@@ -355,10 +355,11 @@ Yes, both ways of using the module.css in React are correct. Let's break down ea
 import styles from "./AppName.module.css";
 
 function AppName() {
-  return <h1 className={styles["appNamestyle"]}>Todo App</h1>;
+  return <h1 className={styles["appName_style"]}>Todo App</h1>;
 }
 export default AppName;
 ```
+In this approach, `styles` is imported from the `AppName.module.css` file. The `styles` object contains all the CSS classes defined in the module, and each class name is a property of this object. By using bracket notation (`styles["appName_style"]`), you can access the class name defined in the module and apply it to the `h1` element.
 
 2. Using curly brackets:
 ```jsx
@@ -369,7 +370,7 @@ function AppName() {
 }
 export default AppName;
 ```
-In this approach, `styles` is again imported from the `AppName.module.css` file. Here, the class name is accessed using dot notation (`styles.appName_style`). This approach is more concise and readable, especially when the class name doesn't contain special characters or spaces.
+In this approach, `styles` is again imported from the `AppName.module.css` file. Here, the class name is accessed using dot notation (`styles.appName`). This approach is more concise and readable, `especially when the class name doesn't contain special characters or spaces`.
 
 Both approaches are correct and achieve the same result. You can choose whichever one you prefer based on your personal preference or coding style guidelines.
 
