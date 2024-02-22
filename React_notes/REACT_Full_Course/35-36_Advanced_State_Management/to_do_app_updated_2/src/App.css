@@ -1,0 +1,17 @@
+.items-container {
+  text-align: left;
+}
+
+.kg-button {
+  width: 80px;
+
+  /* min-width: 100px; */
+}
+
+.kg-row {
+  margin: 20px 0;
+}
+
+.kg-col {
+  width: auto;
+}

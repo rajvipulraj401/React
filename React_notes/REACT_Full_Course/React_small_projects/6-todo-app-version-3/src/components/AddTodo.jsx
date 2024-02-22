@@ -12,6 +12,7 @@ function AddTodo({ onNewItem }) {
   //  as we will use it when add button is clicked.
   const handleNameChange = (ev) => {
     setTodoName(ev.target.value);
+    // now i want to set the name value in the input text as the value of todoName
   };
 
   const handleDateChange = (ev) => {
@@ -22,6 +23,8 @@ function AddTodo({ onNewItem }) {
     onNewItem(todoName, dueDate);
     setdueDate("");
     setTodoName("");
+    // after the button is clicked we send the name and date
+    // to the parent and we will clear the input fields
   };
 
   return (
@@ -39,6 +42,9 @@ function AddTodo({ onNewItem }) {
                   karana hai wo placeholder me daalnea padta hai*/}
 
           {/* NOTE - jsx me comment bhi curly bracket ke andar aata hai  */}
+
+          {/* We need to attach onChange handler in the input so  that whenever there is a change i.e when user enter something 
+           we call the function and sent the todoName and todoDate to the app component */}
         </div>
         <div className="col-4">
           <input type="date" value={dueDate} onChange={handleDateChange} />
@@ -50,6 +56,10 @@ function AddTodo({ onNewItem }) {
             onClick={handleAddButtonClicked}
             /* we have to make anonymous function in onclick because by default it passes the event object but 
             we want to pass  different things that's why */
+
+            /* What happens is that when we click on the button the event object gets passes
+            but we want to pass name and date of the object which got clicked so we need an anonymous function
+            so that we can send arguments */
           >
             Add
           </button>

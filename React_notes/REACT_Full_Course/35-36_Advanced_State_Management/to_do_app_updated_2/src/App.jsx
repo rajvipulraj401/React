@@ -1,5 +1,7 @@
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
+// import TodoItem1 from "./components/Todoitem1";
+// import TodoItem2 from "./components/Todoitem2";
 import TodoItems from "./components/TodoItems";
 import WelcomeMessage from "./components/WelcomeMessage";
 import "./App.css";
@@ -8,29 +10,34 @@ import { useState } from "react";
 const initialTodoItems = [
   {
     name: "Buy Milk",
-    dueDate: "20/01/2024",
+    duedate: "20/01/2024",
   },
   {
     name: "Go to College",
-    dueDate: "20/01/2024",
+    duedate: "20/01/2024",
   },
 ];
 function App() {
-  // let's make a todoItem state where it will get updated whenver new item is added
   const [todoItems, setTodoItems] = useState(initialTodoItems);
 
   const handleNewItem = (itemName, itemDueDate) => {
-    // Now i am getting the name and date and i want to add this in to our todoItems
+    // console.log(`New Item Added : ${itemName} Date:${itemDueDate}`);
+    // const newTodoItems = [
+    //   ...todoItems,
+    //   { name: itemName, dueDate: itemDueDate },
+    // ];
+    // setTodoItems(newTodoItems);
 
-    /*  We will create an ovject and then add that in the todoItems*/
-    //  and send it to TodoItem component to show in the ui
-    console.log(`New Item Added : ${itemName} Date:${itemDueDate}`);
-    const newTodoItems = [
-      ...todoItems,
+    setTodoItems((currValue) => [
+      ...currValue,
       { name: itemName, dueDate: itemDueDate },
-    ];
-    setTodoItems(newTodoItems);
+    ]);
+
+    //  If we want to set new value based on old value then instead
+    // of using spread use a method inside setter function of use state
   };
+
+  // React runs in async way .
 
   const handleDeleteItem = (todoItemName, todoDate) => {
     const newTodoItems = todoItems.filter((item) => item.name !== todoItemName);
@@ -52,9 +59,6 @@ function App() {
           todoItems={todoItems}
           onDeleteClick={handleDeleteItem}
         ></TodoItems>
-
-        {/* instead of making duplicate components send props to one component
-        to get things done at one place  */}
       </div>
     </center>
   );

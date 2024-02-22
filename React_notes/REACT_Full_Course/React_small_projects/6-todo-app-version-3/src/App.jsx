@@ -1,7 +1,5 @@
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
-// import TodoItem1 from "./components/Todoitem1";
-// import TodoItem2 from "./components/Todoitem2";
 import TodoItems from "./components/TodoItems";
 import WelcomeMessage from "./components/WelcomeMessage";
 import "./App.css";
@@ -10,17 +8,22 @@ import { useState } from "react";
 const initialTodoItems = [
   {
     name: "Buy Milk",
-    duedate: "20/01/2024",
+    dueDate: "20/01/2024",
   },
   {
     name: "Go to College",
-    duedate: "20/01/2024",
+    dueDate: "20/01/2024",
   },
 ];
 function App() {
+  // let's make a todoItem state where it will get updated whenver new item is added
   const [todoItems, setTodoItems] = useState(initialTodoItems);
 
   const handleNewItem = (itemName, itemDueDate) => {
+    // Now i am getting the name and date and i want to add this in to our todoItems
+
+    /*  We will create an ovject and then add that in the todoItems*/
+    //  and send it to TodoItem component to show in the ui
     console.log(`New Item Added : ${itemName} Date:${itemDueDate}`);
     const newTodoItems = [
       ...todoItems,
@@ -49,6 +52,9 @@ function App() {
           todoItems={todoItems}
           onDeleteClick={handleDeleteItem}
         ></TodoItems>
+
+        {/* instead of making duplicate components send props to one component
+        to get things done at one place  */}
       </div>
     </center>
   );
