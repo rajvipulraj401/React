@@ -1,7 +1,7 @@
 # 	`_ Context API _`
 
 
-![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/35_Advance_State_management(context_Api)/contextApi.png)
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/35_Advanced_State_Management(context_Api)/contextApi.png)
 
 ### Why we need context Api ?
 
