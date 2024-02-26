@@ -57,7 +57,9 @@ Access the context value in components using the useContext hook:
 const { todoItems, addNewItem, deleteItem } = useContext(TodoItemsContext);
 ```
 
-In order to use "If we want the shared context to be accessible to all components within a certain container, it should be provided at the appropriate level in the component hierarchy."
+### In order to use 
+
+"If we want the shared context to be accessible to all components within a certain container, it should be provided at the appropriate level in the component hierarchy."
 
 ```jsx
 return (
