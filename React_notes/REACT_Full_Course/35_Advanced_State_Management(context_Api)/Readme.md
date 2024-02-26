@@ -1,8 +1,5 @@
 # 	`_ Context API _`
 
-
-![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/35_Advanced_State_Management(context_Api)/contextApi.png)
-
 ### Why we need context Api ?
 
 - In complex React projects like a todo app, passing props down through multiple layers of components can lead to prop drilling, where components receive props they don't need.
@@ -11,6 +8,9 @@
 
 
 (so the state which is shared between multiple components so the parent of those component needs to save /store the state in it .) but sometimes we have to go very deep . ex
+
+
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/35_Advanced_State_Management(context_Api)/contextApi.png)
 
 ### Diagram:
 
