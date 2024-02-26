@@ -1,4 +1,4 @@
-I apologize for the misunderstanding. Let me rectify that. Here are the notes without any alterations:
+
 
 
 ## **Part 1**
