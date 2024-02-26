@@ -158,7 +158,7 @@ const TodoItems = () => {
 
  `Instead of giving state (current value), we can provide a value as an object so that we can access methods as well. Earlier, we were declaring state and passing the props, `but now we are providing it to the context provider. So, whoever wants to access the property or method can use it from the context provider`. Remember, as we change the value of the context provider, all the components get re-rendered.
 
-<U>We can send an object instead of just one value, and then we would be able to access all of the values and even methods by using the context provider.</U>
+<U> We can send an object instead of just one value, and then we would be able to access all of the values and even methods by using the context provider. </U>
 
 Also, methods are also first-class objects.
 
