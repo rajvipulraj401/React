@@ -1,9 +1,10 @@
-# 	`_useReducer_`
+# 	`___useReducer_---`
 
 
 We use it when our app is more complicated we used context when our state was common in most of the components but we will use `useReducer` when the logic of state updatition or maintainability gets tough or lengthy  .
 
--------------attACH PIC -------
+
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/36_Advance_State_management(useReducer)/useReducer.png)
 
 1. `useReducer` is a hook in React that offers more control over state operations compared to `useState`, especially for complex state logic (Basically advance version of useState smgho)
 
@@ -88,7 +89,7 @@ Action only has two things:
 After the action gets dispatched, it goes to the reducer. Now the reducer will see based on this action and old value what will be its new value
 
 
-![Pic]
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/36_Advance_State_management(useReducer)/useReducer.png)
 
 
 
@@ -407,7 +408,7 @@ function AddTodo() {
             /* What happens is that when we click on the button the event object gets passes
             but we want to pass name and date of the object which got clicked so we need an anonymous function
             so that we can send arguments */
-          >
+          > 
             Add
           </button>
         </div>

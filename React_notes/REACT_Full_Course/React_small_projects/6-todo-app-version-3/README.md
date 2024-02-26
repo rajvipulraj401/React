@@ -6,6 +6,10 @@
 - Allow users to add a new todo item by entering its name and selecting a due date.
 - Upon pressing the "Add" button, a new row should be added with the entered name and due date.
 - After adding, clear the input fields.
+- Make another component called message.jsx and show the messsage that "Enjoy your day".
+- Implement delete button functionality 
+Make a function in `app component` to handle delete button click and it will receive `todoName` as the parameter (which will also be a key) 
+ Then using `filter method` do the deletion in array .
 
 #### Implementation Steps:
 
@@ -139,7 +143,9 @@ If we didn't set the `value` attribute and relied solely on `useState`:
 {todoItems.length === 0 &&<WelcomeMessage ><//WelcomeMessage>}
 ```
 
-## `EXTRA  --Notes:`
+## `---------------------EXTRA  --Notes:------------------------`
+
+- Always write css in browser it's easy to then see and copy it back.
 - Ensured proper reference and execution of event handler functions to maintain functionality and context.
 - Avoided directly mutating state to adhere to best practices of immutability.
 - WHEN writing name of method write handle then the suitable name for method ex
@@ -149,3 +155,31 @@ handleOnClick
 - Triggers a function when user input changes.
 - Allows real-time response to user input.
 - we have to add another method (anonymous method) and inside it we can pass the reference of the parent method when using onClick or any other event changer function as it passes the event as parameter by default case .
+
+
+---
+##	**Title: Understanding Event Handling in JavaScript: Passing Function References vs. Direct Invocation**
+
+When attaching an anonymous function to an event handler like a button click, two common approaches are:
+
+1. **Passing a Reference to a Function:**
+   - Syntax: `() => { abc }`
+   - This approach involves passing a reference to the function `abc` without directly invoking it.
+   - When the button is clicked, the anonymous function is triggered, but `abc` is not immediately executed. Instead, it waits for the event to occur.
+
+2. **Directly Calling the Function Inside the Anonymous Function:**
+   - Syntax: `() => { abc() }`
+   - Here, the function `abc` is called directly inside the anonymous function.
+   - When the button is clicked, the anonymous function is triggered, and `abc()` is invoked immediately.
+
+**Result Comparison:**
+- In both scenarios, the function `abc` will eventually be executed when the button is clicked.
+- The difference lies in how the function is invoked within the anonymous function.
+- However, in the context of attaching event handlers like button clicks, both approaches yield the same result.
+
+**Conclusion:**
+- Whether you pass a reference to a function or directly call the function inside an anonymous function for event handling, the outcome remains consistent.
+- The choice between the two approaches often depends on factors like code readability, context, and specific requirements.
+
+--- 
+

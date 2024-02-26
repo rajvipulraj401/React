@@ -1,5 +1,8 @@
 # 	`_Context API_`
 
+
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/35_Advance_State_management(context_Api)/contextApi.png)
+
 ### Why we need context Api ?
 
  We were doing a project in todo App and we were seeing that in order to show/change data we needed states and we have to pass this as props to the components but what happens is that some components get the props unnecessarly because his children need the props so in order to solve this we use contextAPI .
