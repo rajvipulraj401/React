@@ -1,20 +1,33 @@
-# 	`_Context API_`
+# 	`_ Context API _`
 
 
 ![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/35_Advance_State_management(context_Api)/contextApi.png)
 
 ### Why we need context Api ?
 
- We were doing a project in todo App and we were seeing that in order to show/change data we needed states and we have to pass this as props to the components but what happens is that some components get the props unnecessarly because his children need the props so in order to solve this we use contextAPI .
- 
+- In complex React projects like a todo app, passing props down through multiple layers of components can lead to prop drilling, where components receive props they don't need.
+- Prop drilling makes maintenance difficult and can clutter components with unnecessary props.
+- Context API helps solve this issue by providing a shared state that can be accessed by multiple components without passing props through each intermediate component.
+
+
 (so the state which is shared between multiple components so the parent of those component needs to save /store the state in it .) but sometimes we have to go very deep . ex
-parent -> child ->child ->child-> child
+
+### Diagram:
+
+```
+Parent
+└── Child
+    └── Grandchild
+        └── Great Grandchild
+```
+
 
 so here the last child only needs the props but we have to unnecessarly send the props to all the previous parent so in order to avoid this repeatition we use contextAPI.
 
 
-  It makes maintainance of component very hard.
-This is known as prop Drilling .
+### props drilling :-
+
+Props drilling is the passing of props through multiple layers of components in a component hierarchy to reach a deeply nested child component.It makes maintainance of component very hard. 
 
 The above is solved using context api -
 
@@ -24,34 +37,51 @@ So Context means `common shared storage` among all the components. means jitne b
 
 
 
-/* ADD the diagram here*/
-
+```
+Parent
+└── Child
+    └── Grandchild
+        └── Great Grandchild
+```
 
 There is a general convention that the data we have we keep it in different folder
 
-we make a folder called store (because it is just a naming convention ) , all the store management (so jaha bhi state ho , business logic ho usko hum store me rkhte hai.
+we make a folder called store (because it is just a naming convention ) , all the store management (so jaha bhi state ho , business logic ho usko hum store me rkhte hai.) .This helps in separation of concern as we separate ui and logic.
 
 
+## Using Context API:
 
- The method to import createContext is  --
+- Import `createContext` from React:
 
 ```jsx
-import {createContext } from "react";
+import { createContext } from "react";
 
 export const TodoItemsContext = createContext();
-
 ```
---------------------------------------------------------------------------------------------------
----just like we import all the other things from react like useState() just like that we can import createContext from react app .
+Just like we import all the other things from react like useState() similarly we can import createContext from react app .
 
 we can also give initial value when we do create context.ex
+- Initialize context with an optional initial value:
 
+```jsx
 const TodoItemsContext = createContext([]);
+```
 
+- Provide the context value to components using `TodoItemsContext.Provider`:
 
------------------------------------------------------------------------------------------
+```jsx
+<TodoItemsContext.Provider value={{ todoItems, addNewItem, deleteItem }}>
+  {/* Children components */}
+</TodoItemsContext.Provider>
+```
 
-### now how to use it ??
+- Access the context value in components using the `useContext` hook:
+
+```jsx
+const { todoItems, addNewItem, deleteItem } = useContext(TodoItemsContext);
+```
+
+### Now how to use it ??
 
 -- If we want it available For all the container it should be available .
 
@@ -128,69 +158,70 @@ const TodoItems = () => {
 ```
 
 
- instead of giving state(current value) we can give value as object so that 
-      we can get method as well  
-        Earlier we were declaring state and passing the props but now we are giving it to context provider
-      so whoever wants to access the property or method can use it from context provider
-         Remember as we change the value of context provider all the things gets re-render
+ `Instead of giving state (current value), we can provide a value as an object so that we can access methods as well. Earlier, we were declaring state and passing the props, but now we are providing it to the context provider. So, whoever wants to access the property or method can use it from the context provider. Remember, as we change the value of the context provider, all the components get re-rendered.
 
-         we can instead of sending just 1 value we can send an object and then in that way we 
-        would be able to access all of the value and even method whoever needs whichever property using context provider
-        
+We can send an object instead of just one value, and then we would be able to access all of the values and even methods by using the context provider.`
 
-also methoods are also first class objects
+Also, methods are also first-class objects.
+
+**Title:** First-Class Objects in JavaScript
+
+In JavaScript, all non-primitive values, including arrays, objects, and functions, are considered first-class objects. This means they can be treated as objects, allowing them to be assigned to variables, passed as arguments, and returned from functions just like any other value like string or numbers .
+
+JavaScript treats functions as first-class citizens, meaning they can be:
+
+- Assigned to variables.
+- Passed as arguments to other functions.
+- Returned from other functions.
+  
 
 
   ### Always Remember _
   
-  if i am making an object for context then do not pass value directly into it 
+  `If i am making an object for context then do not pass value directly into it 
    Always make object and then pass it usse scope bana rahta hai ki aap jab bhi 
    chahe ek nayi value add kr sakte hai warna
-   refactor krna padega
+   refactor krna padega`
 
+
+### Folder Structure Convention:
+
+- Group context files under a `store` folder.
 
 ## Advantage of context Api
- Logic Separation: This helps keep the UI and business
-logic separate from each other.
+
+- **Logic Separation:** Keeps UI and business logic separate.
 
 
 ## Disadvantage of context API
    
-   Disadvantage of context is that when the context is changed
+   - **Performance:** Changing context value triggers a re-render ,Therefore
    whole app is painted so only put things in context which is very common
    and are used in many levels (which we had to pass unnecesaary at many place as props so )
 
    Else we will prefer other things to keep them in state . 
 
-so finally ,
+### Guidelines:
 
-
-1. Prop Drilling: Context API addresses prop drilling;
-component composition is an alternative.
-2. Folder Setup: Use a store folder for context files.
-3. Initialization: Use React.createContext with initial state
-and export it.
-4. Provider: Implement with contextName.Provider in
-components.
-5. Access Value: Use the useContext hook.
-6. Dynamic Data: Combine context value with state.
-7. Export Functions: Context can also export functions for
-actions
-8. Logic Separation: This helps keep the UI and business
-logic separate from each other.
+1. **Prop Drilling:** Context API addresses prop drilling; component composition is an alternative.
+2. **Folder Setup:** Use a `store` folder for context files.
+3. **Initialization:** Use `React.createContext` with an initial state and export it.
+4. **Provider:** Implement with `contextName.Provider` in components.
+5. **Access Value:** Use the `useContext` hook to access context values.
+6. **Dynamic Data:** Combine context value with state.
+7. **Export Functions:** Context can also export functions for actions.
+8. **Logic Separation:** Helps keep UI and business logic separate.
 
 
 
 
+---
 
 
+## Corrected Code Examples:
 
 
-
-codes
-
-
-`todo-items-store.jsx----------`
+### `todo-items-store.jsx----------`
 ```jsx
 
 import { createContext } from "react";
@@ -208,7 +239,7 @@ export const TodoItemsContext = createContext({
 ```
 
 
-`App.jsx------------`
+### `App.jsx------------`
 
 
 ```jsx
@@ -294,7 +325,7 @@ export default App;
 ```
 
 
-`TodoItems.jsx-------------`
+### `TodoItems.jsx-------------`
 
 
 ```jsx
@@ -336,7 +367,7 @@ export default TodoItems;
 
 
 
-`TodoItem.jsx-------------`
+### `TodoItem.jsx-------------`
 
 
 ```jsx
