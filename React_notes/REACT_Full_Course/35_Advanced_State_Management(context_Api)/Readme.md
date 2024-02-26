@@ -1,16 +1,12 @@
 # 	`_ Context API _`
 
 ### Why we need context Api ?
-
 - In complex React projects like a todo app, passing props down through multiple layers of components can lead to prop drilling, where components receive props they don't need.
 - Prop drilling makes maintenance difficult and can clutter components with unnecessary props.
 - Context API helps solve this issue by providing a shared state that can be accessed by multiple components without passing props through each intermediate component.
 
 
 (so the state which is shared between multiple components so the parent of those component needs to save /store the state in it .) but sometimes we have to go very deep . ex
-
-
-![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/35_Advanced_State_Management(context_Api)/contextApi.png)
 
 ### Diagram:
 
@@ -48,6 +44,8 @@ There is a general convention that the data we have we keep it in different fold
 
 we make a folder called store (because it is just a naming convention ) , All the store management (so jaha bhi state ho , business logic ho usko hum store me rkhte hai.) .This helps in separation of concern as we separate ui and logic.
 
+
+![Alt Text](https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/35_Advanced_State_Management(context_Api)/contextApi.png)
 
 ## Using Context API:
 
