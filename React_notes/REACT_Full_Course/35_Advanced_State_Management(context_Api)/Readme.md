@@ -25,7 +25,7 @@ Parent
 so here the last child only needs the props but we have to unnecessarly send the props to all the previous parent so in order to avoid this repeatition we use contextAPI.
 
 
-### props drilling :-
+### Props drilling :-
 
 Props drilling is the passing of props through multiple layers of components in a component hierarchy to reach a deeply nested child component.It makes maintainance of component very hard. 
 
@@ -46,7 +46,7 @@ Parent
 
 There is a general convention that the data we have we keep it in different folder
 
-we make a folder called store (because it is just a naming convention ) , all the store management (so jaha bhi state ho , business logic ho usko hum store me rkhte hai.) .This helps in separation of concern as we separate ui and logic.
+we make a folder called store (because it is just a naming convention ) , All the store management (so jaha bhi state ho , business logic ho usko hum store me rkhte hai.) .This helps in separation of concern as we separate ui and logic.
 
 
 ## Using Context API:
@@ -125,9 +125,7 @@ const { todoItems, addNewItem, deleteItem } = useContext(TodoItemsContext);
 
   ### NOW HOW will it access it ??
 
-  we will use a hook called  useContext
-
-  and inside  useContext we will pass the context object that we created
+  we will use a hook called  `useContext`and inside  useContext we will pass the context object that we created
 
   for example  
 
@@ -158,9 +156,9 @@ const TodoItems = () => {
 ```
 
 
- `Instead of giving state (current value), we can provide a value as an object so that we can access methods as well. Earlier, we were declaring state and passing the props, but now we are providing it to the context provider. So, whoever wants to access the property or method can use it from the context provider. Remember, as we change the value of the context provider, all the components get re-rendered.
+ `Instead of giving state (current value), we can provide a value as an object so that we can access methods as well. Earlier, we were declaring state and passing the props, `but now we are providing it to the context provider. So, whoever wants to access the property or method can use it from the context provider`. Remember, as we change the value of the context provider, all the components get re-rendered.
 
-We can send an object instead of just one value, and then we would be able to access all of the values and even methods by using the context provider.`
+<u>We can send an object instead of just one value, and then we would be able to access all of the values and even methods by using the context provider.`</u>
 
 Also, methods are also first-class objects.
 
