@@ -81,7 +81,8 @@ const { todoItems, addNewItem, deleteItem } = useContext(TodoItemsContext);
 
 ### Now how to use it ??
 
--- If we want it available For all the container it should be available .
+-- "If we want the shared context to be accessible to all components within a certain container, it should be provided at the appropriate level in the component hierarchy."
+
 
  ex
 
