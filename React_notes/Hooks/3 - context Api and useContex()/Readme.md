@@ -138,7 +138,7 @@ When
 
  you use the useContext hook, you receive the context value, which is typically an object. (`IT can be any value string , boolean , function etc`)
 So, unlike useState, where you get an array with two values (the current state value and a function to update the state), in useContext, you get directly the current context value.
-```
+
 
 
 
