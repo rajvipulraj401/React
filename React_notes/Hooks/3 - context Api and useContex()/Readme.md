@@ -1,4 +1,4 @@
-I apologize for the misunderstanding. Let me rectify that. Here are the notes without any alterations:
+
 
 
 ## **Part 1**
@@ -8,10 +8,12 @@ What i understood of context api ---
 1) Sometimes when we divide a page in component wise and we have to send some data which we do using passing props to child component it becomes really hard when there are multiple levels of child components and this leads to prop drilling . 
 What happens is that all the child components gets the props unnecessarly for example
 
+```
 Parent
 └── Child
     └── Grandchild
         └── Great Grandchild
+```
 
 Now here the great grandchild needs the props but in order to reach there the props has to be passed to all components so in order to avoid this repetition we use 
 `context Api` 
@@ -55,7 +57,9 @@ Access the context value in components using the useContext hook:
 const { todoItems, addNewItem, deleteItem } = useContext(TodoItemsContext);
 ```
 
-In order to use "If we want the shared context to be accessible to all components within a certain container, it should be provided at the appropriate level in the component hierarchy."
+### In order to use 
+
+"If we want the shared context to be accessible to all components within a certain container, it should be provided at the appropriate level in the component hierarchy."
 
 ```jsx
 return (
