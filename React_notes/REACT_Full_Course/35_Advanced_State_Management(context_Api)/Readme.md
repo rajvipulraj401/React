@@ -162,7 +162,7 @@ const TodoItems = () => {
 
 Also, methods are also first-class objects.
 
-**Title:** First-Class Objects in JavaScript
+#### **Title:** First-Class Objects in JavaScript
 
 In JavaScript, all non-primitive values, including arrays, objects, and functions, are considered first-class objects. This means they can be treated as objects, allowing them to be assigned to variables, passed as arguments, and returned from functions just like any other value like string or numbers .
 
