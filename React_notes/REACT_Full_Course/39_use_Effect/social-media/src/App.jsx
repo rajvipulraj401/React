@@ -24,6 +24,8 @@ const App = () => {
           {selectedTab === "Home" ? (
             <PostList></PostList>
           ) : (
+            /* What if there is no postList i.e there is no  
+            so there is actually two condition in postList */
             <CreatePost></CreatePost>
           )}
 

@@ -28,7 +28,19 @@ HOW will our ui will look ?
 
 -> On clicking Home/View button we should be able to view all the created post.
 
+
+
+
 ------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 NOte- In jsx every tag should be closing tag (no self closing tag like html)
@@ -58,3 +70,8 @@ const styles = { width: "10px" };
 ```
 
 In JSX, the double curly braces help distinguish between the JSX syntax and the embedded JavaScript expression. The inner pair is used for creating a JavaScript object representing the styles.
+
+
+
+
+---------------------------------------------------------------------------------------------------------
