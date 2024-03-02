@@ -577,6 +577,23 @@ NOTE -`Hooks are special type of component that has been created by react we can
 we have to keep the state at that point where all other component doesn't need to re - render so in turn it will give less load to browser(less work for browser). and also above the components which are going to use that state. 
 As props can only be send from parents to child .Hence pulling the state up.
 
+
+### Some scenarios where we typically use state in React:
+
+1. **User Input Handling**: When we need to capture and respond to user input, such as form submissions, text input, or button clicks.
+
+2. **Dynamic UI Updates**: When components need to update their appearance or content based on changes in data or user interactions.
+
+3. **Component Lifecycle Changes**: When we need to manage component lifecycle events, such as mounting, updating, or unmounting components.
+
+4. **Data Fetching and Asynchronous Operations**: When components need to fetch data from external sources or perform asynchronous operations, such as fetching data from an API.
+
+5. **Conditional Rendering**: When we need to conditionally render components or elements based on certain conditions or states.
+
+6. **Global State Management**: When we need to manage global application state that needs to be shared across multiple components.
+
+These are some common scenarios where state management is crucial in React applications.
+
 ## useState hook -------
 
 -> **Whenever we use useState hook it always returns an array which have two elements inside it.**
