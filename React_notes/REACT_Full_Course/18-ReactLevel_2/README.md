@@ -1,5 +1,27 @@
   # React Level 2-
 
+
+
+-----------------------------
+![Alt Text](
+https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/input.png)
+
+In React, when you use the `value` and `onChange` attributes together, it creates what is known as a **controlled input**. This means that React has control over the input's value, allowing you to manage its behavior and updates through React state.
+
+With a controlled input:
+- React manages the input's value, and any changes to it are controlled by React state.
+- You have control over how the input behaves and how its value is updated based on user interactions.
+
+On the other hand, if you only use the `defaultValue` parameter, the browser has control over the input, and it behaves as an **uncontrolled input**. In this case:
+- The input's value is initially set by the browser's default value.
+- Users can still input text freely, but there is no way to update any React state variable based on these inputs.
+
+Understanding the distinction between controlled and uncontrolled inputs is essential for managing form inputs effectively in React applications.
+
+--- 
+
+
+
 # `Fragments______`
 
 ### 1. What?

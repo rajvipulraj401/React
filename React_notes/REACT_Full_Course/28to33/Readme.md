@@ -80,18 +80,9 @@ Inside `main.jsx`:
 
 Virtual DOM:
 - Serves as a mediator between the React code and the actual DOM.
-- It's faster because:
-   1. Changes are first made to the virtual DOM.
-   2. React compares the virtual DOM with the actual DOM and updates only the differences in the real dom (the part which actually affects the ui) and other same things are not reloaded .Hence  reducing browser load.
-
-• React creates an in-memory structure called the virtual DOM.
-
-• Different from the actual browser DOM.
-
-• It's a lightweight representation where each node stands for a component and its attributes.
 
 1. **Introduction**:
-   - The Virtual DOM is a lightweight representation of the actual DOM.
+   - The Virtual DOM is a lightweight representation of the actual DOM where each node stands for a component and its attributes. which is Different from the actual browser DOM.
    - Its primary function is to optimize the rendering process in React applications.
 
 2. **Comparison Process**:
@@ -99,8 +90,11 @@ Virtual DOM:
    - It identifies the differences (or "diffs") between the old and new Virtual DOM trees.
 
 3. **Efficient Updates**:
-   - React updates only the parts of the actual DOM that have changed, rather than re-rendering the entire DOM tree.
    - This approach improves performance by minimizing unnecessary DOM manipulations.
+   - It's faster because:
+   1. Changes are first made to the virtual DOM.
+   2. React compares the virtual DOM with the actual DOM and updates only the differences in the real dom (the part which actually affects the ui ,rather than re-rendering the entire DOM tree.) and other same things are not reloaded .Hence  reducing browser load.
+
 
 ## Component Lifecycle:
 
