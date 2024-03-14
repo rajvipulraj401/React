@@ -1,5 +1,52 @@
   # React Level 2-
 
+
+## Importing Non-JavaScript Files
+
+### Example:
+
+```javascript
+// Importing CSS file
+import "./styles.css";
+
+// Importing JSON file
+import user from "./user.json";
+
+function App() {
+    // Rendering JSON data as a string
+    return <h1>{JSON.stringify(user)}</h1>;
+
+    // Alternatively, to render the object directly:
+    // return <h1>{user.name}, {user.age}</h1>;
+}
+```
+
+Explanation:
+- When importing JSON data, it's necessary to stringify it before rendering, as objects are not valid React child elements.
+
+Result:
+- The output will be: `{"name":"Kyle","age":27}`.
+
+## How to Import Images
+
+```javascript
+// Importing image file
+import img from "./Code.png";
+
+function App() {
+    // Rendering the imported image
+    return <img src={img} alt="code" />;
+}
+```
+
+Explanation:
+- When importing images, simply use the imported variable as the `src` attribute value in the `<img>` tag.
+
+Result:
+- The image specified by `Code.png` will be displayed in the rendered component.
+
+---
+
 # `Fragments______`
 
 ### 1. What?
