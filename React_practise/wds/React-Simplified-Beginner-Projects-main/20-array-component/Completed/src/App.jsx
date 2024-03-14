@@ -1,89 +1,109 @@
 import { useState } from "react"
+// Functionality To Create
 
-const INITIAL_VALUE = ["A", "B", "C"]
+// 1. Create state that stores an array with the initial value of `["A", "B", "C"]` ✅
+// Answer:
+import { useState } from "react";
 
-function App() {
-  const [array, setArray] = useState(INITIAL_VALUE)
-  const [value, setValue] = useState("")
+const initialValue = ["A", "B", "C"];
 
-  function removeFirstElement() {
-    setArray(currentArray => {
-      return currentArray.slice(1)
-    })
-  }
+const App = () => {
+  const [array, setArray] = useState(initialValue);
+  const [value, setValue] = useState("");
 
-  function removeSpecificLetter(letter) {
-    setArray(currentArray => {
-      return currentArray.filter(element => element !== letter)
-    })
-  }
+  // 2. Add the ability to remove the first element from the array ✅
+  // Answer:
+  const removeFirstElement = () => {
+    setArray((currentArray) => {
+      return currentArray.slice(1);
+    });
+  };
 
-  function addLetterToStart(letter) {
-    setArray(currentArray => {
-      return [letter, ...currentArray]
-    })
-  }
+  // 3. Add the ability to remove a specific letter from the array ✅
+  // Answer:
+  const removeB = (elm) => {
+    setArray((currentArray) => {
+      return currentArray.filter((curr) => curr !== elm);
+    });
+  };
 
-  function addLetterToEnd(letter) {
-    setArray(currentArray => {
-      return [...currentArray, letter]
-    })
-  }
+  // 4. Add the ability to add a new element to the start of the array ✅
+  // Answer:
+  const addStart = (elm) => {
+    setArray((prevArray) => [elm, ...prevArray]);
+  };
 
-  function clear() {
-    setArray([])
-  }
+  // 5. Add the ability to add a new element to the end of the array ✅
+  // Answer:
+  const addEnd = (elm) => {
+    setArray((prevArray) => [...prevArray, elm]);
+  };
 
-  function reset() {
-    setArray(INITIAL_VALUE)
-  }
+  // 6. Add the ability to clear the array ✅
+  // Answer:
+  const clear = () => {
+    setArray([]);
+  };
 
-  function updateAToH() {
-    setArray(currentArray => {
-      return currentArray.map(element => {
-        if (element === "A") return "H"
-        return element
-      })
-    })
-  }
+  // 7. Add the ability to reset the array to the initial value ✅
+  // Answer:
+  const reset = () => {
+    setArray(initialValue);
+  };
 
-  function addLetterAtIndex(letter, index) {
-    setArray(currentArray => {
-      return [
-        ...currentArray.slice(0, index),
-        letter,
-        ...currentArray.slice(index),
-      ]
-    })
-  }
+  // Bonus Functionality
+
+  // 1. Add the ability to update all `A` elements in the array to `H` ✅
+  // Answer:
+  const updateA2H = () => {
+    setArray((prevArr) => {
+      return prevArr.map((curr) => (curr === "A" ? "H" : curr));
+    });
+  };
+
+  // 2. Add an input that is connected to state and a button that will add the input value to the start of the array
+  // Answer:
+  const addValueToStart = () => {
+    setArray((prevArray) => [value, ...prevArray]);
+  };
+
+  // 3. Add the ability to add a new element at any index in the array
+  // Answer:
+  const addAtIndex = (index, newValue) => {
+    setArray((prevArray) => [
+      ...prevArray.slice(0, index), // Elements before the index
+      newValue, // New value at the specified index
+      ...prevArray.slice(index) // Elements after the index
+    ]);
+  };
+
 
   return (
-    <div>
-      <button onClick={removeFirstElement}>Remove First Element</button>
-      <br />
-      <button onClick={() => removeSpecificLetter("B")}>Remove All B's</button>
-      <br />
-      <button onClick={() => addLetterToStart("B")}>Add To Start</button>
-      <br />
-      <button onClick={() => addLetterToEnd("Z")}>Add To End</button>
-      <br />
-      <button onClick={clear}>Clear</button>
-      <br />
-      <button onClick={reset}>Reset</button>
-      <br />
-      <button onClick={updateAToH}>Update A To H</button>
-      <br />
-      <button onClick={() => addLetterAtIndex("C", 2)}>Add C At 2</button>
-      <br />
-      <input value={value} onChange={e => setValue(e.target.value)} />
-      <br />
-      <button onClick={() => addLetterToStart(value)}>
-        Add Value To Array
-      </button>
-      <br />
-      {array.join(", ")}
-    </div>
-  )
-}
+    <>
+      <button onClick={removeFirstElement}>REMOVE IT</button>
+      <br/><br/>
+      {array.join(",")}
+      <br/><br/>
+      <button onClick={() => removeB("B")}>REMOVE B</button>
+      <br/><br/>
+      <button onClick={() => addEnd("D")}>Add2End</button>
+      <br/><br/>
+      <button onClick={() => addStart("B")}>Add2Start</button>
+      <br/><br/>
+      <button onClick={() => reset("B")}>Reset</button>
+      <br/><br/>
+      <button onClick={() => clear("B")}>Clear </button>
+      <br/><br/>
+      <button onClick={() => updateA2H()}>update A to H </button>
+      <br/><br/>
+	// see bonus challenge question 2
+      <input onChange={(e) => setValue(e.target.value)} value={value}></input>
+      <br/><br/>
+      <button onClick={addValueToStart}>Add Value to Array</button>
+      <br/><br/>
+      <button onClick={() => addAtIndex(2, "C")}>Add at Index </button>
+    </>
+  );
+};
 
-export default App
+export default App;

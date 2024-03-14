@@ -1,7 +1,10 @@
 import { useState } from "react";
 
+const initialValue = ["A", "B", "D"];
+
 const App = () => {
-  const [array, setArray] = useState(["A", "B", "C"]);
+  const [array, setArray] = useState(initialValue);
+  const [value, setValue] = useState("");
 
   const removeFirstElement = () => {
     /* so what happens is that when the button gets clicked 
@@ -51,22 +54,49 @@ kiya tha wo taarika nahi hai function define krne directly
   //   });
   // };
 
-  const add = (elm) => {
-    setArray(
-      (prevArray) => [...prevArray, elm]
-
-      // This is wrong because you are returning mutliple value so put elm inside the array so that you are returning single value
-    );
-  };
-
   /* To remove an element from the array stored in the state using the useState hook,
 we need to provide a new array to the setter function. in order
   to do any change in the initial array passed  to the useState hook we need to pass another  ,Since the setter function
 expects an array, we cannot directly modify the existing array using loops. Instead,
 we need to use built-in array methods such as filter(), splice(), or slice() to create
 a new array with the desired changes.
+
 */
 
+  const addEnd = (elm) => {
+    setArray((prevArray) => [...prevArray, elm]);
+  };
+
+  const addStart = (elm) => {
+    setArray((prevArray) => [elm, ...prevArray]);
+  };
+
+  const reset = () => {
+    setArray(initialValue);
+  };
+
+  const clear = () => {
+    setArray([]);
+  };
+  const updateA2H = () => {
+    setArray((prevArr) => {
+      // now based on the value from the previous array what we will do is that we will update each A value of
+      // the elements to H FOR THIS we will use map method .
+      return prevArr.map((curr) => (curr === "A" ? "H" : curr));
+      // return prevArr.map((curr) => curr === "A" && "H"); THIS WILL Not work as i will get false at other places
+    });
+  };
+
+  //---------------------------------------------------------
+  // about input question last 2 of bonus functionality
+
+  const addAtIndex2 = (letter, ind) => {
+    // we are getting an index and letter
+    setArray((prevArr) => {
+      return [...prevArr.slice(0, ind), letter, ...prevArr.slice(ind)];
+      //This is Wrong❌❌❌ return [prevArr.slice(0, ind), letter, prevArr.slice(ind)];
+    });
+  };
   return (
     <>
       {/*
@@ -82,7 +112,22 @@ a new array with the desired changes.
       <br></br> <br></br>
       <button onClick={() => removeB("B")}>REMOVE B</button>
       <br></br> <br></br>
-      <button onClick={() => add("B")}>Add</button>
+      <button onClick={() => addEnd("D")}>Add2End</button>
+      <br></br> <br></br>
+      <button onClick={() => addStart("B")}>Add2Start</button>
+      <br></br> <br></br>
+      <button onClick={() => reset("B")}>Reset</button>
+      <br></br> <br></br>
+      <button onClick={() => clear("B")}>Clear </button>
+      <br></br> <br></br>
+      <button onClick={() => updateA2H()}>update A to H </button>
+      <br></br> <br></br>
+      {/* ----------------------------------------------------------TOUGH portion from here i have to give more attention  */}
+      <input onChange={(e) => setValue(e.target.value)} value={value}></input>
+      <br></br> <br></br>
+      <button onClick={() => addStart(value)}>Add Value to Array</button>
+      <br></br> <br></br>
+      <button onClick={() => addAtIndex2("C", 2)}>Add at Index </button>
     </>
   );
 };
