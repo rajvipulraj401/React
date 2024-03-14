@@ -90,6 +90,42 @@ Virtual DOM:
 
 • It's a lightweight representation where each node stands for a component and its attributes.
 
+1. **Introduction**:
+   - The Virtual DOM is a lightweight representation of the actual DOM.
+   - Its primary function is to optimize the rendering process in React applications.
+
+2. **Comparison Process**:
+   - When a component renders, React compares the new Virtual DOM with the previous version.
+   - It identifies the differences (or "diffs") between the old and new Virtual DOM trees.
+
+3. **Efficient Updates**:
+   - React updates only the parts of the actual DOM that have changed, rather than re-rendering the entire DOM tree.
+   - This approach improves performance by minimizing unnecessary DOM manipulations.
+
+## Component Lifecycle:
+
+1. **Overview**:
+   - The component lifecycle refers to the series of phases a React component goes through from creation to removal.
+   - It consists of three main parts: Mounting, Updating, and Unmounting.
+
+2. **Mounting Phase**:
+   - Occurs when a component is first rendered to the page.
+   - Methods like `componentDidMount` are executed during this phase.
+
+3. **Updating Phase**:
+   - Triggered whenever a component's state or props change.
+   - Methods like `componentDidUpdate` are called after the component updates.
+
+4. **Unmounting Phase**:
+   - Executed when a component is removed from the page.
+   - The `componentWillUnmount` method is invoked before the component is unmounted.
+
+5. **Re-render Triggers**:
+   - `Components re-render when their state or props change, or when their parent component re-renders(when their state or props changes).`
+   - Re-rendering occurs to reflect the updated state of the component or its parent in the UI.
+
+These revised notes provide a clearer understanding of the Virtual DOM and Component Lifecycle concepts in React, making them suitable for study and reference.
+
 ## Reconciliation Process:
 
 • When component data changes, React updates the virtual DOM's state to mirror these changes.
