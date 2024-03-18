@@ -24,7 +24,6 @@ To see Quick Pizza App in action, visit [Quick Pizza App Demo](https://quickpizz
 
 - **React**: A JavaScript library for building user interfaces.
 - **React Router**: Declarative routing for React applications.
-- **React Query**: A data-fetching library for React.
 - **Context API**: A React feature for managing global state.
 - **Redux**: A predictable state container for JavaScript apps.
 - **GPS Location API**: Utilized for tracking user location.
