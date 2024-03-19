@@ -4,7 +4,7 @@ Welcome to Quick Pizza App!
 
 ## Description
 
-Quick Pizza App is a web application built using React. It provides users with the ability to order pizzas online with features such as GPS location tracking, a shopping cart, and a seamless checkout process. The application leverages various technologies including React Router, React Query, Context API, and Redux to provide a smooth user experience.
+Quick Pizza App is a web application built using React. It provides users with the ability to order pizzas online with features such as GPS location tracking, a shopping cart, and a seamless checkout process. The application leverages various technologies including React Router, React Query, Context API and Redux to provide a smooth user experience.
 
 ## Live Demo
 
