@@ -1,6 +1,5 @@
 
 When do we use  useState  in React:--
-Certainly! Here's a merged version of the two notes:
 
 ---
 
