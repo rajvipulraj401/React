@@ -14,7 +14,6 @@ On the other hand, if you only use the `defaultValue` parameter, the browser has
 - The input's value is initially set by the browser's default value.
 - Users can still input text freely, but there is no way to update any React state variable based on these inputs.
 
-Understanding the distinction between controlled and uncontrolled inputs is essential for managing form inputs effectively in React applications.
 
 --- 
 
