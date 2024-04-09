@@ -1,0 +1,14 @@
+What is diffing algorithm or reconciliation in Reactjs?
+
+It’s a very important topic for Frontend interview and many people don’t know about it. 
+
+I’ve tried to explain it in very easy 4 points. 
+
+1️⃣ When you update the state of a component in ReactJS, React creates a new virtual tree (called the "next tree") that represents the updated UI.
+
+2️⃣ React then compares the "next tree" with the previous virtual tree (called the "current tree") to identify the differences between them.
+
+3️⃣ Once React has identified the differences between the two trees, it only updates the parts of the UI that have changed, rather than re-rendering the entire UI.
+
+4️⃣ This process is called "reconciliation" or "diffing". It's what makes ReactJS fast and efficient, as it reduces the number of updates needed to render the UI.
+

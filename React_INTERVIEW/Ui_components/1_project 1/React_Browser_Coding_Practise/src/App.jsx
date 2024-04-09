@@ -1,12 +1,11 @@
-// import React from "react";
-// import data from  "./data.js";
+import data from "./components/1.accordian/data";
 
-import Accordion from "./components/accordian";
+import Accordion from "./components/1.accordian";
 
 const App = () => {
   return (
-    <div>
-      <Accordion></Accordion>
+    <div className="App">
+      <Accordion key={data.id}></Accordion>
     </div>
   );
 };

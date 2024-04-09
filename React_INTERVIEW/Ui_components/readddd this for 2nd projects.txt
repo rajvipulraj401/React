@@ -1,0 +1,14 @@
+hey make the project of intershala which the companies gave it to you
+
+Complete  all of the below tasks.  : 
+
+Task 1 > Create a Login Authentication and Users CRUD  -  10 Points
+Task 2 > Create a Form Creation Application like Google Forms to make custom forms.  -  20 Points
+Task 3 > Create a Video Application which will look like Youtube livechat, where the video will be played on the left and subtitles will be visible on the right side as a list with timestamp. If user clicks on the subtitle, the video will load for that timestamp.  -  30 Points
+
+Selection will be on the basis of total points earned and the quality of your submission.
+
+You can send google drive link of the screen recorded video of your assignment/working webapp (not the code) in the Internshala chat.
+Please rename the video with your fullname before sending.
+
+Thanks,

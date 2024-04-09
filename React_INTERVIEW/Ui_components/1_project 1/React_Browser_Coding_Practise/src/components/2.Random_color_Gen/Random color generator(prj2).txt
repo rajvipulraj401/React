@@ -1,0 +1,9 @@
+ Break the problem in smaller parts (brak it now for the ui component)
+
+--- first create a random color generator button and so on and on.....
+
+Wrtie the logic . 
+
+
+Note -- Try to give inline css first and then comment it out and give external css.
+

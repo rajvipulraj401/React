@@ -1,0 +1,41 @@
+	**LISTEN just do 25 part 1 and 25 part 2 and uta enough hai aur uske baad  neeche se milana hogya**
+
+Here are top 15 React Machine Coding Interview questions to ace your next frontend interview -
+
+1. Implement a Todo List: Create a simple todo list application where users can add, edit, and delete tasks.
+
+// jo jo deleted hai wo already covered hai .
+
+3. Create a Pagination Component: Design a pagination component that handles navigation between pages of data.
+
+4. Implement a Login Form: Build a login form with validation for email and password fields.
+
+Build a Countdown Timer: Develop a countdown timer component that starts from a specified time and decrements until it reaches zero.
+// 5. is already there in 25 react part 2
+
+7. Implement Drag and Drop: Develop a feature that allows users to drag and drop items within a list.
+
+8. Build a Chat Application: Develop a real-time chat application using WebSockets or a library like Socket.io.
+
+9. Create a Dropdown Component: Design a dropdown component with options that can be selected by the user.
+
+ Implement Form Validation: Develop a form with validation for various fields such as email, password, and phone number.
+
+//10 is also in React 25 part 2
+
+Build a Carousel Component: Design a carousel component that displays a slideshow of images or content.
+// 11 is also in react 25 part 1
+
+12. Create a Responsive Layout: Develop a responsive layout that adjusts based on the screen size and orientation.
+
+13. Implement Redux Store: Set up a Redux store and integrate it with a React application to manage state.
+
+14. Build an Infinite Scroll Component: Develop a component that loads more data as the user scrolls down the page.
+
+
+Create a Quiz Application: Develop a quiz application where users can answer multiple-choice questions and see their score at the end.
+// 15 is also in React 25 part 2
+
+
+
+OTHER 25 IN part 2 

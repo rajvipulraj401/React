@@ -1,0 +1,27 @@
+UI challenges to excel in any machine coding round. 🔥 
+
+1️⃣ Implement Star Rating functionality
+2️⃣ Design a Pop Over component
+3️⃣ Create an Accordion UI component
+4️⃣ Design a Carousel for displaying images
+5️⃣ Build a grid using HTML/CSS and JavaScript with search, sort, and event bubbling (Amazon onsite)
+6️⃣ Design a responsive NavBar
+7️⃣ Implement Infinite Scroll feature
+8️⃣ Develop Typeahead/Autocomplete functionality using a trie data structure
+9️⃣ Implement a Debounce function
+🔟 Build a Tic Tac Toe game
+1️⃣1️⃣ Create a Snake and Ladder board game
+1️⃣2️⃣ Make a Calendar of any month like a Date Picker
+1️⃣3️⃣ Implement a throttle function
+1️⃣4️⃣ Create custom Higher Order Functions like Map, Reduce, Filter, and Sort
+1️⃣5️⃣ Design an analog clock
+1️⃣6️⃣ Build a Todo List application
+1️⃣7️⃣ Implement functionality to change all text on a page to different translations
+1️⃣8️⃣ Develop a Giphy image search and display feature (using the Giphy API) in a responsive format
+1️⃣9️⃣ Build a Connect Four game
+2️⃣0️⃣ Implement Nested Checkboxes where parent and children checkboxes are synchronized
+2️⃣1️⃣ Create a poll widget
+2️⃣2️⃣ Implement an Event Emitter
+2️⃣3️⃣ Implement the Promise.all function
+2️⃣4️⃣ Flatten a nested JavaScript array without using Array.prototype.flat()
+2️⃣5️⃣ Implement a custom Sort() function

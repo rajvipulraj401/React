@@ -1,0 +1,88 @@
+Here are 5 tricky JS questions, can you guess the output of them?
+
+You can find the solutions of all in the 1st comment.
+
+1. console.log([] + []);
+
+2. console.log(2 + "2" - 2);
+
+3. console.log(NaN === NaN);
+
+4. console.log("b" + "a" + +"a" + "a");
+
+5. console.log(true + false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers--
+
+
+1. an empty string
+
+In JavaScript, when you use the + operator with arrays, they are implicitly converted to strings, and an empty array is represented as an empty string. So, [] + [] results in "".
+
+2. 20.
+
+Here's the breakdown:
+
+2 + "2" results in the string "22" (concatenation).
+The subtraction - 2 coerces the string "22" to a number, resulting in the final value of 20.
+
+3. false.
+
+In JavaScript, NaN (Not a Number) is considered not equal to itself.
+
+4. “baNaNa"
+
+Here's the breakdown:
+
+"b" + "a" results in "ba"
++"a" attempts to convert "a" to a number, resulting in NaN (Not a Number)
+Finally, "a" is concatenated, resulting in "baNaNa".
+
+5. 1 
+In JavaScript, when you add true and false, they are implicitly converted to numbers (1 and 0, respectively), resulting in 1 + 0 which equals 1.
+
+
+
+---------------------------------------------
+6.eval('console.log("hello")');
+
+
+7. console.log(2 + '2');
+
+8. console.log([] == ![]);
+
+9. console.log(1 < 2 < 3);
+
+10. console.log('5' - 3);
+
+11. const arr = [1, 2, 3];
+arr[10] = 10;
+console.log(arr);
+
+
+
+
+1. The output will be '22'. In JavaScript, when you use the + operator with a string and a number, it performs string concatenation.
+
+2. The output will be true. The == operator performs type coercion, so ![] is converted to false, and [] is converted to an empty string. Therefore, '' == false evaluates to true.
+
+3. The output will be true. JavaScript evaluates from left to right, so 1 < 2 evaluates to true, and then true < 3 evaluates to true.
+
+4. The output will be 2. JavaScript performs type coercion in arithmetic operations, so the string '5' is converted to a number, and then the subtraction is performed.
+
+5. The output will be [ 1, 2, 3, <7 empty items>, 10 ]. When you assign a value to an array at an index that is beyond the current length of the array, JavaScript creates empty items in the array to fill the gap.

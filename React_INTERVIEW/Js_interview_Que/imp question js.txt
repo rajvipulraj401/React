@@ -1,0 +1,166 @@
+fundamental questions to help you prepare for Javascript Interviews:
+
+🔍 What is event delegation, and how does it function in JavaScript?
+🔍 Can you provide an illustration of how ES6 has altered the approach to working with "this" in JavaScript?
+🔍 Explain the concept of prototypal inheritance.
+🔍 Differentiate between a variable that is null, undefined, or undeclared.
+🔍 Define what a closure is and describe its uses and advantages.
+🔍 Explain the primary distinction between the Array.forEach() loop and Array.map() method, as well as when to choose one over the other.(see polyfills also)
+🔍 What is a common scenario for employing anonymous functions?
+🔍 Distinguish between host objects and native objects.
+🔍Clarify the distinctions among 'function User(){}', 'var user = User()', and 'var user = new User()
+🔍 Can you explain the purposes of Function.call and Function.apply, along with their notable differences?
+🔍 Describe the Function.prototype.bind method.
+🔍 Explain the differences between feature detection, feature inference, and utilizing the User Agent (UA) string.
+🔍 Define the concept of "hoisting."
+🔍 What is type coercion, and what are some common pitfalls associated with relying on it in JavaScript code?
+🔍 Describe event bubbling and event capturing.
+🔍 What distinguishes an "attribute" from a "property"?
+🔍 List the advantages and disadvantages of extending built-in JavaScript objects.
+🔍 Explain the differences between == and ===.
+🔍 Discuss the same-origin policy's implications for JavaScript.
+🔍 Why is it referred to as a "Ternary operator," and what does the term "Ternary" signify?
+🔍 Define strict mode and outline some of its advantages and disadvantages.
+🔍 Analyze the pros and cons of writing JavaScript code in a language that compiles to JavaScript.
+🔍 What tools and techniques do you employ for debugging JavaScript code?
+🔍 Enumerate the benefits and drawbacks of immutability and explain how you can achieve it in your code.
+🔍 Differentiate between synchronous and asynchronous functions and elucidate the event loop.
+🔍 Explain the disparities between variables created using let, var, or const.
+🔍 Compare ES6 classes and ES5 function constructors, and furnish a use case for the arrow (=>) function syntax.
+🔍 Describe the advantages of using the arrow syntax for methods in constructors.
+🔍 Define a higher-order function and provide an example of object or array destructuring.
+🔍 Give an example of generating a string using ES6 Template Literals and explain their benefits.
+🔍 Provide an example of a curry function and clarify why this syntax can be advantageous.
+🔍 Discuss the benefits of using spread syntax and differentiate it from rest syntax.
+🔍 Explain debounce vs throttling.
+🔍 Define what a promise is and describe its applications.
+🔍 Explore how Object-Oriented Programming (OOP) principles can be applied when coding in JavaScript.
+
+
+-----------------------------------------------------------------------------------
+
+
+𝟭-𝟭𝟬: 𝗕𝗮𝘀𝗶𝗰𝘀 𝗼𝗳 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁
+
+1. What is JavaScript?
+2. Explain the difference between let, const, and var.
+3. How does hoisting work in JavaScript?
+4. Describe the concept of closures.
+5. Explain the event loop in JavaScript.
+6. What is the difference between == and ===?
+7. How do you check the type of a variable in JavaScript?
+8. What is the use of the this keyword in JavaScript?
+9. Explain the difference between function declaration and function expression.
+10. How does the setTimeout function work?
+
+𝟭𝟭-𝟮𝟬: 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀 𝗮𝗻𝗱 𝗦𝗰𝗼𝗽𝗲
+
+11. What is a callback function?
+12. Explain the concept of a pure function.
+13. Describe the differences between function.call, function.apply, and function.bind.
+14. What is the purpose of the arguments object in a function?
+15. How do you create a closure in JavaScript?
+16. What is the use of the bind method?
+17. What is the difference between a shallow copy and a deep copy?
+18. How does the call stack work in JavaScript?
+19. Explain the concept of function currying.
+20. How can you avoid callback hell in JavaScript?
+
+𝟮𝟭-𝟯𝟬: 𝗢𝗯𝗷𝗲𝗰𝘁𝘀 𝗮𝗻𝗱 𝗣𝗿𝗼𝘁𝗼𝘁𝘆𝗽𝗲𝘀
+
+21. What is prototypal inheritance?
+22. How do you create an object in JavaScript?
+23. What is the purpose of the prototype property in JavaScript?
+24. Explain the difference between Object.create and the constructor pattern.
+25. How do you add a property to an object in JavaScript?
+26. What is the hasOwnProperty method used for?
+27. How can you prevent modification of object properties in JavaScript?
+28. Describe the use of the new keyword.
+29. Explain the concept of Object Destructuring in JavaScript.
+30. What is the difference between null and undefined?
+
+𝟯𝟭-𝟰𝟬: 𝗗𝗢𝗠 𝗠𝗮𝗻𝗶𝗽𝘂𝗹𝗮𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗘𝘃𝗲𝗻𝘁𝘀
+
+31. What is the DOM?
+32. How do you select elements with Vanilla JavaScript?
+33. Explain event delegation in JavaScript.
+34. What is the purpose of the addEventListener method?
+35. How do you create and remove elements in the DOM?
+36. Explain the concept of event propagation.
+37. How can you prevent the default behaviour of an event?
+38. What is the purpose of the data- attribute in HTML?
+39. Describe the difference between innerHTML and textContent.
+40. How do you handle asynchronous code in JavaScript?
+
+
+-------------------------------------------------------------------------
+
+Very important Concepts for Every JS Developer to ace their Frontend interviews - 
+
+1️⃣ JavaScript Engines: Learn about the engines that execute JavaScript, such as V8 (used in Chrome).
+2️⃣ Value Types and Reference Types: Understand the distinction between primitive types and objects.
+3️⃣ Primitive Types: Know the fundamental data types like string, number, boolean, null, undefined.
+4️⃣ Expression vs Statement: Distinguish between expressions and statements in JavaScript code.
+5️⃣ Function Scope, Block Scope, and Lexical Scope: Grasp how scopes work in JavaScript.
+6️⃣ Message Queue and Event Loop: Understand asynchronous JavaScript through the event loop.
+7️⃣ setTimeout, setInterval, and requestAnimationFrame: Manage time-related operations effectively.
+8️⃣ == vs === vs typeof: Differentiate between loose equality, strict equality, and the typeof operator.
+9️⃣ Call Stack: Learn how the call stack manages function calls and execution flow.
+🔟 IIFE, Modules, and Namespaces: Organize and encapsulate code using Immediately Invoked Function Expressions and modularization.
+1️⃣1️⃣ Bitwise Operators, Type Arrays, and Array Buffers: Handle binary data efficiently with low-level operations.
+1️⃣2️⃣ DOM and Layout Trees: Understand the Document Object Model for web development.
+1️⃣3️⃣ Factory Functions and Classes: Explore different approaches for creating objects.
+1️⃣4️⃣ this, call, apply, and bind: Master context management and the 'this' keyword.
+1️⃣5️⃣ new, Constructor, instanceof, and Instances: Grasp object instantiation and constructor functions.
+1️⃣6️⃣ Prototypal Nature : Utilize prototype-based inheritance for code efficiency.
+1️⃣7️⃣ Object.create and Object.assign: Learn to create and manipulate objects effectively.
+1️⃣8️⃣ map, reduce, filter: Master array methods for functional programming.
+1️⃣9️⃣ Pure Functions, Side Effects, State Mutation, and Event Propagation: Write clean and maintainable code.
+2️⃣0️⃣ Closures: Manage variable scope and create modular code.
+2️⃣1️⃣ High Order Functions: Use higher-order functions for concise and expressive code.
+2️⃣2️⃣ Recursion: Solve problems efficiently with recursive functions.
+2️⃣3️⃣ Collections and Generators: Understand data structures and generators for data manipulation.
+2️⃣4️⃣ Asynchronous Operations: Handle asynchronous operations with callbacks, promise-based patterns and async/await .
+2️⃣5️⃣Partial Applications, Currying, Compose, and Pipe: Explore functional programming concepts for code modularity.
+2️⃣6️⃣ Data Structures & Algorithms: Explore various data structures for problem-solving.
+2️⃣7️⃣ Inheritance, Polymorphism, and Code Reuse: Master object-oriented programming concepts for scalability.
+2️⃣8️⃣ Design Patterns: Apply reusable solutions to common problems for improved code architecture.
+2️⃣9️⃣ Clean Code: Prioritize writing clean and readable code following best practices for maintainability.
+
+
+---------------------------------------------------------------------------------------------
+
+Here are top 30 interview questions for mastering DOM - 
+
+1. What is the DOM, and how does it relate to HTML?
+2. How can you access elements in the DOM using JavaScript?
+3. Explain the differences between getElementById, getElementsByClassName, and getElementsByTagName.
+4. What is the purpose of the querySelector method, and how does it differ from querySelectorAll?
+5. Explain the concept of event bubbling and how it impacts event handling in the DOM.
+6. How do you stop event propagation in the DOM?
+7. What is event delegation, and why is it useful in DOM manipulation?
+8. How can you dynamically create HTML elements using JavaScript?
+9. Explain the differences between the textContent and innerHTML properties.
+10. How can you modify CSS properties of an element in the DOM using JavaScript?
+11. Explain the purpose of the setAttribute and getAttribute methods in DOM manipulation.
+12. What is the difference between appendChild and insertBefore methods for adding elements to the DOM?
+13. How do you remove elements from the DOM using JavaScript?
+14. What is the purpose of the parentNode property in DOM manipulation?
+15. Explain how to clone an element in the DOM using JavaScript.
+16. How do you check if an element exists in the DOM using JavaScript?
+17. What is the purpose of the classList property, and how can you use it to manipulate classes?
+18. How do you add and remove classes from an element in the DOM?
+19. Explain the differences between classList.add, classList.remove, and classList.toggle.
+20. How can you traverse the DOM tree using JavaScript?
+21. What are data attributes (data-*), and how can you use them in DOM manipulation?
+22. Explain the purpose of the style property in DOM manipulation.
+23. How can you retrieve the dimensions (width and height) of an element in the DOM?
+24. What is the purpose of the offset properties (offsetWidth, offsetHeight, offsetLeft, offsetTop) in DOM manipulation?
+25. How do you handle form manipulation in the DOM using JavaScript?
+26. Explain the differences between innerText, textContent, and innerHTML.
+27. How do you detect if an element is hidden or visible in the DOM?
+28. What are the differences between the client and offset properties in DOM manipulation?
+29. How can you handle scroll events in the DOM using JavaScript?
+30. Explain the differences between createDocumentFragment and createElement in DOM manipulation.
+
+
