@@ -195,38 +195,14 @@ setCount(count -1)
 
 **`Reason**  :--- Our count value is just the value of count when we render our function so here we are doing ,suppose here count value is 4 so we are doing in both cases 4-1 =3 so both will return same value  They are just overriding each other . 
 
- ### But when  we pass another anonymous function 
 
-```jsx
-function decremenCoun(){
-setCount(prevCount => prevCount -1)
-setCount(prevCount => prevCount -1)
-}
-
-```
-  ### Here on Above what happens is that our previous value (latest value of count) is passed into it .Therefore we are doing -2 on the above code .
+### When we use function version inside our setter method to get the current value of state ?
 
 
-```jsx
-
-function incrementCount () {
-
-setCount (prevCount => prevCount -1 )
-}
-
-```
-
-2) So, Anytime you need to modify the state you need to send previous state value to create the new value , You need to make sure to use function version of setting your state just like if you were setting the state of inside of a class component.
-
-
-----
-
-
-whenver you need the current value of the state pass a function in your setter function and then use the value  SO , IF YOU ARE setting the value that depends on the previous value or the current value of the state you need  to use the function version of the state .
+In this we use the function and the function always return the up to date state value so hence we get every time up to date state value.
 
 
 example 
-
 
 
 ```jsx
@@ -256,16 +232,19 @@ Hi {name} {age}
 
 ```
 
-This will actually update the state by two  cause this is a function that gets runs with the current value of our age .  But one more thing the above is only re-rendering once cause react combines all the continuous re-renders.
-Component does re-render itself when we update the state with the old value in case of direct mutating the state and in case of passing function in setter method it returns new value and set it to state each time , Hence we get updated state value each time of next re-renders. And also if there are continuous re-renders react combines all the multiple re- renders into one  and if they are not continuous then it will re-render as no of times as there are setter method used.
-
-
+This will actually update the state by two  cause this is a function that gets runs with the current value of our age .  
 
 `So , in Conclusinon The only take away from this is if you are setting the value that depends on the previous value or current value of the state  we need  to use the function version of the set method.
 otherwise if  we are just setting it to the different value where we don't care about the previous state value then we can just use normal set method .`
 
 
+### How many time state actually re-renders in continuous re-renders ?
 
+- one more thing the above is only re-rendering once cause react combines all the continuous re-renders.
+Component does re-render itself when we update the state with the old value in case of direct mutating the state and in case of passing function in setter method it returns new value and set it to state each time , Hence we get updated state value each time of next re-renders. And also if there are continuous re-renders react combines all the multiple re- renders into one  and if they are not continuous then it will re-render as no of times as there are setter method used.
+
+
+----------------------------------------------------------------------
 
 
 ## Q) create a new timer function component called counter and have a state for a counter that starts at 0 and render that in the jsx and when you click the number increment it by 1 .
