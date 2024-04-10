@@ -277,6 +277,52 @@ export default ExampleComponent;
 
 In this example, when the `updateCount` function is called, triggering three consecutive state updates, React optimizes these updates into a single re-render operation, resulting in the component being re-rendered only once despite the multiple state changes.
 
+
+
+
+---
+
+
+example
+
+```jsx
+    setTimer((current) => current + 1);
+    setTimer((current) => current + 1);
+    setTimer((current) => current + 1);
+    setTimer((current) => current + 1);
+
+
+```
+
+And also for the continuous state updation using setter method react just  behaves asnchronously and combines them and do only one re-render and if the re-render are not continuous i mean there are codes in between it  then the re-render will be as no of times as there are setter method in the code .
+
+
+
+
+#### FOR non continuous state updates
+
+
+example :--
+
+
+```jsx
+
+setTimer((current) => current + 1);
+
+//some code...
+    setTimer((current) => current + 1);
+
+//some code...
+    setTimer((current) => current + 1);
+
+//some code...
+    setTimer((current) => current + 1);
+
+
+```
+
+Here above the component will re-render as many times as the setter function .
+
 ----------------------------------------------------------------------
 
 
