@@ -238,11 +238,44 @@ This will actually update the state by two  cause this is a function that gets r
 otherwise if  we are just setting it to the different value where we don't care about the previous state value then we can just use normal set method .`
 
 
-### How many time state actually re-renders in continuous re-renders ?
+### **How many times does a component actually re-render during consecutive state updates in React?**
 
-- one more thing the above is only re-rendering once cause react combines all the continuous re-renders.
-Component does re-render itself when we update the state with the old value in case of direct mutating the state and in case of passing function in setter method it returns new value and set it to state each time , Hence we get updated state value each time of next re-renders. And also if there are continuous re-renders react combines all the multiple re- renders into one  and if they are not continuous then it will re-render as no of times as there are setter method used.
 
+When multiple state updates occur in quick succession, React does not immediately re-render the component after each state update.
+Instead, React combines consecutive state updates and schedules them to be handled asynchronously into a single re-render operation. 
+This behavior keeps the website efficient by minimizing unnecessary DOM manipulations and improves the performance of the application.
+
+
+In scenarios where there are no consecutive state updates, React will re-render the component as many times as there are setter methods used to update the state.
+
+
+For example, consider the following code snippet:
+
+```jsx
+import React, { useState } from 'react';
+
+function ExampleComponent() {
+  const [count, setCount] = useState(0);
+
+  // Consecutive state updates
+  function updateCount() {
+    setCount(1); // First state update
+    setCount(2); // Second state update
+    setCount(3); // Third state update
+  }
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={updateCount}>Update Count</button>
+    </div>
+  );
+}
+
+export default ExampleComponent;
+```
+
+In this example, when the `updateCount` function is called, triggering three consecutive state updates, React optimizes these updates into a single re-render operation, resulting in the component being re-rendered only once despite the multiple state changes.
 
 ----------------------------------------------------------------------
 
