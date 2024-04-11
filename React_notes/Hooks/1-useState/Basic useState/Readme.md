@@ -105,7 +105,7 @@ console.log("State inline setter")
 return "Joe"
 }
 
-// or just  do like this .instead of calling just pass reference it is the same as above
+// or just  do like this .instead of invoking the funciton or calling an inline function  // just pass reference it is the same as above
 
 
 function App(){
