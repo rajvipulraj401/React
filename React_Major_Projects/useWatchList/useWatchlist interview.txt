@@ -1,0 +1,39 @@
+mai aise bolunga 
+
+Sir, First i created an app component where i divided different layout of the page like navbar, main section like i did all the logic separation and even the things which will used repeatedly . and i used useFetch hook to fetch datas of movie from omdb api .
+Then i created some custom Hooks like
+useMovies and useLocalStorageState .and from there i added functionality of fetching movie data and managing local storafe for user Data  so that the data stay persistent . and i  also created a starRating component . fro which user can rate the watched movies.
+
+-------------------------------------------------------------------------------------
+
+Absolutely, let's break down each question and provide concise answers in a similar tone and language:
+
+**1. Question**: How did you implement the movie search functionality?
+   - **Answer**: Sir, I implemented the movie search functionality using the `useMovies` custom hook. This hook utilizes the OMDB API to fetch movie data based on the user's search query. It handles the logic for fetching and managing movie data, providing a seamless search experience for the user.
+
+**2. Question**: What is the purpose of the `useLocalStorageState` custom hook, and how did you use it in your project?
+   - **Answer**: Sir, the purpose of the `useLocalStorageState` custom hook is to manage stateful data persistently in the browser's local storage. I used it in my project to store user data, such as the list of watched movies, ensuring that the data remains accessible even after the user closes the application.
+
+**3. Question**: Explain the functionality of the `useKey` custom hook and where it is used in your project.
+   - **Answer**: Sir, the `useKey` custom hook is used to detect keyboard events and perform actions based on key presses. In my project, I utilized it to handle keyboard navigation within certain components, enhancing the user experience by allowing them to interact with the application using keyboard shortcuts.
+
+**4. Question**: Can you explain how the star rating system works in your application?
+   - **Answer**: Sir, the star rating system allows users to rate the movies they've watched. It's implemented using the `starRating` component, which displays a set of stars that users can click to select their rating. This rating is then stored and associated with the respective movie in the application's data.
+
+**5. Question**: How did you handle fetching movie details from the OMDB API, and what are the key features of the `useMovies` custom hook?
+   - **Answer**: Sir, I handled fetching movie details from the OMDB API using the `useMovies` custom hook. This hook encapsulates the logic for making API requests, parsing the response data, and handling loading and error states. It provides a simple interface for components to fetch movie data based on search queries.
+
+**6. Question**: What is the purpose of the `Loader` and `ErrorMessage` components, and when are they rendered in your application?
+   - **Answer**: Sir, the `Loader` component is used to indicate to the user that content is being loaded, while the `ErrorMessage` component displays an error message if something goes wrong during data fetching. These components are rendered conditionally based on the application's loading and error states, ensuring a smooth user experience.
+
+**7. Question**: How did you structure the layout of your application, and which components make up the main content area?
+   - **Answer**: Sir, I structured the layout of my application using the `App` component as the main hub. Within the `App` component, I divided the layout into different sections, including the navbar, main content area, and footer. The main content area consists of components such as `Search`, `MovieDetails`, `WatchedSummary`, and `WatchedMoviesList`.
+
+**8. Question**: Explain the functionality of the `Search` component and how it interacts with the state of your application.
+   - **Answer**: Sir, the `Search` component allows users to search for movies by entering keywords into a search bar. It interacts with the state of the application by updating the search query state when users input text into the search bar. This triggers the `useMovies` hook to fetch movie data based on the search query and update the displayed results accordingly.
+
+**9. Question**: What is the purpose of the `WatchedSummary` and `WatchedMoviesList` components, and where are they used in your project?
+   - **Answer**: Sir, the `WatchedSummary` component provides a summary of the user's watched movies, including the total number of movies watched and the average rating. The `WatchedMoviesList` component displays a list of movies that the user has watched, along with their respective ratings. These components are used in the main content area of the `App` component to showcase the user's watched movies.
+
+**10. Question**: Can you describe the functionality of the `MovieDetails` component and how it retrieves and displays movie information?
+    - **Answer**: Sir, the `MovieDetails` component is responsible for displaying detailed information about a selected movie. It retrieves movie information by receiving data from the `useMovies` hook based on the user's search query or selection. This component then formats and displays relevant movie details, such as title, plot, genre, and ratings, providing users with comprehensive information about the selected movie.
