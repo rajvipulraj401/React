@@ -8,10 +8,9 @@ Notes:
 
 3) Always provide initial values instead of leaving them as `undefined`. If no value is available, consider initializing them as empty.
 
-
 1. You can use a lot of icons without managing them.
 
-2. Install Package
+2. Install Package-
 
    `npm install react-icons –save`
 
