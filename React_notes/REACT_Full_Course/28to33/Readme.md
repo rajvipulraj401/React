@@ -75,18 +75,6 @@ Inside `main.jsx`:
 `SO in CONCLUSION all our content is inside the root element`
 
 
-## Reconciliation Process:
-
-• When component data changes, React updates the virtual DOM's state to mirror these changes.
-
-• React then compares the current and previous versions of the virtual DOM.
-
-• It identifies the specific nodes that need updating. (means specific HTML nodes which have been changed and it will identify them and only change them )
-
-• Only these nodes are updated in the real browser DOM, making it efficient.
-
-so,
-` IN conclusion - Virtual dom is the tree of my components and the Html tree is the real dom which is made by browser.THis tree (virtual dom ) is made by react and i only do changes in the components and react put my changes in the virtual dom and the final changes which happens (only the changed part from the previous version ) react only put that in the real DOM.`
 
 # 30 **React and ReactDOM (virtual DOM)**
 
