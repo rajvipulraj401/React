@@ -75,50 +75,6 @@ Inside `main.jsx`:
 `SO in CONCLUSION all our content is inside the root element`
 
 
-## Virtual DOM:
-
-Virtual DOM:
-- Serves as a mediator between the React code and the actual DOM.
-
-1. **Introduction**:
-   - The Virtual DOM is a lightweight representation of the actual DOM where each node stands for a component and its attributes. which is Different from the actual browser DOM.
-   - Its primary function is to optimize the rendering process in React applications.
-
-2. **Comparison Process**:
-   - When a component renders, React compares the new Virtual DOM with the previous version.
-   - It identifies the differences (or "diffs") between the old and new Virtual DOM trees.
-
-3. **Efficient Updates**:
-   - This approach improves performance by minimizing unnecessary DOM manipulations.
-   - It's faster because:
-   1. Changes are first made to the virtual DOM.
-   2. React compares the virtual DOM with the actual DOM and updates only the differences in the real dom (the part which actually affects the ui ,rather than re-rendering the entire DOM tree.) and other same things are not reloaded .Hence  reducing browser load.
-
-
-## Component Lifecycle:
-
-1. **Overview**:
-   - The component lifecycle refers to the series of phases a React component goes through from creation to removal.
-   - It consists of three main parts: Mounting, Updating, and Unmounting.
-
-2. **Mounting Phase**:
-   - Occurs when a component is first rendered to the page.
-   - Methods like `componentDidMount` are executed during this phase.
-
-3. **Updating Phase**:
-   - Triggered whenever a component's state or props change.
-   - Methods like `componentDidUpdate` are called after the component updates.
-
-4. **Unmounting Phase**:
-   - Executed when a component is removed from the page.
-   - The `componentWillUnmount` method is invoked before the component is unmounted.
-
-5. **Re-render Triggers**:
-   - `Components re-render when their state or props change, or when their parent component re-renders(when their state or props changes).`
-   - Re-rendering occurs to reflect the updated state of the component or its parent in the UI.
-
-These revised notes provide a clearer understanding of the Virtual DOM and Component Lifecycle concepts in React, making them suitable for study and reference.
-
 ## Reconciliation Process:
 
 • When component data changes, React updates the virtual DOM's state to mirror these changes.
