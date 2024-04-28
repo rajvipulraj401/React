@@ -76,19 +76,6 @@ Inside `main.jsx`:
 
 
 
-# 30 **React and ReactDOM (virtual DOM)**
-
-React and ReactDOM:
-- React builds components, while ReactDOM converts these components into the actual DOM.
-
-In Conclusion:
-- Virtual DOM is a representation of React components, and the final HTML tree generated from these components is known as the actual DOM.
-
-• The actual updating of the browser's DOM isn't done by React itself
-
-• It's handled by a companion library called react-dom
-
-• `React Dom converts the React component tree into actual browser DOM means in Html`
 
 ## **Root Element**
 
