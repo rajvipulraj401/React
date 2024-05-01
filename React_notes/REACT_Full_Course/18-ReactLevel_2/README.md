@@ -15,7 +15,7 @@ On the other hand, if you only use the `defaultValue` parameter, the browser has
 - Users can still input text freely, but there is no way to update any React state variable based on these inputs.
 
 
---- 
+----- 
 
 ## Importing Non-JavaScript Files
 
