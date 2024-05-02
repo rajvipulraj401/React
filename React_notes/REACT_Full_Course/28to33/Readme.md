@@ -8,10 +8,9 @@ Notes:
 
 3) Always provide initial values instead of leaving them as `undefined`. If no value is available, consider initializing them as empty.
 
-
 1. You can use a lot of icons without managing them.
 
-2. Install Package
+2. Install Package-
 
    `npm install react-icons –save`
 
@@ -76,76 +75,7 @@ Inside `main.jsx`:
 `SO in CONCLUSION all our content is inside the root element`
 
 
-## Virtual DOM:
 
-Virtual DOM:
-- Serves as a mediator between the React code and the actual DOM.
-
-1. **Introduction**:
-   - The Virtual DOM is a lightweight representation of the actual DOM where each node stands for a component and its attributes. which is Different from the actual browser DOM.
-   - Its primary function is to optimize the rendering process in React applications.
-
-2. **Comparison Process**:
-   - When a component renders, React compares the new Virtual DOM with the previous version.
-   - It identifies the differences (or "diffs") between the old and new Virtual DOM trees.
-
-3. **Efficient Updates**:
-   - This approach improves performance by minimizing unnecessary DOM manipulations.
-   - It's faster because:
-   1. Changes are first made to the virtual DOM.
-   2. React compares the virtual DOM with the actual DOM and updates only the differences in the real dom (the part which actually affects the ui ,rather than re-rendering the entire DOM tree.) and other same things are not reloaded .Hence  reducing browser load.
-
-
-## Component Lifecycle:
-
-1. **Overview**:
-   - The component lifecycle refers to the series of phases a React component goes through from creation to removal.
-   - It consists of three main parts: Mounting, Updating, and Unmounting.
-
-2. **Mounting Phase**:
-   - Occurs when a component is first rendered to the page.
-   - Methods like `componentDidMount` are executed during this phase.
-
-3. **Updating Phase**:
-   - Triggered whenever a component's state or props change.
-   - Methods like `componentDidUpdate` are called after the component updates.
-
-4. **Unmounting Phase**:
-   - Executed when a component is removed from the page.
-   - The `componentWillUnmount` method is invoked before the component is unmounted.
-
-5. **Re-render Triggers**:
-   - `Components re-render when their state or props change, or when their parent component re-renders(when their state or props changes).`
-   - Re-rendering occurs to reflect the updated state of the component or its parent in the UI.
-
-These revised notes provide a clearer understanding of the Virtual DOM and Component Lifecycle concepts in React, making them suitable for study and reference.
-
-## Reconciliation Process:
-
-• When component data changes, React updates the virtual DOM's state to mirror these changes.
-
-• React then compares the current and previous versions of the virtual DOM.
-
-• It identifies the specific nodes that need updating. (means specific HTML nodes which have been changed and it will identify them and only change them )
-
-• Only these nodes are updated in the real browser DOM, making it efficient.
-
-so,
-` IN conclusion - Virtual dom is the tree of my components and the Html tree is the real dom which is made by browser.THis tree (virtual dom ) is made by react and i only do changes in the components and react put my changes in the virtual dom and the final changes which happens (only the changed part from the previous version ) react only put that in the real DOM.`
-
-# 30 **React and ReactDOM (virtual DOM)**
-
-React and ReactDOM:
-- React builds components, while ReactDOM converts these components into the actual DOM.
-
-In Conclusion:
-- Virtual DOM is a representation of React components, and the final HTML tree generated from these components is known as the actual DOM.
-
-• The actual updating of the browser's DOM isn't done by React itself
-
-• It's handled by a companion library called react-dom
-
-• `React Dom converts the React component tree into actual browser DOM means in Html`
 
 ## **Root Element**
 
