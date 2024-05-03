@@ -1,4 +1,4 @@
-# --------------- React Level 3 ----------------
+# --------------- React Level 3 -------------------
 
 # 23 `Passing **Children** to a Component by using child props________`
 
