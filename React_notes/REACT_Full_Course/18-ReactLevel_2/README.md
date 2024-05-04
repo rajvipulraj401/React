@@ -65,21 +65,9 @@ Result:
 
 # `Fragments______`
 
-### 1. What?
 
-`Allows grouping of multiple elements without
-extra DOM nodes.(without extra div)`
+Read in Copy notes .📖🙈🙈
 
-### 2. Why?
-
-• Return multiple elements without a wrapping
-parent.
-• Cleaner DOM and consistent styling.
-
-### 3. How? Two syntaxes:
-
-1. <React.Fragment>...</React.Fragment>
-2. Short: <>...</>
 
 
 
@@ -118,6 +106,8 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 # `Conditional Rendering______`
 
+Read in Copy notes .📖🙈🙈
+
 #### `When we do rendering based on certain condition it is called conditional Rendering`
 
 • Displaying content based on certain conditions.
@@ -145,15 +135,6 @@ https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/
 
 ![Alt Text](
 https://github.com/rajvipulraj401/React/blob/main/React_notes/REACT_Full_Course/18-ReactLevel_2/conditional3.png)
-
-## `Benefits of Doing conditional rendering :---`
-
-
-• Enhances **user experience**.
-
-• Reduces unnecessary rendering.
-
-• Makes apps **more interactive and responsive**.
 
 
 
