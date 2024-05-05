@@ -1,4 +1,4 @@
-
+# See CODE OF 27 folder in your React folder (Before) in order to understand fully
 
 
 ##  What  is a pure function ?
