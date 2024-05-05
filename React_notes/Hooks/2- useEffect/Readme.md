@@ -2,15 +2,51 @@
 
 
 ##  What  is a pure function ?
-Ans - If a function has no side effects at all then that function is known as pure function .
+Ans -    - Pure functions are functions that always return the same output for the same input and have no side effects.
+   - They depend only on their input parameters and don't modify any external state or variables.
+   - Pure functions are predictable and easier to test since they don't have hidden dependencies.
+   - Example of a pure function:
+     ```javascript
+     function add(a, b) {
+       return a + b;
+     }
+     ```
+     The `add` function always returns the same result for the same input `a` and `b`, and it doesn't modify any external variables or state.
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## What is  a side Effect ?
 
---When you are changing something whihc is outside of you function scope then you are doing a side effect .
+--When you are changing something which is outside of you function scope then you are doing a side effect .
 
-**Note - All the function in react needs to be pure function (not doing any side Effects)**
+**Note -  In React, components are expected to be pure functions, meaning they shouldn't have side effects.**
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Q) What is an Impure Functions ?
+
+Answer --
+   - Impure functions have side effects, meaning they can modify external state or variables outside of their scope.
+   - They may rely on global variables, mutate data, perform I/O operations, or have other observable interactions.
+   - Impure functions can be harder to reason about and test due to their unpredictable behavior.
+   - Example of an impure function:
+
+     ```javascript
+     let result = 0;
+     function impureAdd(a) {
+       result += a;
+       return result;
+     }
+     ```
+     The `impureAdd` function modifies the `result` variable outside its scope, making its behavior unpredictable and depending on external state.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ##  What is the difference between reference and values ?
 
@@ -47,8 +83,10 @@ Conclusion -- Above the person object is changing every single time in the re-re
 
  # What is a <i><u>useEffect</i></u> ?
 
-Answer ---useEffect is very good for doing side effects in our component so if we ever want to deal with browser , Dom or fetch Data from Api we will always use useEffect.
-This hook is very good for doing side effect with your component .In Conclusion useEffect is for anytime  when we want a side effect to occur whether when the components mounts or when it unmounts, when variable changes , when state changes like when anything update and you want to do something This is when you will use useEffect hook.As It allows you to do side effects while keeping your function a pure function .
+Answer ---useEffect is a hook which allows us to perform side effects in a controlled manner within a functional component. so if we ever want to deal with browser , Dom or fetch Data from Api we will always use useEffect. By encapsulating side effects within `useEffect`, you ensure that your component remains a pure function, as the side effects are isolated within the hook and don't affect the component's render behavior directly.
+ .In Conclusion useEffect is for anytime  when we want a side effect to occur whether when the components mounts or when it unmounts, when variable changes , when state changes like when anything update and you want to do something This is when you will use useEffect hook.As It allows you to do side effects while keeping your function a pure function .
+
+
 
 
 This Hook takes three things as a parameter 
@@ -59,18 +97,25 @@ This Hook takes three things as a parameter
 
 
 
-There are three cases of useEffect :--
+### There are three cases of useEffect :--
 
-1) Case 1 -- run on every render (here we don't pass any dependancy array so it runs every time)
+1)case 1 -- run on every render (here we don't pass any dependancy array so it runs every time)
 
 2) Case 2 - Run only when certain values changes 
+(here we run when certain values changes as we pass them in dependancy array)
+
 
 3) case 3 --- Run on only first render 
 (here we pass empty dependancy array)
 
-(Here we run when certain values changes as we pass them in dependancy array)
+We can also make useEffect run only on mounting not again , All we have to do is to pass nothing in our dependancy array just an empty array .So This dependancy array which is an empty array will never change and nothing inside of it ever changes so that it means it never re-runs .Now we can do whatever we want in the component it will never re-run it again after mounting.
 
-### Case 1:-----------------
+  useEffect(() => {
+    console.log(" Log when Mount ");
+  }, []);
+
+
+### Case 1 (detail explanation :-----------------
 
 By Default when you use useEffect and you pass it a function it's just going to call that function every single time our component gets re-rendered. It doesn't matter what you change if your state changes or if you parent state changes it's going to call it.
 
@@ -126,7 +171,7 @@ Now This is fine at some scenarios but often time you want to run useEffect when
 
 
 
-### Case 2-------------------------
+### Case 2 (detail explanation -------------------------
 
 
 
@@ -182,7 +227,7 @@ export default Children;
 
 
 
- ### Case 3 ------- 
+ ### Case 3(detail explanation  ------- 
 
 Note ---It will always run the first time when you mount your component for the first time.So Every useEffect will run for the first time no matter what .
 
@@ -203,8 +248,13 @@ Answer -- The reason that react wants you to keep these as pure function is beca
 
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## -----Now let's do some side effect with our browser and dom .----------
+
+
+
+## -----Some common  side effect with our browser and dom🙈🙈 .----------
+
 
 
 

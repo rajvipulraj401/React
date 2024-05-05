@@ -1,0 +1,68 @@
+import React, { useEffect, useState } from "react";
+
+const FetchApiAsync = function () {
+  const [users, setUsers] = useState();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
+
+  useEffect(() => {
+    // Set loading state to true and clear any previous error
+    setLoading(true);
+    setError(undefined);
+
+    // Create an instance of AbortController
+    const controller = new AbortController();
+
+    // Fetch data from the API using the associated signal
+    fetch("https://jsonplaceholder.typicode.com/users", {
+      signal: controller.signal,
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          // If successful, parse the JSON data
+          return res.json();
+        } else {
+          // Handle errors by rejecting the promise
+          throw new Error(`Request failed with status ${res.status}`);
+        }
+      })
+      .then((data) => {
+        // Set the users state with the fetched data
+        setUsers(data);
+      })
+      .catch((err) => {
+        // Handle errors, including the "AbortError"
+        if (err?.name === "AbortError") return; // Ignore aborted requests
+        setError(err.message);
+      })
+      .finally(() => {
+        // Regardless of success or failure, set loading to false
+        setLoading(false);
+      });
+
+    // Cleanup function: Abort the fetch request when the component unmounts
+    return () => {
+      controller.abort();
+    };
+  }, []); // Empty dependency array ensures this effect runs only once
+
+  let jsx;
+
+  if (loading) {
+    jsx = <h2>Loading...</h2>;
+  } else if (error != null) {
+    jsx = <h2>Error {error}!</h2>;
+    // Show the error if we get an error in the error state from the catch method
+  } else {
+    jsx = JSON.stringify(users);
+  }
+
+  return (
+    <div>
+      <h1>Users</h1>
+      {jsx}
+    </div>
+  );
+};
+
+export default FetchApiAsync;
