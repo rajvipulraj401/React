@@ -13,32 +13,33 @@ const FetchApiAsync = function () {
     // Create an instance of AbortController
     const controller = new AbortController();
 
-    // Fetch data from the API using the associated signal
-    fetch("https://jsonplaceholder.typicode.com/users", {
-      signal: controller.signal,
-    })
-      .then((res) => {
+    const fetchData = async () => {
+      try {
+        // Fetch data from the API using the associated signal
+        const res = await fetch("https://jsonplaceholder.typicode.com/users", {
+          signal: controller.signal,
+        });
+
         if (res.status === 200) {
           // If successful, parse the JSON data
-          return res.json();
+          const data = await res.json();
+          // Set the users state with the fetched data
+          setUsers(data);
         } else {
-          // Handle errors by rejecting the promise
+          // Handle errors by throwing an error
           throw new Error(`Request failed with status ${res.status}`);
         }
-      })
-      .then((data) => {
-        // Set the users state with the fetched data
-        setUsers(data);
-      })
-      .catch((err) => {
+      } catch (err) {
         // Handle errors, including the "AbortError"
         if (err?.name === "AbortError") return; // Ignore aborted requests
         setError(err.message);
-      })
-      .finally(() => {
+      } finally {
         // Regardless of success or failure, set loading to false
         setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
 
     // Cleanup function: Abort the fetch request when the component unmounts
     return () => {

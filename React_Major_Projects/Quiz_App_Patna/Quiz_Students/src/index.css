@@ -1,0 +1,44 @@
+/* Css  */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Style for NAVBAR ---- */
+
+/* .Navigation_links {
+  display: flex;
+} */
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px; /* Add padding around the entire navbar */
+  background-color: #f0f0f0;
+}
+
+.nav-Text {
+  color: rgb(255, 255, 0);
+  font-size: 25px;
+  font-family: "Lollipop", sans-serif;
+  /* font-family: ; */
+}
+
+.logo-Text {
+  font-size: 34px;
+  font-weight: 900;
+  font-style: italic;
+  font-family: Lolli;
+}
+
+.Navigation_links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adjust the gap between navigation links */
+}
+
+/* Additional styles for the coin icon */
+.coin-icon {
+  /* Add circular div styles */
+}

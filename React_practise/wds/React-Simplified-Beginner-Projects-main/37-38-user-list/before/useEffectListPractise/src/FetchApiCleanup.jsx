@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 /* Now how we do cleanup in case of fetching api inside of 
 useEffect Hook or How do we cancel our fetch when we unmount our component ?
