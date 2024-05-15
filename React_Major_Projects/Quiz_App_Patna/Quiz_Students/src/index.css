@@ -4,6 +4,13 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --primary-color: #4285f4;
+  --font-size: 16px;
+  --color: rgb(255, 255, 0);
+}
+
 /* Style for NAVBAR ---- */
 
 /* .Navigation_links {
@@ -15,11 +22,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 50px; /* Add padding around the entire navbar */
-  background-color: #f0f0f0;
+  background-color: rgba(0, 179, 255, 0.87);
 }
 
 .nav-Text {
-  color: rgb(255, 255, 0);
+  /* color: rgb(255, 255, 0); */
+  color: var(--color);
   font-size: 25px;
   font-family: "Lollipop", sans-serif;
   /* font-family: ; */
@@ -35,10 +43,128 @@
 .Navigation_links {
   list-style: none;
   display: flex;
-  gap: 20px; /* Adjust the gap between navigation links */
+  gap: 60px; /* Adjust the gap between navigation links */
 }
 
 /* Additional styles for the coin icon */
-.coin-icon {
-  /* Add circular div styles */
+
+/* .coin-icon {
+} */
+
+/* -------------------------------------------------INtro Div---------------------------------------- */
+
+.intro_div {
+  display: flex;
+  width: inherit;
+  background-color: rgb(6 182 212);
+  padding: 50px 300px;
+  /* justify-content: space-around; */
+  max-height: 70vh;
+
+  clip-path: polygon(
+    100% 0,
+    0 0,
+    0 95.9%,
+    1.82% 95.19%,
+    3.64% 94.46%,
+    5.45% 93.71%,
+    7.27% 92.95%,
+    9.09% 92.19%,
+    10.91% 91.46%,
+    12.73% 90.76%,
+    14.55% 90.09%,
+    16.36% 89.48%,
+    18.18% 88.93%,
+    20% 88.45%,
+    21.82% 88.04%,
+    23.64% 87.72%,
+    25.45% 87.49%,
+    27.27% 87.35%,
+    29.09% 87.31%,
+    30.91% 87.36%,
+    32.73% 87.5%,
+    34.55% 87.74%,
+    36.36% 88.07%,
+    38.18% 88.47%,
+    40% 88.96%,
+    41.82% 89.51%,
+    43.64% 90.13%,
+    45.45% 90.79%,
+    47.27% 91.5%,
+    49.09% 92.24%,
+    50.91% 92.99%,
+    52.73% 93.75%,
+    54.55% 94.5%,
+    56.36% 95.23%,
+    58.18% 95.94%,
+    60% 96.6%,
+    61.82% 97.21%,
+    63.64% 97.76%,
+    65.45% 98.24%,
+    67.27% 98.65%,
+    69.09% 98.97%,
+    70.91% 99.2%,
+    72.73% 99.34%,
+    74.55% 99.39%,
+    76.36% 99.34%,
+    78.18% 99.19%,
+    80% 98.95%,
+    81.82% 98.63%,
+    83.64% 98.22%,
+    85.45% 97.73%,
+    87.27% 97.18%,
+    89.09% 96.56%,
+    90.91% 95.9%,
+    92.73% 95.19%,
+    94.55% 94.46%,
+    96.36% 93.71%,
+    98.18% 92.95%,
+    100% 92.19%
+  );
+}
+
+.bckQuizImgDiv {
+  background-image: url("public/backgroundQuizPic.png");
+  flex: 1;
+  height: 40vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 100px;
+  /* margin-left: 10px; */
+  position: relative;
+  left: 20px;
+}
+
+.introTextDiv {
+  flex: 1; /* Share 50% of the width */
+  padding: 20px; /* Add padding inside the text div */
+  text-align: center;
+  /* max-height: inherit; */
+  color: white;
+}
+
+.introTextDiv h1 {
+  font-size: 74px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.introTextDiv p {
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: left;
+  padding: 0 100px;
+  margin-bottom: 20px;
+}
+
+.introTextDiv button {
+  background-color: var(--color);
+  color: black;
+  font-size: 21px;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 5px;
+  cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
+import Intro from "./Intro";
 import "./index.css";
 
 const App = () => {
@@ -15,6 +16,7 @@ Logic
 */}
 
       <NavBar></NavBar>
+      <Intro></Intro>
     </>
   );
 };
