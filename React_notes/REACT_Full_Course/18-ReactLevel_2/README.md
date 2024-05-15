@@ -33,7 +33,7 @@ function App() {
     return <h1>{JSON.stringify(user)}</h1>;
 
     // Alternatively, to render the object directly:
-    // return <h1>{user.name}, {user.age}</h1>;
+    // return <h1>{user.name},{user.age}</h1>;
 }
 ```
 
@@ -47,7 +47,7 @@ Result:
 
 ```javascript
 // Importing image file
-import img from "./Code.png";
+import img from  "./Code.png";
 
 function App() {
     // Rendering the imported image
