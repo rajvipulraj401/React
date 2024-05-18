@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./NavBar";
 import Intro from "./Intro";
 import "./index.css";
+import GameCode from "./GameCode";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ Logic
 
       <NavBar></NavBar>
       <Intro></Intro>
+      <GameCode></GameCode>
     </>
   );
 };
