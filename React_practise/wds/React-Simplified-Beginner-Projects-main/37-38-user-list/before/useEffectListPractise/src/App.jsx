@@ -1,85 +1,51 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 
+// -------------  MAKE 2 VERSION ONE WITH ERROR HANDLING AND other without error handling--------------------------
+
 const App = () => {
-  const [data, setData] = useState();
-  // keeping a state for storing data from api call and also to show it.
+  // Let's do it without error handling
 
-  const [loading, setLoading] = useState(false);
-  // keeping a state for storing loading from api call and also to show it.
+  // Make a state
 
-  const [error, setError] = useState();
-  // keeping a state for storing error from api call and also to show it.
+  //   NOW IN ORDER to store the data from the api call we need a state so let's use a state
 
-  // NOW let's Do side effect of fetching data inside useEffect
+  const [nameApi, SetNamwApi] = useState([]);
+  //   keeping state as empty array because i want to store
+  // multiple names
 
   useEffect(() => {
-    // useEffect takes a call back fun , cleanup func and a dependancy array
+    // useEffect hooks take two thing in argument 1st is a callback function
+    //  second is a dependancy array and also inside the callback function it takes
+    // a return keyword which is a cleanup function.
 
-    setLoading(true);
-    // setError(undefined); //aS no error so undefined
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
 
-    const controller = new AbortController();
-
-    fetch("https://jsonplaceholder.typicode.com/users", {
-      signal: controller.signal,
-    })
-      // Fetching the data and assigning a signal object using abort controller object
-
-      /*  NOW i made the fetch request it is requesting a promise 
-      and now i have to handle this promise
-    */
-
-      .then((res) => {
-        // console.log(res)
-
-        // What if the response returns an error
-
-        if (res.status == 200)
-          // if response success then return json file
-          return res.json();
-        else {
-          throw new Error(`Request failed with status ${res.status}`);
-          // if error we will throw the error with the status code
+        // lets use map method to loop
+        {
+          data.map((curr) => {
+            // console.log(curr.name);
+            SetNamwApi((nameApi) => [...nameApi, curr.name]);
+            console.log(nameApi);
+          });
         }
-      })
-      // Now this json file also returns a promise that needs to be handled
-      .then((datas) => {
-        // now we get the data from the api file now we want it to store in the state
-        // console.log(data);
-        setData(datas);
-
-        console.log(datas);
-      })
-
-      // now we handled the data
-
-      // noW LET'S CATCH the error
-
-      .catch((error) => {
-        /*  Now IF THE error is because of the abort controller then we
-will ignore this error by returning 
-*/
-
-        if (error?.name === "AbortError") return;
-        // Checking if there is error object exist or not using optional chaining
-
-        setError(error);
-      })
-      .finally(() => {
-        // CATCH and FINALLy  method takes a callback function in the parameter
-        // in tHIS fiNALLY method what we will do is that we will set the loading state to be true
-
-        setLoading(true);
+        // map method returns a new array , we can even store it
+        //  instead of map we could have just used forEach method also as
+        // we don't require any manipulation in array
       });
-  }, []);
-  // I want to run useEffect on Only on Mount so Empty depend array
 
+    return () => {};
+  }, []);
   return (
     <>
       <h1>User List</h1>
-
-      <ul>{data.map((curr) => curr.name)}</ul>
+      <ul>
+        {nameApi.map((name, index) => (
+          <li key={index}>{name}</li>
+        ))}
+      </ul>
     </>
   );
 };

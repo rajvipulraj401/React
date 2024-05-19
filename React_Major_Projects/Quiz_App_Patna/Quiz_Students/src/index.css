@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -11,20 +12,25 @@
   --color: rgb(255, 255, 0);
 }
 
-/* Style for NAVBAR ---- */
-
-/* .Navigation_links {
-  display: flex;
-} */
+/*-------------------------------------------- Style for NAVBAR ---- */
 
 .navBar {
   display: flex;
+  position: sticky;
+  top: 0;
   align-items: center;
   justify-content: space-between;
   padding: 10px 50px; /* Add padding around the entire navbar */
-  background-color: rgba(0, 179, 255, 0.87);
+  /* background-color: rgba(0, 179, 255, 0.87); */
+
+  background-color: var(--primary-color);
+  z-index: 100;
+  transition: background-color 200ms linear;
 }
 
+.navBar.scrolled {
+  background-color: rgb(34, 211, 238);
+}
 .nav-Text {
   /* color: rgb(255, 255, 0); */
   color: var(--color);
@@ -134,7 +140,7 @@
   flex: 1;
   height: 40vh;
   background-size: contain;
-  margin-left: 350px;
+  margin-left: 250px;
   background-repeat: no-repeat;
 
   /* position: relative;
@@ -152,44 +158,40 @@
 }
 
 .introTextDiv h1 {
-  font-size: 74px;
-  margin-bottom: 30px;
+  font-size: 70px;
+  margin-bottom: 20px;
   font-weight: 400;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .introTextDiv p {
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1.5;
   /* text-align: left; */
   text-align: left;
 
   padding: 0 10px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .introTextDiv button {
   background-color: var(--color);
   color: black;
-  font-size: 21px;
+  font-size: var(--font-size);
   border: none;
-  padding: 18px 40px;
+  padding: 10px 30px;
   border-radius: 5px;
   cursor: pointer;
 }
 
 /* -----------------------------------------Input Game Code Div-------------------------------- */
 
-.ContainerGame {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
 .Game-Code {
-  height: 120px;
-  width: 1700px;
+  height: 130px;
+  width: 1380px;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px 0 32px 0;
   background-color: var(--primary-color);
   border-radius: 30px;
@@ -200,30 +202,230 @@
 
 .Input-Container {
   border: 1px solid rgb(250 204 21);
-  padding: 20px;
+  padding: 15px;
   border-radius: 20px;
   height: auto;
-  width: 30%;
+  width: 33%;
 }
 
-.Input-Container input {
+.Input-Container input[type="number"] {
   border: none;
-  border-radius: 10px;
-  padding: 0 20px;
-  height: 50px;
-  width: 300px;
+  border-radius: 5px;
+  padding: 0 0 0 40px;
+  height: 40px;
+  width: 250px;
   margin-right: 15px;
-  font-size: 20px;
+  font-size: var(--font-size);
   outline: none;
 }
+
+/* In order to remove increment or decrement button in 
+input type number field  */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */
 .Input-Container button {
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: black;
   color: white;
   /* padding: 10px 10px; */
-  font-size: 20px;
-  height: 50px;
+  font-size: var(--font-size);
+  height: 40px;
   width: 150px;
   cursor: pointer;
+}
+
+.ContainerGame {
+  display: flex;
+  justify-content: center;
+  /* width: 90vw; */
+  /* text-align: center; */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------CardContainer------------------------------------------ */
+.CardContainerDiv {
+  height: 250px;
+  width: 1350px;
+  /* margin-top: 20px; */
+  margin-bottom: 80px;
+  margin-left: 60px;
+  padding: 20px 0 32px 0;
+  /* background-color: var(--primary-color); */
+  border-radius: 30px;
+}
+
+.arrow {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.arrow img {
+  margin-left: 40px;
+}
+
+.upperDiv {
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 20px; */
+  margin-bottom: 15px;
+}
+
+.upperDiv h3 {
+  font-size: 34px;
+  font-weight: 400;
+}
+.upperDiv button {
+  background: none;
+  background-color: rgba(204, 230, 239, 0.6);
+  border: none;
+  border-radius: 5px;
+  /* background-color: black; */
+  color: var(--primary-color);
+  /* padding: 10px 10px; */
+  font-size: var(--font-size);
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.upperDiv a {
+  text-decoration: none;
+  all: unset;
+}
+
+.CardContainerDiv .cardsDiv {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  place-items: center;
+  /* column-gap: 10px; */
+  column-gap: 10px;
+  height: inherit;
+  /* background-color: orange; */
+}
+
+/* ---------------------------------Styling of card individual----------------- */
+/* .card {
+  height: inherit;
+  width: 250px;
+}
+.bckImgQuiz {
+  height: 85%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-image: url("quizImg.png");
+}
+.bckImgQuiz .bckImgDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bckImgQuiz .bckImgDiv span {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+} */
+
+.card {
+  height: inherit;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.bckImgQuiz {
+  position: relative; /* Make it the containing block for the pseudo-element */
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 5px;
+  margin-bottom: 30px;
+  overflow: hidden; /* Ensure the zoomed image does not overflow */
+}
+
+.bckImgQuiz::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("quizImg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+  z-index: 0; /* Ensure the pseudo-element is behind other content */
+}
+
+.bckImgQuiz:hover::before {
+  transform: scale(1.07); /* Slightly zoom in when hovered */
+}
+
+.bckImgDiv {
+  position: relative; /* Ensure it is above the pseudo-element */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 1; /* Make sure it stays above the pseudo-element */
+}
+
+.bckImgDiv span {
+  color: white;
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cardTextDiv {
+  padding-left: 10px;
+  position: relative;
+  top: -15px;
+}
+
+.cardTextDiv p {
+  padding-bottom: 3px;
+  font-size: 18px;
+}
+
+/* ------------------------Footer Styling-------------------- */
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 150px;
+}
+.footerLinks {
+  display: flex;
+}
+
+.footerLinks div {
+  padding: 10px;
 }

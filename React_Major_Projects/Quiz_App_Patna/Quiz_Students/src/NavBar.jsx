@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import "./index.css";
 
 const NavBar = () => {
+  /* In order to do something when page scroll we need to use
+
+use useEffect hook cause this is a side effect that's why
+*/
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector(".navBar");
+      if (window.scrollY > 0) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      // Adding a cleanup function
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navBar">
+      <nav className="navBar ">
         {/* I have to inside this nav div
         add 
         a)  1 logo 
