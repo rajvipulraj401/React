@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
-// import "./index.css";
+import React, { useState, useEffect, useRef } from "react";
+import Notification from "./Notification";
+import "./index.css";
 
-const NavBar = () => {
-  /* In order to do something when page scroll we need to use
-
-use useEffect hook cause this is a side effect that's why
-*/
+const NavBar = ({ isDarkMode, handleThemeToggle }) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState("DEFAULT");
+  const [showNotification, setShowNotification] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,38 +21,88 @@ use useEffect hook cause this is a side effect that's why
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      // Adding a cleanup function
     };
   }, []);
 
-  return (
-    <>
-      <nav className="navBar ">
-        {/* I have to inside this nav div
-        add 
-        a)  1 logo 
-        a1) A theme changer icon 
-        b) 4 navigation link 
-        c) a coin icon which displays a coin
-         image and the value of the coin set to 0 */}
-        <div className="logo-Text nav-Text">QUIZARD</div>
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
 
-        <div className="Navigation_links">
-          <div>{/* Theme icon here */}</div>
-          <div className="nav-Text">Live Quiz</div>
-          <div className="nav-Text">Profile</div>
-          <div className="nav-Text">
-            Default
-            {/* Here i have to add a drop down menu  */}
-          </div>
-          <div className="nav-Text">Logout</div>
-          <div className="nav-Text">
-            {/* Here i have to make it a circular div and 
-          inside that i have to add a coin icon and  0 text  */}
-          </div>
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+    setDropdownOpen(false);
+    setShowNotification(true);
+  };
+
+  const handleNotificationComplete = () => {
+    setShowNotification(false);
+  };
+
+  return (
+    <nav className="navBar">
+      <div className="logo-Text">QUIZARD</div>
+      <div className="Navigation_links">
+        <div className="theme-toggle">
+          <button onClick={handleThemeToggle}>
+            <img
+              src={isDarkMode ? "night.png" : "day.png"}
+              alt="Theme Icon"
+              className="theme-icon"
+            />
+          </button>
         </div>
-      </nav>
-    </>
+        <div className="nav-Text">Live Quiz</div>
+        <div className="nav-Text" ref={dropdownRef} onClick={toggleDropdown}>
+          {selectedItem}
+          <span className="dropdown-arrow"> ▼ </span>
+          {dropdownOpen && (
+            <ul className="dropdown-menu">
+              {[
+                "DEFAULT",
+                "Grade 12",
+                "Grade 11",
+                "Grade 10",
+                "Grade 9",
+                "Grade 8",
+                "Grade 7",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="dropdown-item"
+                  onClick={() => handleItemClick(item)}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <div className="nav-Text">Login</div>
+        <div className="nav-Text">Register</div>
+        <div className="nav-Text">
+          {/* Coin container or any other content */}
+        </div>
+      </div>
+      {showNotification && (
+        <Notification
+          message="Class updated successfully."
+          onComplete={handleNotificationComplete}
+        />
+      )}
+    </nav>
   );
 };
 

@@ -14,52 +14,223 @@
 
 /*-------------------------------------------- Style for NAVBAR ---- */
 
+/* Styles for the navbar */
 .navBar {
   display: flex;
   position: sticky;
   top: 0;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 50px; /* Add padding around the entire navbar */
-  /* background-color: rgba(0, 179, 255, 0.87); */
-
+  padding: 0 50px;
   background-color: var(--primary-color);
   z-index: 100;
   transition: background-color 200ms linear;
+  /* position: relative; */
 }
 
 .navBar.scrolled {
   background-color: rgb(34, 211, 238);
 }
+
 .nav-Text {
-  /* color: rgb(255, 255, 0); */
   color: var(--color);
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Lollipop", sans-serif;
-  /* font-family: ; */
 }
 
 .logo-Text {
   font-size: 34px;
+  color: var(--color);
   font-weight: 900;
   font-style: italic;
   font-family: Lolli;
+  cursor: pointer;
 }
 
 .Navigation_links {
   list-style: none;
   display: flex;
-  gap: 60px; /* Adjust the gap between navigation links */
+  align-items: center;
+  gap: 40px;
   cursor: pointer;
+  margin-right: -25px;
 }
 
 .nav-Text:hover {
   color: white;
 }
-/* Additional styles for the coin icon */
 
-/* .coin-icon {
-} */
+.dropdown-arrow {
+  margin-left: -5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: white;
+  color: black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  list-style: none;
+  margin-top: 5px;
+  margin-left: -3px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 0 0 1px 5px;
+  /* margin-bottom: -7px; */
+  font-weight: 100;
+
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 75, 255, 0.866);
+  color: white;
+}
+
+.theme-toggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.theme-icon {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.8s ease-in;
+  position: relative;
+  bottom: -4px;
+}
+
+.coin-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  position: relative;
+}
+
+.coin-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.coin-container span {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  color: black;
+}
+
+/* ------------------------------------------------Style for notification ------------------------ */
+.notification {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-size: 22px;
+  font-weight: 400;
+  width: 380px;
+  height: 80px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateX(0) translateY(0) rotate(0deg);
+  transition: transform 0.2s, opacity 0.4s, border-bottom-color 0.4s;
+  border-bottom: 3px solid transparent;
+}
+
+.notification.show {
+  opacity: 1;
+  animation: bounce 0.5s, settle 0.2s 0.2s, borderAppear 0.4s 0.8s forwards;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-10px) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(10px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-10px) rotate(-5deg);
+  }
+}
+
+@keyframes settle {
+  from {
+    transform: translateX(0) translateY(0) rotate(5deg);
+  }
+  to {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes borderAppear {
+  from {
+    border-bottom-color: transparent;
+  }
+  to {
+    border-bottom-color: #333;
+  }
+}
+
+.loading-circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid lightgreen;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 2s linear infinite;
+  right: 20px;
+  margin-left: -20px;
+}
+
+.loading-circle .checkmark {
+  display: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: lightgreen;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.notification.show .loading-circle {
+  animation: none;
+}
+
+.notification.show .loading-circle .checkmark {
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* -------------------------------------------------INtro Div---------------------------------------- */
 
@@ -155,6 +326,9 @@
   /* max-height: inherit; */
   color: white;
   margin-right: 250px;
+  position: relative;
+  left: 30px;
+  top: -30px;
 }
 
 .introTextDiv h1 {
@@ -200,8 +374,15 @@
   align-items: center;
 }
 
-.Input-Container {
+.BorderWhite {
+  border: 1px solid white;
+}
+.BorderYellow {
   border: 1px solid rgb(250 204 21);
+}
+
+.Input-Container {
+  /* border: 1px solid rgb(250 204 21); */
   padding: 15px;
   border-radius: 20px;
   height: auto;
@@ -286,17 +467,27 @@ input::-webkit-outer-spin-button {
   font-weight: 400;
 }
 .upperDiv button {
-  background: none;
-  background-color: rgba(204, 230, 239, 0.6);
+  /* background: none; */
+  /* background-color: rgba(204, 230, 239, 0.6); */
   border: none;
   border-radius: 5px;
   /* background-color: black; */
-  color: var(--primary-color);
+
   /* padding: 10px 10px; */
   font-size: var(--font-size);
   height: 40px;
   width: 100px;
   cursor: pointer;
+}
+
+.darkBtn {
+  background-color: #475569;
+  color: white;
+  font-weight: 500;
+}
+.lightBtn {
+  background-color: rgba(204, 230, 239, 0.6);
+  color: var(--primary-color);
 }
 
 .upperDiv a {
@@ -316,30 +507,6 @@ input::-webkit-outer-spin-button {
 }
 
 /* ---------------------------------Styling of card individual----------------- */
-/* .card {
-  height: inherit;
-  width: 250px;
-}
-.bckImgQuiz {
-  height: 85%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  background-image: url("quizImg.png");
-}
-.bckImgQuiz .bckImgDiv {
-  display: flex;
-  justify-content: space-between;
-}
-
-.bckImgQuiz .bckImgDiv span {
-  background-color: black;
-  color: white;
-  padding: 5px;
-  border-radius: 10px;
-} */
 
 .card {
   height: inherit;
@@ -349,6 +516,12 @@ input::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+/* darkCard {
+  background-color: ;
+} */
+lightCard {
+  background-color: #f0f0f0;
 }
 
 .bckImgQuiz {
@@ -392,6 +565,16 @@ input::-webkit-outer-spin-button {
   z-index: 1; /* Make sure it stays above the pseudo-element */
 }
 
+.light-title {
+  color: black;
+}
+.dark-title {
+  color: white;
+}
+.title {
+  transition: color 0.4s ease;
+}
+
 .bckImgDiv span {
   color: white;
   background-color: black;
@@ -418,12 +601,21 @@ input::-webkit-outer-spin-button {
   align-items: center;
   padding: 20px;
   font-size: 16px;
-  background-color: var(--primary-color);
+
   color: white;
   margin-top: 150px;
 }
 .footerLinks {
   display: flex;
+}
+
+.darkFooter {
+  background-color: rgb(31 41 55);
+  border-top: 1px solid white;
+}
+
+.lightFooter {
+  background-color: var(--primary-color);
 }
 
 .footerLinks div {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "./NavBar";
 import Intro from "./Intro";
 import "./index.css";
@@ -7,36 +7,34 @@ import CardContainer from "./CardContainer";
 import Footer from "./Footer";
 
 const App = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handleThemeToggle = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.style.backgroundColor = isDarkMode
+      ? "white"
+      : "rgb(31 41 55)";
+  };
+
   return (
     <>
-      {/* 
-Logic 
-
-1-- let's first make the nav bar 
-2-- then main content
-
-
-
-
-*/}
-
-      <NavBar></NavBar>
-      <Intro></Intro>
-      <GameCode></GameCode>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <CardContainer></CardContainer>
-      <Footer></Footer>
+      <NavBar isDarkMode={isDarkMode} handleThemeToggle={handleThemeToggle} />
+      <Intro />
+      <GameCode isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <CardContainer isDarkMode={isDarkMode} />
+      <Footer isDarkMode={isDarkMode} />
     </>
   );
 };
