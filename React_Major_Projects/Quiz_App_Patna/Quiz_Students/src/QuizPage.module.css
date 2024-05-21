@@ -1,0 +1,74 @@
+/* --------------------------------- QuizPage styles-----------------*/
+
+.quizNavbar {
+  background-color: #100422; /* Your desired background color */
+  /* Other styles specific to this component */
+}
+
+.QuizPage {
+  background-color: #100422;
+  height: 100vh;
+}
+
+.QuizContent {
+  /* height: 70vh; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* background-color: #ffcc00; */
+  margin-bottom: -27px;
+}
+.QuizQuestionMarkImg {
+  height: 34vh;
+  width: 17vw;
+}
+
+.QuizContent h1 {
+  padding: 15px 0;
+  font-weight: 300;
+}
+
+.QuizContent p {
+  padding: 2px 0 15px 0;
+  font-size: 18px;
+}
+.QuizContent h2 {
+  padding: 0 0 25px 0;
+  font-weight: 100;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.QuizContent h3 {
+  padding: 15px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.greenButton {
+  /* background-color: yellow; */
+
+  width: 60px;
+  border-radius: 5px;
+  background-color: #d0f2e4;
+  padding: 4px 8px;
+  font-size: 18px;
+  margin-left: 10px;
+  color: #00a86b;
+  cursor: pointer;
+  height: 35px;
+}
+.blueButton {
+  background-color: #0e7490;
+  color: white;
+  width: 260px;
+  height: 45px;
+  position: relative;
+  left: 7px;
+  /* padding: 8px 24px; */
+  border-radius: 100px;
+  border: 1px solid rgb(0 188 212);
+  cursor: pointer;
+  font-size: 18px;
+}

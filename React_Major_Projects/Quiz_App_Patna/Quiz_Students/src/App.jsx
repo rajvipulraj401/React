@@ -1,10 +1,8 @@
+// App.jsx
 import React, { useState } from "react";
-import NavBar from "./NavBar";
-import Intro from "./Intro";
-import "./index.css";
-import GameCode from "./GameCode";
-import CardContainer from "./CardContainer";
-import Footer from "./Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home"; // Assuming you'll create this page
+import QuizPage from "./QuizPage"; // Assuming you'll create this page
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -15,27 +13,34 @@ const App = () => {
       ? "white"
       : "rgb(31 41 55)";
   };
-
   return (
-    <>
-      <NavBar isDarkMode={isDarkMode} handleThemeToggle={handleThemeToggle} />
-      <Intro />
-      <GameCode isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <CardContainer isDarkMode={isDarkMode} />
-      <Footer isDarkMode={isDarkMode} />
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Home isDarkMode={isDarkMode} handleThemeToggle={handleThemeToggle} />
+        }
+      />
+      <Route
+        path="/QuizPage"
+        element={
+          <QuizPage
+            isDarkMode={isDarkMode}
+            handleThemeToggle={handleThemeToggle}
+          />
+        }
+      />
+
+      {/* <Route
+        path="/LoginPage"
+        element={
+          <LoginPage
+            isDarkMode={isDarkMode}
+            handleThemeToggle={handleThemeToggle}
+          />
+        }
+      /> */}
+    </Routes>
   );
 };
 

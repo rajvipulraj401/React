@@ -1,8 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import Notification from "./Notification";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
-const NavBar = ({ isDarkMode, handleThemeToggle }) => {
+const NavBar = ({ isDarkMode, handleThemeToggle, customClassName }) => {
+  // const navigate = useNavigate();
+
+  // const handleClick = () => {
+  //   navigate("/LoginPage");
+  // };
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState("DEFAULT");
   const [showNotification, setShowNotification] = useState(false);
@@ -12,9 +19,9 @@ const NavBar = ({ isDarkMode, handleThemeToggle }) => {
     const handleScroll = () => {
       const navbar = document.querySelector(".navBar");
       if (window.scrollY > 0) {
-        navbar.classList.add("scrolled");
+        navbar.classList.add("scrolled", styles.quizNavbar);
       } else {
-        navbar.classList.remove("scrolled");
+        navbar.classList.remove("scrolled", styles.quizNavbar);
       }
     };
 
@@ -52,7 +59,9 @@ const NavBar = ({ isDarkMode, handleThemeToggle }) => {
   };
 
   return (
-    <nav className="navBar">
+    // <nav className="navBar">
+    <nav className={`navBar ${customClassName || ""}`}>
+      {/* Apply custom class */}
       <div className="logo-Text">QUIZARD</div>
       <div className="Navigation_links">
         <div className="theme-toggle">
@@ -90,7 +99,10 @@ const NavBar = ({ isDarkMode, handleThemeToggle }) => {
             </ul>
           )}
         </div>
-        <div className="nav-Text">Login</div>
+        <div className="nav-Text">
+          {/* onClick={handleClick} */}
+          Login
+        </div>
         <div className="nav-Text">Register</div>
         <div className="nav-Text">
           {/* Coin container or any other content */}
