@@ -1,0 +1,97 @@
+.curvedDiv {
+  height: 230px;
+  width: 1400pxw;
+  overflow-x: hidden;
+  background-color: #006b87;
+  clip-path: polygon(
+    100% 0,
+    0 0,
+    0 89.52%,
+    2% 89.2%,
+    4% 88.25%,
+    6% 86.71%,
+    8% 84.62%,
+    10% 82.06%,
+    12% 79.13%,
+    14% 75.93%,
+    16% 72.56%,
+    20% 65.84%,
+    22% 62.71%,
+    24% 59.89%,
+    26% 57.49%,
+    28% 55.57%,
+    30% 54.22%,
+    32% 53.48%,
+    34% 53.37%,
+    36% 53.9%,
+    38% 55.06%,
+    40% 56.79%,
+    42% 59.04%,
+    44% 61.73%,
+    46% 64.77%,
+    48% 68.04%,
+    50% 71.43%,
+    52% 74.82%,
+    54% 78.09%,
+    56% 81.12%,
+    58% 83.82%,
+    60% 86.07%,
+    62% 87.8%,
+    64% 88.96%,
+    66% 89.49%,
+    68% 89.38%,
+    70% 88.64%,
+    72% 87.29%,
+    74% 85.37%,
+    76% 82.96%,
+    78% 80.15%,
+    80% 77.02%,
+    82% 73.7%,
+    84% 70.29%,
+    86% 66.93%,
+    88% 63.72%,
+    90% 60.79%,
+    92% 58.24%,
+    94% 56.15%,
+    96% 54.6%,
+    98% 53.65%,
+    100% 53.33%
+  );
+}
+
+.LoginNavbar {
+  background: none;
+  /* position: relative;
+  bottom: 30px; */
+
+  margin: 0 -30px;
+}
+
+.DetailsContainer {
+  display: flex;
+  width: 1440px;
+  /* height: 80vh; */
+  margin-top: -10px;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.Thinking {
+  background-image: url("Thinking.png");
+  width: 60%;
+  height: 470px;
+  background-size: contain;
+  margin-left: -350px;
+  background-repeat: no-repeat;
+}
+
+.LoginCredentials {
+  padding: 24px;
+}
+
+.greenCol {
+  color: aqua;
+}
+.greenButton {
+  width: 300px;
+}

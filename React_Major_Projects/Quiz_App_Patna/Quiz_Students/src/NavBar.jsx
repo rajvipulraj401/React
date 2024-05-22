@@ -4,11 +4,11 @@ import "./index.css";
 import { useNavigate } from "react-router-dom";
 
 const NavBar = ({ isDarkMode, handleThemeToggle, customClassName }) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const handleClick = () => {
-  //   navigate("/LoginPage");
-  // };
+  const handleClick = () => {
+    navigate("/LoginPage");
+  };
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState("DEFAULT");
@@ -99,7 +99,7 @@ const NavBar = ({ isDarkMode, handleThemeToggle, customClassName }) => {
             </ul>
           )}
         </div>
-        <div className="nav-Text">
+        <div className="nav-Text" onClick={handleClick}>
           {/* onClick={handleClick} */}
           Login
         </div>

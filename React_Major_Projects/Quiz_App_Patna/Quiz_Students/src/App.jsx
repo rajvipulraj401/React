@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home"; // Assuming you'll create this page
 import QuizPage from "./QuizPage"; // Assuming you'll create this page
+import LoginPage from "./LoginPage";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -31,7 +32,7 @@ const App = () => {
         }
       />
 
-      {/* <Route
+      <Route
         path="/LoginPage"
         element={
           <LoginPage
@@ -39,7 +40,7 @@ const App = () => {
             handleThemeToggle={handleThemeToggle}
           />
         }
-      /> */}
+      />
     </Routes>
   );
 };
