@@ -2,7 +2,10 @@
 
 # 23 `Passing **Children** to a Component by using child props________`
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6d4d10bcf2c35a121ebb877b10c12c11b06e6822
 ### What it is ? 
 If we want to render something that is between the component tags, then we need to use a special prop called `props.children`. This is a special prop provided by React, and its name should only be `children`, no other. (lowercase **c**, not capital C)   
 
