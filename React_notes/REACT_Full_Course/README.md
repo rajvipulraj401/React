@@ -167,6 +167,28 @@ developer efficiency.`
 5. Use npm start for CRA.
 
 
+# 8.1 ***HOW to use vite in your project ??*****
+
+Yes, your method is also correct! If you want to quickly set up a Vite project using the steps you're used to, follow this:  
+
+### **1. Inside Your Empty Folder, Run:**  
+```sh
+npm create vite@latest .
+```
+(The `.` ensures Vite initializes the project in the current folder.)  
+
+### **2. Install Dependencies:**  
+```sh
+npm install
+```
+
+### **3. Start the Development Server:**  
+```sh
+npm run dev
+```
+
+This will launch your Vite project at `http://localhost:5173`.  
+----
 `npm create vite@latest
 npm  install on  that folder 
 npm run dev
