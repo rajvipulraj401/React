@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(220, 220, 220);
+}
+
+.button4-container,
+.button4-sm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.dropdown-wrapper,
+.dropdown-wrapper-sm {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dropdown {
+  width: 20%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: rgb(4, 33, 73);
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.dropdown:hover {
+  cursor: pointer;
+  color: rgb(200, 200, 200);
+}
+
+.dropdown:hover > .dropdown-menu > li {
+  display: block;
+}
+
+.dropdown:hover > .dropdown-menu > li:first-child {
+  border-top: 2px solid rgb(200, 200, 200);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.dropdown-menu > li {
+  display: none;
+  color: #fff;
+  background-color: rgb(4, 33, 73);
+  padding: 10px 20px;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.dropdown-menu > li:hover {
+  color: rgb(200, 200, 200);
+}
+
+.dropdown-menu-2 > .dropdown-item-1 {
+  transform-origin: top center;
+  animation: translateY 300ms 10ms ease-in-out forwards;
+}
+.dropdown-menu-2 > .dropdown-item-2 {
+  transform-origin: top center;
+  animation: translateY 300ms 20ms ease-in-out forwards;
+}
+.dropdown-menu-2 > .dropdown-item-3 {
+  transform-origin: top center;
+  animation: translateY 300ms 30ms ease-in-out forwards;
+}
+.dropdown-menu-2 > .dropdown-item-4 {
+  transform-origin: top center;
+  animation: translateY 300ms 40ms ease-in-out forwards;
+}
+.dropdown-menu-2 > .dropdown-item-5 {
+  transform-origin: top center;
+  animation: translateY 300ms 50ms ease-in-out forwards;
+}
+
+@keyframes translateY {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.button {
+  width: 220px;
+  height: 44px;
+  background: linear-gradient(90deg, #f0f600 37.65%, #00a8aa 104.96%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 48px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #00a8aa 37.65%, #f0f600 104.96%);
+}

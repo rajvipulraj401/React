@@ -1,0 +1,847 @@
+/* <<<<<<---------- GALLERY CSS Start... ------------>>>>>> */
+@media (min-width: 1024px) and (max-width: 1060px) {
+  .MainDivGallery .overlay1 {
+    left: 45%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 38.5%;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 580px) {
+  .MainDivGallery .overlay1 {
+    left: 48%;
+    top: 1.75%;
+    width: 150px;
+    height: 140px;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 41.45%;
+    bottom: 32%;
+
+    height: 138px;
+    width: 142px;
+  }
+
+  .MainDivGallery .overlay3 {
+    top: 22%;
+
+    height: 130px;
+    width: 140px;
+  }
+
+  .MainDivGallery .imageL {
+    bottom: 80px;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 610px) {
+  .MainDivGallery .overlay1 {
+    left: 48%;
+    top: 1.25%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 42%;
+    bottom: 27%;
+
+    height: 145px;
+    width: 145px;
+  }
+
+  .MainDivGallery .overlay3 {
+    top: 25%;
+
+    height: 140px;
+    width: 140px;
+  }
+
+  .MainDivGallery .imageL {
+    bottom: 70px;
+  }
+}
+
+@media (min-width: 610px) and (max-width: 640px) {
+  .MainDivGallery .overlay1 {
+    left: 49%;
+    top: 1%;
+    width: 150px;
+    height: 150px;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 43%;
+    bottom: 27%;
+
+    height: 145px;
+    width: 145px;
+  }
+
+  .MainDivGallery .overlay3 {
+    top: 25%;
+
+    height: 140px;
+    width: 140px;
+  }
+
+  .MainDivGallery .imageL {
+    bottom: 60px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 670px) {
+  .MainDivGallery .overlay1 {
+    left: 49%;
+    top: 1%;
+    width: 155px;
+    height: 155px;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 42.56%;
+    bottom: 22%;
+
+    height: 150px;
+    width: 150px;
+  }
+
+  .MainDivGallery .overlay3 {
+    top: 25%;
+
+    height: 145px;
+    width: 145px;
+  }
+
+  .MainDivGallery .imageL {
+    bottom: 50px;
+  }
+}
+
+@media (min-width: 670px) and (max-width: 710px) {
+  .MainDivGallery .overlay1 {
+    left: 50%;
+    top: 1%;
+    width: 155px;
+    height: 155px;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 43.76%;
+    bottom: 22%;
+
+    height: 150px;
+    width: 150px;
+  }
+
+  .MainDivGallery .overlay3 {
+    top: 25%;
+
+    height: 145px;
+    width: 145px;
+  }
+
+  .MainDivGallery .imageL {
+    bottom: 50px;
+  }
+}
+
+@media (min-width: 710px) and (max-width: 750px) {
+  .MainDivGallery .overlay1 {
+    left: 50%;
+    top: 1%;
+    width: 155px;
+    height: 155px;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 45%;
+    bottom: 22%;
+
+    height: 150px;
+    width: 150px;
+  }
+
+  .MainDivGallery .overlay3 {
+    top: 25%;
+
+    height: 145px;
+    width: 145px;
+  }
+
+  .MainDivGallery .imageL {
+    bottom: 50px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 810px) {
+  .MainDivGallery .overlay1 {
+    left: 45%;
+    top: 1%;
+    width: 185px;
+    height: 185px;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 40%;
+    bottom: 15%;
+
+    height: 170px;
+    width: 180px;
+  }
+
+  .MainDivGallery .overlay3 {
+    top: 25%;
+
+    height: 150px;
+    width: 150px;
+  }
+
+  .MainDivGallery .imageL {
+    bottom: 30px;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 865px) {
+  .MainDivGallery .overlay1 {
+    left: 45%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 38.5%;
+  }
+
+  .MainDivGallery .imageL {
+    bottom: 40px;
+  }
+}
+
+@media (min-width: 865px) and (max-width: 900px) {
+  .MainDivGallery .overlay1 {
+    left: 44.75%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 40.25%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 930px) {
+  .MainDivGallery .overlay1 {
+    left: 46%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 41%;
+  }
+}
+
+@media (min-width: 930px) and (max-width: 975px) {
+  .MainDivGallery .overlay1 {
+    left: 47%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 41.5%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1060px) {
+  .MainDivGallery .overlay1 {
+    left: 45%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 38.5%;
+  }
+}
+
+@media (min-width: 1060px) and (max-width: 1090px) {
+  .MainDivGallery .overlay1 {
+    left: 46%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 39.5%;
+  }
+}
+
+@media (min-width: 1090px) and (max-width: 1130px) {
+  .MainDivGallery .overlay1 {
+    left: 47.5%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 40%;
+  }
+}
+
+@media (min-width: 1130px) and (max-width: 1175px) {
+  .MainDivGallery .overlay1 {
+    left: 48.5%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 41%;
+  }
+}
+
+@media (min-width: 1175px) and (max-width: 1200px) {
+  .MainDivGallery .overlay1 {
+    left: 50%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 42%;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1330px) {
+  .MainDivGallery .overlay1 {
+    left: 51%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 44%;
+  }
+}
+
+@media (min-width: 1330px) and (max-width: 1360px) {
+  .MainDivGallery .overlay1 {
+    left: 50%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 44.5%;
+  }
+}
+
+@media (min-width: 1360px) and (max-width: 1400px) {
+  .MainDivGallery .overlay1 {
+    left: 49%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 43.75%;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1450px) {
+  .MainDivGallery .overlay1 {
+    left: 48%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 42.5%;
+  }
+}
+
+@media (min-width: 1450px) and (max-width: 1505px) {
+  .MainDivGallery .overlay1 {
+    left: 46%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 41%;
+  }
+}
+
+@media (min-width: 1505px) and (max-width: 1535px) {
+  .MainDivGallery .overlay1 {
+    left: 45%;
+  }
+
+  .MainDivGallery .overlay2 {
+    left: 40%;
+  }
+}
+
+.square-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.square-overlay:hover {
+  transform: scale(1.03);
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToTop {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.slide-in-from-top {
+  animation: slideInFromTop 0.5s forwards;
+}
+
+.slide-out-to-top {
+  animation: slideOutToTop 0.5s forwards;
+}
+
+.slide-in-from-right {
+  animation: slideInFromRight 0.5s forwards;
+}
+
+.slide-out-to-right {
+  animation: slideOutToRight 0.5s forwards;
+}
+
+/* <<<<<<---------- GALLERY CSS ENDING... ------------>>>>>> */
+
+/* <<<<<<<<<<----------BLOG CSS START -------------->>>>>>>>>>>>>> */
+
+@media (min-width: 550px) and (max-width: 580px) {
+  .blog-page .mobileBlogs {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (min-width: 515px) and (max-width: 550px) {
+  .blog-page .mobileBlogs {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 515px) {
+  .blog-page .mobileBlogs {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 440px) and (max-width: 480px) {
+  .blog-page .mobileBlogs {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 440px) {
+  .blog-page .mobileBlogs {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 150vh;
+    gap: 10px;
+  }
+
+  .blog-page .mobileBlogs div {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 370px) {
+  .blog-page .mobileBlogs {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 140vh;
+    gap: 10px;
+  }
+
+  .blog-page .mobileBlogs div {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 350px) {
+  .blog-page .mobileBlogs {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 120vh;
+    gap: 10px;
+  }
+
+  .blog-page .mobileBlogs div {
+    background-size: cover;
+  }
+}
+
+/* <<<<<<<<<<----------BLOG CSS END -------------->>>>>>>>>>>>>> */
+
+/* <<<<<<<<<<----------Team Css sTART HERE -------------->>>>>>>>>>>>>> */
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    /* JAB left me hai toh invisible */
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.animate-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.animate-right {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+.animate-top {
+  animation: slideInFromTop 1s ease-out forwards;
+}
+
+.animate-bottom {
+  animation: slideInFromBottom 1s ease-out forwards;
+}
+
+/* <<<<<<<<<<----------Team Css Animations ends HERE -------------->>>>>>>>>>>>>> */
+
+/* <<<<<<<<<<----------Premium Partners Radial Gradient Starts HERE -------------->>>>>>>>>>>>>> */
+
+.bg-radial-gradient-left {
+  background: radial-gradient(
+    ellipse at left,
+    rgb(57, 57, 12) 0%,
+    rgba(57, 57, 12, 0.673) 25%,
+    rgba(57, 57, 12, 0.406) 50%,
+    transparent 80%
+  );
+}
+
+.bg-radial-gradient-right {
+  background: radial-gradient(
+    ellipse at right,
+    rgb(57, 57, 12) 0%,
+    rgba(57, 57, 12, 0.673) 25%,
+    rgba(57, 57, 12, 0.406) 50%,
+    transparent 80%
+  );
+}
+
+/* <<<<<<<<<<----------Premium Partners Radial Gradient Ends HERE -------------->>>>>>>>>>>>>> */
+
+/* <<<<<<---------- FOUNDER CSS STARTING  ------------>>>>>>*/
+
+@keyframes animate-rightSide {
+  from {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  to {
+    opacity: 1;
+    /* transform: translateX(2%); */
+    transform: translateX(2%);
+  }
+}
+
+@keyframes animate-rightMost {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate-leftMost {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes animate-leftSide {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.invisible {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.animate-rightSide {
+  animation: animate-rightSide 1s forwards;
+}
+.animate-rightMost {
+  animation: animate-rightMost 1s forwards;
+}
+.animate-leftMost {
+  animation: animate-leftMost 1s forwards;
+}
+
+.animate-leftSide {
+  animation: animate-leftSide 1s forwards;
+}
+
+/* ----------Adding line animation into it---------- */
+
+.line1 {
+  transform: rotate(140deg) translateX(0) scaleX(0);
+  z-index: 50;
+  transition: transform 1s 0.5s;
+}
+
+.line2 {
+  transform: rotate(140deg) translateX(0) scaleX(0);
+  transition: transform 1s 0.5s;
+}
+
+.image-container:hover .line1 {
+  transform: rotate(140deg) translateX(0) scaleX(0.3);
+}
+
+.image-container:hover .line2 {
+  transform: rotate(140deg) translateX(0) scaleX(1.1);
+}
+
+.image-container:hover .text-container {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+}
+
+/* ----------Adding line animation ends heree---------- */
+
+/* <<<<<<---------- FOUNDER CSS ENDING  ------------>>>>>>*/
+/* <<<<<<---------- Hiring Animation for dropdown menu ------------>>>>>>*/
+
+.dropdown-line {
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(90deg, #f0f600 37.65%, #00a8aa 104.96%);
+  margin: 4px 0;
+  width: 115%;
+  margin-left: -8%;
+}
+
+.dropdown_menu-2 {
+  /* background-color: ;
+  opacity: 0.5; */
+  /* transition: background-color 300ms ease-in-out 300ms; */
+
+  animation: BackgroundColor 400ms ease-in-out forwards;
+}
+.dropdown_menu-2 > .dropdown_item-1 {
+  transform-origin: top center;
+
+  animation: translateY 300ms ease-in-out forwards;
+}
+.dropdown_menu-2 > .dropdown_item-2 {
+  transform-origin: top center;
+  animation: translateY 300ms ease-in-out forwards;
+}
+.dropdown_menu-2 > .dropdown_item-3 {
+  transform-origin: top center;
+  animation: translateY 300ms ease-in-out forwards;
+}
+.dropdown_menu-2 > .dropdown_item-4 {
+  transform-origin: top center;
+  animation: translateY 300ms ease-in-out forwards;
+}
+/* .dropdown_menu-2 > .dropdown_item-5 {
+  transform-origin: top center;
+  animation: translateY 300ms 300ms ease-in-out forwards;
+} */
+
+@keyframes translateY {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  /* 40% {
+    opacity: 0.2;
+    transform: translateY(-15px);
+  }
+  60% {
+    opacity: 0.4;
+    transform: translateY(-5px);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(-1px);
+  } */
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes BackgroundColor {
+  0% {
+    opacity: 0;
+    background-color: grey;
+  }
+
+  /* 40% {
+    opacity: 0.25;
+    background-color: #1a1919;
+  }
+  80% {
+    opacity: 0.5;
+    background-color: #1a1919;
+  } */
+  100% {
+    opacity: 1;
+    background-color: #1a1919;
+  }
+}
+
+/* .item {
+  transition: transform 0.4s ease-in-out, opacity s ease-in-out;
+  opacity: 0;
+  transform: translateX(80%);
+}
+
+.item.visible {
+  opacity: 1;
+  transform: translateX(0);
+} */
+
+.item {
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  opacity: 0;
+  transform: translateX(30%);
+}
+
+.item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* .dropdown_menu-2 > .dropdown_item-4 {
+  transform-origin: top center;
+  animation: translateY 300ms ease-in-out forwards;
+} */

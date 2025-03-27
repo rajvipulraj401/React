@@ -9,7 +9,7 @@ Qtify is a simple music streaming app built using React and Vite.
 Run the following command to install required packages:
 
 ```sh
-npm create vite@latest .
+npm create vite@latest . (This dot install in the current folder)
 npm install
 ```
 
