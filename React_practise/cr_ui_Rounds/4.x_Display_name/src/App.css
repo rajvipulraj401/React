@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* --------------Delete below css----------------- */
+
+.container {
+  padding: 0 10px;
+}
+h1 {
+  font-size: 50px;
+  padding: 20px 0;
+}
+.name-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 70px;
+  height: 30px;
+  margin: 10px 20px;
+}
