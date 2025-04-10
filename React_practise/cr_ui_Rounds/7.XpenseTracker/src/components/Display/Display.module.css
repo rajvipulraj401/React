@@ -1,0 +1,104 @@
+.displayContainer {
+  display: flex;
+  width: 98%;
+  /* DO not use another 100vw here just use 100% width so that it takes full width of parent only */
+  height: 269px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(98, 98, 98, 1);
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: 10px;
+  justify-content: space-around;
+  align-items: center;
+  /* margin: 10px; */
+}
+
+.cardContainer {
+  display: flex;
+  gap: 50px;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.chartContainer {
+  /* background-color: red; */
+
+  min-width: 400px;
+  height: 250px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  /* justify-content: space-evenly; */
+}
+
+.expenseContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.pie {
+  height: 90%;
+  width: 70%;
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+
+/* ------------ aLL MEDIA QUERY HERE --------------------
+(Always write bigger px at top and lower at bottom when usiing max-width and when using min-width  write lower at top and higher at bottom) */
+
+@media (max-width: 1280px) {
+  .displayContainer {
+    padding: 50px 10px;
+  }
+
+  .cardContainer {
+    gap: 20px;
+    margin-left: 10px;
+  }
+
+  .chartContainer {
+    align-items: start;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cardContainer {
+    /* font-size: 14px; */
+    flex-direction: column;
+    gap: 50px;
+    width: 70%;
+  }
+  .displayContainer {
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .chartContainer {
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .cardContainer {
+    width: 75%;
+  }
+}
+@media (max-width: 450px) {
+  .cardContainer {
+    width: 90%;
+  }
+
+  .chartContainer {
+    min-width: 320px;
+  }
+  .expenseContainer {
+    justify-content: center;
+  }
+}

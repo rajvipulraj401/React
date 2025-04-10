@@ -1,0 +1,29 @@
+.box {
+  width: 26px;
+  height: 8px;
+}
+
+.expenseContainer {
+  display: flex;
+  gap: 10px;
+  height: auto;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+@media (max-width: 650px) {
+  .expenseContainer {
+    margin-right: 5px;
+    gap: 2px;
+  }
+
+  .box {
+    width: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .expenseContainer {
+    font-size: 14px;
+  }
+}

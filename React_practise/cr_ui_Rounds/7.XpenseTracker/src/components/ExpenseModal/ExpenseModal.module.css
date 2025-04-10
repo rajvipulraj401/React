@@ -1,0 +1,104 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.expenseModalContent {
+  width: 538px;
+  height: 335px;
+
+  background-color: white;
+  padding: 3rem;
+  border-radius: 15px;
+  /* width: 350px; */
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.expenseModalContent h2 {
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.formRow .inputField {
+  /* flex: 1; */
+
+  width: 50%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.buttonRow {
+  display: flex;
+  /* width: 100%; */
+  gap: 1rem;
+  /* justify-content: space-between; */
+}
+
+.addBtn {
+  /* flex: 1; */
+  width: 50%;
+  padding: 0.6rem;
+  background-color: #f5b434;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cancelBtn {
+  /* flex: 1; */
+  width: 50%;
+  padding: 0.6rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addBtn:hover {
+  background-color: #f3a81c;
+}
+
+.cancelBtn:hover {
+  background-color: #cfcfcf;
+}
+
+/* NOTE: The styling tweaks below (using :invalid) only work when the corresponding input or select 
+   element has the "required" attribute. Without "required", the :invalid pseudo-class won't apply.
+
+   NOTE 2: If you're handling form validation manually (custom validation), it's totally fine to 
+   still use the "required" attribute. Just make sure you're preventing the browser's default 
+   form submission behavior (e.g., using e.preventDefault()). This way, you can still take advantage 
+   of :invalid for styling without interfering with your custom validation logic.
+*/
+
+/* Style the placeholder option when no value is selected */
+select:invalid {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Style the date input when no date is selected */
+input[type="date"]:invalid {
+  color: rgba(0, 0, 0, 0.5);
+}

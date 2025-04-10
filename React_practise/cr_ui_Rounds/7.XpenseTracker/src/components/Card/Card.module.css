@@ -1,0 +1,77 @@
+.card {
+  font-family: sans-serif;
+  background-color: #9b9b9b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 15px;
+  width: 355.41px;
+  height: 181px;
+  /* margin: 0 50px 0 0; */
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.button {
+  /* width: fit-content; */
+  width: 167px;
+  height: 38px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.cardTitle {
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-weight: 300;
+}
+/* 
+--------aLL MEDIA QUERY HERE-------------- 
+(above me km pixel wala dete jao jaise 1300 phir neeche 1200 1100 
+ulta mat dena jaise upar 1100 neeche 1200 toh nahi lagega css kyunki top to bottom jaata hai aur
+toh 1100 px nhi lgega neeche  1200 px wala ke wajah se  ok na kyunki max -width diye ho ISLEA SABSE bada wala value ko upar hi rkhna ) */
+
+@media (max-width: 1280px) {
+  .card {
+    width: 325.41px;
+  }
+
+  @media (max-width: 1140px) {
+    .cardTitle {
+      font-size: 27px;
+    }
+    .card {
+      width: 290.41px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 100%;
+  }
+  .cardTitle {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 650px) {
+  .cardTitle {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cardTitle {
+    font-size: 20px;
+  }
+}

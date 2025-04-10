@@ -1,0 +1,77 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.incomeModalContent {
+  background-color: white;
+  padding: 2rem;
+  /* padding: 1rem; */
+  border-radius: 15px;
+  /* width: 350px; */
+
+  width: 538px;
+  height: 164px;
+
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.incomeModalContent h2 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.inputField {
+  /* width: 100%; */
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  margin-right: 0.5rem;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addBtn {
+  flex: 1;
+  margin-right: 0.5rem;
+  padding: 0.6rem;
+  background-color: #f5b434;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cancelBtn {
+  flex: 1;
+  padding: 0.6rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addBtn:hover {
+  background-color: #f3a81c;
+}
+
+.cancelBtn:hover {
+  background-color: #cfcfcf;
+}

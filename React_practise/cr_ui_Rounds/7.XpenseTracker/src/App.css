@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* -------without relative units giving absolute units */
+
+.container {
+  background: #3b3b3b;
+  height: 100vh;
+  width: 100vw;
+  /* display: flex;
+  justify-content: center; */
+  /* align-items: center; */
+  color: white;
+  padding: 20px;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.recentTransactionANDtopExpenses {
+  display: flex;
+  /* width: 100vw; */
+  width: 90%;
+  padding: 20px 0;
+}
+
+.recentTransactionANDtopExpenses h2 {
+  margin-bottom: 10px;
+}
+
+.recentTransaction {
+  width: 80%;
+}
+
+.TopExpenses {
+  width: 50%;
+}
+
+.recentTransactionANDtopExpenses h2 {
+  font-size: 28;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ----------------A ll media queries ------------------ */
+
+@media (max-width: 1330px) {
+  .recentTransactionANDtopExpenses {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .recentTransactionANDtopExpenses {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+
+    align-items: center;
+  }
+  .TopExpenses,
+  .recentTransaction h2 {
+    text-align: center;
+  }
+
+  .recentTransaction {
+    width: 100%;
+  }
+
+  .TopExpenses {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .TopExpenses {
+    width: 100%;
+  }
+}
