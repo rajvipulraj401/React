@@ -1,0 +1,236 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  gap: 0px;
+  border-radius: 15px;
+  height: auto;
+
+  margin-bottom: 25px;
+}
+
+.tabContainer {
+  /* outline: 1px solid red; */
+  padding: 40px 0px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tabSwitchContainer {
+  display: flex;
+  /* gap: 30px; */
+  justify-content: space-between;
+  text-align: center;
+}
+
+.tabSwitchContainer span {
+  color: #27ae60;
+}
+
+.tabSwitch {
+  cursor: pointer;
+}
+
+/* .arrow {
+  background-color: var(--color-white);
+  cursor: pointer;
+} */
+
+.arrow svg {
+  font-size: 35px;
+  color: var(--color-primary);
+}
+
+.tabContainerTiming {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 40px;
+  margin: 30px 0;
+  /* grid-template-columns: repeat(6, 1fr); */
+  /* outline: 1px solid red; */
+
+  /* display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 50px;
+  padding: 30px 20px; */
+}
+.row1 {
+  /* outline: 1px solid blue; */
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.dateTrackerLine {
+  height: 8px;
+  width: 90%;
+  align-self: center;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  /* background-color: var(--color-primary); */
+  background-color: rgba(173, 223, 230, 0.3);
+}
+
+/* ------------------TopSectionCode below👇🏼👇🏼👇🏼👇🏼👇🏼-------------- */
+.card {
+  display: flex;
+  align-items: flex-start;
+  /* background: #ffffff; */
+  /* border-radius: 16px; */
+  /* padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  gap: 30px;
+  justify-content: space-between;
+  /* outline: 1px solid blue; */
+  height: 185px;
+
+  max-width: 800px;
+
+  /* outline: 1px solid red; */
+}
+
+/* ---------- Left Section (Image + Tick + Rating) ---------- */
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.imageWrapper {
+  width: 100px;
+  height: 100px;
+  background-color: #d6efff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hospitalImg {
+  width: 60px;
+  height: auto;
+}
+
+.tick {
+  position: absolute;
+  bottom: 30%;
+  right: -5px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+  margin-top: 10px;
+  background-color: #27ae60;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 50px;
+}
+
+/* ---------- Middle Section (Text Info) ---------- */
+.middleSection {
+  /* flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 200px; */
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 200px;
+  /* gap: px; */
+  height: 100%;
+}
+
+.title {
+  font-size: 18px;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+.location,
+.description {
+  font-size: 14px;
+  color: var(--color-secondary);
+  margin: 3px 0;
+}
+
+.fee {
+  font-size: 14px;
+  margin: 10px 0 20px 0;
+}
+
+.free {
+  color: green;
+  font-weight: bold;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: hsl(0, 0%, 67%);
+  margin-left: 4px;
+}
+
+/* ---------- Right Section (Availability + Button) ---------- */
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* align-items: end; */
+  text-align: center;
+  height: 100%;
+  /* outline: 1px solid red; */
+  /* padding-bottom: 10px; */
+}
+
+.rightSection2 {
+  display: flex;
+  text-align: center;
+  gap: 20px;
+}
+.rightSectionpad {
+  padding-bottom: 10px;
+}
+
+.available {
+  color: green;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rightSection {
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+}

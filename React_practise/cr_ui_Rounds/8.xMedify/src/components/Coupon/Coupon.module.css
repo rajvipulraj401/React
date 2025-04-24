@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 10rem 0 5rem 0;
+  width: 100%;
+  position: relative;
+}
+
+.couponImg {
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.couponImg:hover {
+  transform: scale(1.02);
+}

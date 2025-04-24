@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+/* In order to remove vertical scroll bar */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* yahan z-index kaam karega */
+  background-color: rgba(0, 0, 0, 0.6); /*  make the background dim little bit*/
+}
+
+.AppContainer {
+  width: 100%;
+  /* Give width 100% always else overflow will occur */
+  height: auto;
+  font-family: var(--font-primary);
+}
+
+/* USE cSS VARIABLES here ok na see qtify and do it like that color same hi use hua hai baar baar islea */
+
+/* ✅ HOW TO DECLARE CSS VARIABLES:
+   Declare inside :root for global access */
+
+:root {
+  --color-primary: #2aa7ff; /* Main background color (skyblue) */
+  --color-secondary: #1b3c74; /* Footer + large heading background */
+  --color-secondary2: #102851; /* Section bg where small font is used */
+
+  --color-text-muted-grayBlue: #77829d; /* font color for less important content */
+  --color-text-card-label-gray: #abb6c7; /* Card label/specialization text */
+  --color-white: #ffffff; /* Font color used on dark backgrounds like footer/banner */
+  --color-lightBlack: #5c6169;
+
+  --font-primary: "Poppins", sans-serif;
+  --padding-base: 0px 80px;
+  --btn-radius: 8px;
+  --card-gradient: linear-gradient(144.2deg, #e1f3ff 0%, #2aa7ff 100%);
+
+  --bg-gradient2: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    rgba(232, 241, 255, 0.47) 89.11%
+  );
+}
+/* .button {
+  background-color: var(--color-primary);
+  font-family: var(--font-main);
+  padding: var(--padding-base);
+}
+
+
+ */
+
+/* ✅ HOW TO USE CSS VARIABLES:
+     Use with var(--variable-name) anywhere in your CSS */
+
+/* --------------NOTES BELOW ---------------------- */
+/* 
+  ✅ What is :root?
+
+  :root is a special CSS pseudo-class selector that targets the highest-level parent in the DOM (i.e., the <html> element).
+  It's often used to declare CSS variables globally, so they are accessible anywhere in your styles.
+
+  Example:
+    :root {
+      --main-color: #34c94b;
+    }
+
+  ✅ What is a Pseudo-class?
+
+  A pseudo-class is used to define the special state of an element.
+  Syntax: selector:pseudo-class
+
+  Example:
+    button:hover {
+      background-color: var(--main-color);
+    }
+
+  ✅ What is a Pseudo-element?
+
+  A pseudo-element is used to style specific parts of an element.
+  Syntax: selector::pseudo-element
+
+  Example:
+    p::first-line {
+      font-weight: bold;
+    }
+
+  🔁 Summary:
+    - :root → top-level selector for global CSS (like <html>)
+    - Pseudo-class → adds styling based on state (like :hover, :focus)
+    - Pseudo-element → targets specific parts inside elements (like ::before, ::after)
+*/

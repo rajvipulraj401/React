@@ -1,0 +1,24 @@
+.wrapper {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--color-secondary);
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.cardRow {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,120 @@
+.select {
+  border: 2px solid red;
+  border-radius: 10px;
+  min-width: 200px;
+  min-height: 50px;
+
+  gap: 10px;
+  text-align: center;
+}
+
+.select {
+  color: gray; /* Placeholder color */
+}
+
+.select option {
+  color: black; /* Normal options ka color */
+}
+
+.searchForm {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.searchForm select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 35%;
+}
+
+/* ------------ */
+
+.searchContainer {
+  width: 68%;
+  background: white;
+  padding: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: -10%;
+  right: 17%;
+}
+.subHeading {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* .cardWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+} */
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 0 10px;
+  width: 100%;
+}
+
+/* ----------Responsive design ----------- */
+
+@media screen and (max-width: 768px) {
+  .searchContainer {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12%;
+    padding: 30px 15px;
+    position: relative; /* So it flows with content */
+  }
+
+  .searchForm {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .searchForm input {
+    width: 100%;
+  }
+
+  .searchForm button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .subHeading {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .searchContainer {
+    padding: 25px 10px;
+    width: 95%;
+  }
+
+  .cardWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .subHeading {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,16 @@
+.wrapper {
+  width: 100vw;
+  height: 80px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--color-primary);
+  position: relative;
+}
+
+.wrapper h1 {
+  text-align: start;
+
+  padding: 20px 200px;
+  color: var(--color-white);
+  font-size: 35px;
+}

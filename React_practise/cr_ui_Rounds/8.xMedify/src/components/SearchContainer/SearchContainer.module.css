@@ -1,0 +1,68 @@
+.select {
+  border: 2px solid red;
+  border-radius: 10px;
+  min-width: 200px;
+  min-height: 50px;
+
+  gap: 10px;
+  text-align: center;
+}
+
+.select {
+  color: gray; /* Placeholder color */
+}
+
+.select option {
+  color: black; /* Normal options ka color */
+}
+
+.searchForm {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.searchForm select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 35%;
+}
+
+/* ------------ */
+
+.searchForm {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+.searchForm input {
+  /* flex: 1; */
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 35%;
+}
+
+.searchFormContainer {
+  width: 1166px;
+  height: 105px;
+  padding: 27px;
+  box-shadow: 6px 6px 35px 0px rgba(16, 40, 81, 0.11);
+  border-radius: 15px;
+  background-color: var(--color-white);
+}
+.fullContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -50px;
+  z-index: 5;
+}

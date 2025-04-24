@@ -1,0 +1,18 @@
+.buttonContainer {
+  border-radius: var(--btn-radius);
+  font-size: 16px;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background-color: var(--bg);
+}
+
+.buttonContainer:hover {
+  /* background-color: #1996e0;  */
+  opacity: 0.7;
+}

@@ -1,0 +1,42 @@
+.hospitalInfoContainer {
+  display: flex;
+  justify-content: center;
+
+  background: var(--bg-gradient2);
+  padding: 20px 0 20px 0;
+}
+
+.infoText {
+  margin: 0 10px;
+}
+.hospitalInfoContent {
+  width: 1166px;
+  /* height: 500px; */
+
+  height: auto;
+}
+
+.gridContainer {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.column1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+h5 {
+  margin: 5px 0;
+  color: var(--color-lightBlack);
+}
+
+h5 span {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+}

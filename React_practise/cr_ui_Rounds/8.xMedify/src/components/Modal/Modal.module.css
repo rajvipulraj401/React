@@ -1,0 +1,41 @@
+/* .modalContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 50%;
+  height: 30%;
+  border: 1px solid red;
+  border-radius: 15px;
+} */
+
+/* --------v2 styles --------- */
+
+.modal {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.emailInput {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-evenly;
+}

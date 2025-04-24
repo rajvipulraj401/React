@@ -1,0 +1,158 @@
+.footerContainer {
+  background: var(--color-secondary);
+  width: 100vw;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  /* min-height: 424px; */
+  height: auto;
+  justify-content: space-between;
+  padding: var(--padding-base);
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  text-align: start;
+  gap: 100px;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* min-height: 424px; */
+  /* border: 2px solid white; */
+}
+
+.logoAndIcons {
+  /* border: 1px solid yellow; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 10px;
+}
+.iconContainer .icon {
+  width: 35px;
+  height: 35px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.copyright {
+  font-size: 16px;
+}
+
+/* -----------Now below is styling of lists--------------- */
+
+.links {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.links li {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 20px;
+  color: var(--color-white);
+}
+
+/* --------------bELOW IS RESPONSIVE DESIGN----------------------- */
+
+/* NOte -- For max width keep higher px above */
+
+@media (max-width: 768px) {
+  .footerContainer {
+    padding: 20px 20px;
+    min-height: auto;
+    gap: 50px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerContainer {
+    padding: 20px 10px;
+    min-height: auto;
+    gap: 50px;
+    font-size: 14px;
+  }
+
+  .iconContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .iconContainer .icon {
+    width: 50px;
+    height: 18px;
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerContainer {
+    padding: 30px 5px;
+    min-height: auto;
+  }
+
+  .footerGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    justify-content: start;
+  }
+
+  .logoAndIcons {
+    flex-direction: row;
+    align-items: start;
+
+    grid-column: 1/4;
+    margin-bottom: 20px;
+  }
+
+  .iconContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .iconContainer .icon {
+    width: 50px;
+    height: 18px;
+    padding: 10px 5px;
+    position: relative;
+    right: 100px;
+  }
+
+  .links {
+    justify-content: start;
+    align-items: start;
+    font-size: 12px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
+}

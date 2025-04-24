@@ -1,0 +1,142 @@
+.familySection {
+  display: flex;
+  /* justify-content: space-evenly; */
+  justify-content: center;
+  align-items: center;
+  padding: 60px 80px;
+  background: #f4f8ff;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.leftContent {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  color: var(--color-secondary);
+}
+
+.leftContent h4 {
+  font-size: 18px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.leftContent h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.leftContent p {
+  color: #77829d;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.rightStats {
+  /* flex: 1; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* place-items: start; */
+  gap: 30px;
+  min-width: 280px;
+}
+
+.statCard {
+  width: 200px;
+  height: 250px;
+  background: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+/* .statCard:hover {
+  transform: translateY(-5px);
+} */
+
+.iconCircle {
+  font-size: 28px;
+  background: #e0ecff;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon colors */
+.blue {
+  background: rgba(42, 167, 255, 0.1);
+  color: var(--color-primary);
+}
+
+.red {
+  background: rgba(255, 84, 62, 0.1);
+  color: #ff543e;
+}
+
+.yellow {
+  background: rgba(255, 204, 0, 0.1);
+  color: #ffcc00;
+}
+
+.green {
+  background: rgba(0, 209, 96, 0.1);
+  color: #00d160;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .familySection {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .leftContent h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .familySection {
+    flex-direction: column;
+    justify-content: start;
+    /* padding: 40px 20px; */
+  }
+
+  .rightStats {
+    /* flex: 1; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    min-width: 280px;
+  }
+
+  .statCard {
+    width: 150px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 400px) {
+  .rightStats {
+    /* flex: 1; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    /* min-width: 280px; */
+    width: auto;
+    margin-right: 42px;
+  }
+
+  .statCard {
+    width: 130px;
+    height: 180px;
+  }
+}

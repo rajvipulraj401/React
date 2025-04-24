@@ -1,0 +1,37 @@
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgContainer {
+  width: 300px;
+  height: 300px;
+  border-radius: 50% 50% 0 0;
+  background: var(--card-gradient);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContainer img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 50px;
+}
+
+.name {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.specialization {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}

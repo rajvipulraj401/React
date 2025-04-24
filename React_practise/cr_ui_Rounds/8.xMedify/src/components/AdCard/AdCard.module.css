@@ -1,0 +1,63 @@
+.adCard {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  color: var(--color-secondary);
+  width: 100%;
+  /* max-width: 400px; */
+  height: 230px;
+}
+
+.adCard h2 {
+  font-size: 22px;
+  font-weight: bold;
+  /* line-height: 1.2; */
+}
+
+.blue {
+  color: var(--color-primary);
+}
+
+.tag {
+  margin: 10px 0;
+  background-color: var(--color-primary);
+  color: white;
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.top {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.hash {
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.note {
+  font-size: 10px;
+  color: gray;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .adCard h2 {
+    font-size: 18px;
+  }
+
+  .tag {
+    font-size: 12px;
+  }
+
+  .top {
+    font-size: 14px;
+  }
+}
