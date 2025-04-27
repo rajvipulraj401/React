@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-primary: #009879;
+}
+
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  margin: 10px 0 0 0;
+}
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Now style the individual th and td */
+table {
+  width: 100%;
+  /* border: 1px solid blue; */
+  height: 100%;
+  margin: 0 20px;
+  padding: 0;
+  border-collapse: collapse;
+  box-shadow: ;
+  /* border-collapse: separate; */
+
+  /*separate (use this when need border */
+
+  /* THE ABOVE line removes all the border */
+
+  /* agar spacing chahiye toh */
+  /* border-spacing: 0 5px; */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* Ye kya karega:
+
+- `0` → X-axis (horizontal shift)
+- `4px` → Y-axis (vertical shift)
+- `8px` → blur radius
+- `rgba (0,0,0,0.2) `  → shadow ka color (thoda transparent blackk) */
+
+  border: 1px solid var(--color-primary);
+
+  border-left: none;
+  border-right: none;
+}
+
+tr {
+  /* margin-top: 10px;
+  padding: 10px; */
+
+  /* MARGIN ,padding wont apply in table row for adding spacing between row 
+   use border-spacing in table this will give spacing  */
+}
+
+th,
+td {
+  padding: 15px 20px;
+  /* margin: 10px;*/
+  /* MARGIN wont apply in td */
+}
+
+th {
+  background-color: var(--color-primary);
+  color: white;
+
+  font-weight: 400;
+  text-align: left;
+}
+
+.col-id {
+  width: 15%;
+}
+
+.col-name,
+.col-email {
+  width: 35%;
+}
+
+.col-role {
+  width: 25%;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  gap: 20px;
+}
