@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f3f0f8;
+  width: 100%;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #7d7dff;
+}
+
+.toggle {
+  cursor: pointer;
+  font-size: 18px;
+}

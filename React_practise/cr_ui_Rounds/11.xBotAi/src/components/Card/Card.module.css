@@ -1,0 +1,104 @@
+.card {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f0e5ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+
+  margin: 30px 20px 0px 20px;
+}
+
+/* .card:hover {
+  background-color: red;
+} */
+
+.timeAndBtn {
+  display: flex;
+  gap: 10px;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.likeBtn,
+.dislikeBtn {
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: inherit;
+}
+
+/* --------doing icon styline ends ----------- */
+
+.purple {
+  background-color: #d6b3ff;
+}
+
+.lightpurple {
+  background-color: #f0e5ff;
+}
+
+.leftSection {
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.message {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.rateText {
+  font-size: 0.85rem;
+  color: black;
+  margin-top: 0.1rem;
+}
+
+.stars {
+  /* margin: 0.1rem 0; */
+}
+
+.filledStar {
+  color: gold;
+  font-size: 1.5rem;
+}
+
+.emptyStar {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.feedback {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 0.2rem;
+}

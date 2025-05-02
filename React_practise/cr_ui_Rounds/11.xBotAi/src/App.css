@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* In order to remove vertical scroll bar */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.main-container {
+  width: 100%;
+  /* height: 100%; */
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.navbar-container {
+  /* outline: 1px solid black; */
+  position: fixed;
+  width: 80%;
+  border-bottom: 1px solid red;
+}
+.sidebar-div {
+  height: 100%;
+}
+
+.section-div-container {
+  height: 100%;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* yahan z-index kaam karega */
+  background-color: rgba(0, 0, 0, 0.6); /*  make the background dim little bit*/
+}

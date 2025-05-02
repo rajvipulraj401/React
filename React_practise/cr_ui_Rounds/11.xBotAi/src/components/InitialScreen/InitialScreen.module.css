@@ -1,0 +1,69 @@
+.container {
+  background-color: #f7f7fc;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 24px;
+  /* margin: 30px 0 20px 0; */
+  padding: 20px 10px;
+}
+
+.imageandHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* outline: 4px solid orange; */
+
+  width: 100%;
+}
+
+.aiImgLargeContainer {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  /* outline: 3px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aiImgLargeContainer img {
+  /* overflow: hidden; */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cardsWrapper {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* -------All media query below---------- */
+@media (max-width: 900px) {
+  .cardsWrapper {
+    gap: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardsWrapper {
+    grid-template-columns: 1fr; /* sidebar upar aa jayega, pura width le lega */
+    gap: 8px;
+    padding: 0 20px;
+  }
+}

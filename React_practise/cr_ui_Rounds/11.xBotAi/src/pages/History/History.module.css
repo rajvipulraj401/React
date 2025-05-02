@@ -1,0 +1,37 @@
+.historyPage {
+  min-height: 100vh;
+  background-color: #f5f2fa;
+  padding: 2rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.filterSection {
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.subHeading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

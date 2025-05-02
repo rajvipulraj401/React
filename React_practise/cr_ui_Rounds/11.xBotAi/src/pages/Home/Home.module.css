@@ -1,0 +1,19 @@
+/* .homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  gap: 10px;
+} */
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 85%;
+  height: 103%;
+
+  margin-top: 40px;
+}

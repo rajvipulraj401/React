@@ -1,0 +1,33 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.weather-cards {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.weather-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 6px;
+  min-width: 150px;
+  background: #f7f7f7;
+}
