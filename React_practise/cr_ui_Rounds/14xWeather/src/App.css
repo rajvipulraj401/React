@@ -6,16 +6,18 @@
 
 input {
   padding: 10px;
-  margin-right: 10px;
+  margin-right: 15px;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 button {
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
+  background-color: lightgreen;
+  border-radius: 10px;
 }
-
 .weather-cards {
   margin-top: 20px;
   display: flex;
@@ -30,4 +32,23 @@ button {
   border-radius: 6px;
   min-width: 150px;
   background: #f7f7f7;
+}
+
+/* Spinner Style */
+.spinner {
+  border: 2px solid #f3f3f3; /* Light gray */
+  border-top: 2px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
