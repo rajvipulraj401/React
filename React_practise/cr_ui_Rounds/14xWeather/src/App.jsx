@@ -85,7 +85,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Step 1: - so whenever we get new SubmittedCity we will call the with that city
+  // Step 1: - so whenever we get new SubmittedCity we will call  with that city
   useEffect(() => {
     //Milestone :-- do the api call now
 
@@ -102,7 +102,10 @@ const App = () => {
     const fetchWeather = async () => {
       try {
         const response = await fetch(
-          `https://api.weatherapi.com/v1/current.json?key=3d962750a69347e6a2a130843250105&q=${submittedCity}`
+          // `https://api.weatherapi.com/v1/current.json?key=3d962750a69347e6a2a130843250105&q=${submittedCity}`
+          `https://api.weatherapi.com/v1/current.json?key=${key}&q=${submittedCity}`
+
+          // ? MARK ke baad query parameter hota hai api me (jaise maine apna key daala hai aur q me konsa city hai )
         );
 
         if (!response.ok) throw new Error();
@@ -124,6 +127,10 @@ const App = () => {
     // if (!cityData)
     fetchWeather();
   }, [submittedCity]);
+
+  // FUNCTION AND DATA :----
+
+  const key = "3d962750a69347e6a2a130843250105";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -177,7 +184,7 @@ const App = () => {
         {loading && <p>Loading data...</p>}
         {error && <p className="error-message">{error}</p>}
 
-        {cityData && (
+        {cityData && !error && !loading && (
           <div className="weather-cards">
             <div className="weather-card">
               <h4>Temperature</h4>

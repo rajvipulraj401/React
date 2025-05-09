@@ -146,13 +146,14 @@ const App = () => {
         setData(response.data);
 
         /* ---------method 2 using fetch and axios ----- */
+
         // const response = await fetch(
         //   "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
         // );
 
         // const res = await response.json();
-        // console.log(res);
-        // console.log(response.data);
+        // console.log(res); // ✅ yahi actual data hai
+        // console.log(response.data); // ❌ galat, fetch me .data nahi hota
       } catch (error) {
         console.error("Error:", error.message);
         alert("failed to fetch data");
