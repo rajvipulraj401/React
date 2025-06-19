@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.table-container {
+  /* outline: 2px solid red; */
+
+  margin: 5px;
+
+  border-collapse: collapse;
+  /***
+  Note --read this 📖📖
+  border-collapse: collapse tells the browser how to render adjacent cell borders in a table.
+
+When applied to table, it merges adjacent td/th borders into a single line.
+  */
+}
+th {
+  text-align: left;
+}
+td,
+th {
+  /* outline: 2px solid green; */
+  border: 2px solid green;
+  padding: 10px;
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid blue;
+  padding: 5px;
+  margin: 2px 5px 2px 2px;
+}
