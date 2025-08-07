@@ -1,0 +1,157 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-nephilm: Nephilm, italic;
+  --font-proxima: Proxima, sans-serif;
+
+  --breakpoint-no: 1px;
+  --breakpoint-ss1: 305px;
+  --breakpoint-ss: 345px;
+  --breakpoint-dxs: 360px;
+  --breakpoint-xxs: 405px;
+  --breakpoint-sm0: 450px;
+  --breakpoint-sm1: 480px;
+  --breakpoint-sm2: 550px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md1: 690px;
+  --breakpoint-md: 768px;
+  --breakpoint-mdg: 830px;
+  --breakpoint-mlg: 900px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xg: 1040px;
+  --breakpoint-xlg: 1100px;
+  --breakpoint-xlg1: 1157px;
+  --breakpoint-xllg: 1200px;
+  --breakpoint-xl0: 1225px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xl2: 1325px;
+  --breakpoint-xl3: 1380px;
+  --breakpoint-xxl: 1440px;
+
+  --animate-marquee: marqueeLeft 60s linear infinite;
+  --animate-flicker-animation: flicker 2s linear infinite;
+  --animate-marquee_content_up: scrollUp 4s linear infinite;
+  --animate-marquee_content_down: scrollDown 4s linear infinite;
+  --animate-flicker: flicker 4s linear infinite;
+
+  @keyframes marqueeLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes scrollBall {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%);
+    }
+  }
+  @keyframes flicker {
+    0%,
+    19.9%,
+    22%,
+    62.9%,
+    64%,
+    64.9%,
+    70%,
+    100% {
+      opacity: 0.99;
+      box-shadow:
+        rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    20%,
+    21.9%,
+    63%,
+    63.9%,
+    65%,
+    69.9% {
+      opacity: 0.4;
+    }
+  }
+  @keyframes scrollUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@font-face {
+    font-family: "Nephilm";
+    src: url("./assets/Font/NelphimItalic-Italic.otf") format("opentype");
+} 
+
+@font-face {
+    font-family: "Proxima";
+    src: url("./assets/Font/Proxima\ Nova\ Bold.otf") format("opentype");
+}
+
+
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 1s;
+  }
